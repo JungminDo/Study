@@ -1,0 +1,460 @@
+
+html {
+    border:1px solid lime;
+}
+
+body {
+    border: 2px dotted blue; /* dotted 테두리가 점선 */
+}
+
+p {
+    border: 4px solid black;
+    padding:  20px;
+    margin: 20px;
+}
+
+.marginpadding {
+    width: 100px;
+    height: 100px;
+    border: 4px solid black;
+    padding:  20px 0 35px 40px;
+    margin: 10px 50px 5px 30px;
+          /* 위 오른쪽 아래 왼쪽 */
+}
+
+.week_movie {
+    width: 361px;
+    height: 130px;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid purple;
+    margin: 10px;
+}
+
+.left {
+    float: left;
+    width: 230px;
+    height: 130px;
+    margin: 0 20px 0 0;
+}
+
+.right {
+    float: left;
+    width: 95px;
+    height: 100px;
+    padding: 30px 0 0 15px;
+    border-left: 1px solid lime;
+}
+.boxout {
+    border:2px solid blue;
+    width: 600px;
+    padding: 0 0 0 30px;
+}
+.boxout p {
+    width: 300px;
+    height: 100px;
+    overflow: auto;
+    border: 4px solid black;
+    margin: 30px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.pama {
+    width: 400px;
+    overflow: auto;
+    border: 2px solid green;
+    padding: 10px 20px 10px 20px;
+    margin: 30px 0 30px 50px
+}
+
+.pama ul{
+    overflow: auto;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px 20px 10px 20px;
+    margin: 0 0 0 10px;
+}
+.pama > ul li {
+    overflow: auto;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique purple;
+    margin-left: 10px;
+}
+
+.bordertest {
+    width: 452px;
+    border: 4px solid black;
+    padding: 23px 20px 5px 20px;
+    height: 114px;
+    overflow: auto;
+}
+
+.margintest > p:first-child {
+    margin-bottom: 20px;
+}
+
+.margintest p {
+    border: 4px solid black;
+    padding: 23px 20px 5px 20px;
+    width: 452px;
+    height: 114px;
+}
+
+.margintest1 {
+    border: 4px solid gray;
+}
+
+.margintest1 > p {
+    border: 4px solid black;
+    padding: 23px 20px 5px 20px;
+    width: 452px;
+    height: 114px;
+    margin: 30px 0 20px 15px;
+}
+
+.story {
+    margin-top: 20px;
+    padding: 20px;
+    border: 4px solid lime;
+}
+
+.story > div {
+    text-align: right;
+    margin-top: -15px;
+}
+
+.marginauto1 {
+    width: 700px;
+    border: 4px solid lime;
+}
+
+.marginauto1 > p {
+    border: 4px solid black;
+    padding: 23px 20px 5px 20px;
+    width: 452px;
+    height: 114px;
+    margin: 0 auto;
+}
+
+.noblock {
+    background-color: lime;
+
+}
+
+.noblock > p {
+    border: 4px solid black;
+    margin: 30px;
+    padding: 20px;
+}
+
+.realative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 2px solid green;
+}
+
+.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    border: 3px solid lime;
+}
+
+.margincall {
+    width: 452px;
+    margin: 20px;
+    height: auto;
+    border: 4px solid black;
+    background: whitesmoke;
+}
+
+.margincall > p {
+    padding: 10px;
+    border: 4px solid black;
+    background-color: orange;
+}
+
+.imgtest {
+    width: 500px;
+    margin: 40px;
+    padding: 20px;
+    border: 4px solid black;
+}
+
+.imgtest > p {
+    /*
+    background-color: palegreen;   배경색
+    background-image: image();      배경이미지 삽입
+    background-repeat: repeat;      배경이미지 반복을 어떻게 시키겠다
+    background-position: center;    배경이미지의 위치를 지정
+    background-attachment: fixed;   배경이미지가 어떻게 붙어있을지
+    background-size: auto;          배경이미지의 사이즈 조절
+    background-clip: padding-box;   배경이미지가 상자에서 잘리는 기준
+    background-origin: border-box;  배경이미지가 위치하는 기준
+
+    background: transparent url('cat.png') repeat scroll 0 0;
+           단축형 색깔 이미지경로 반복방법 어떻게 붙어있는지 위치 */
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 4px solid gray;
+    background-image: url('cat.png');
+}
+/*
+body {
+    background-image: url('cat.png');
+    background-repeat: repeat-y;
+    background-position: 50% 50%;
+    background-attachment: scroll;
+} */
+
+.testbox2 {
+    width: 496px;
+    border: 2px solid black;
+    height: auto;
+    background-image: url('cat.png');
+}
+
+.testbox2 > p {
+    padding: 8px 10px 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    height: 19px;
+    color: white;
+    border: 0 solid white;
+    text-align: right;
+    margin: 20px;
+    max-width: 496px;
+}
+
+.testbox2 > p strong {
+    font-size: 16px;
+    color: black;
+
+}
+
+.first {
+
+    background-color: red;
+
+
+}
+
+.second {
+    width: 75%;
+    background-color: greenyellow;
+}
+
+.fourth {
+    width: 54%;
+    background-image: url('cat.png');
+    background-repeat: no-repeat;
+}
+
+.third {
+    width: 64%;
+    background-color: orange;
+}
+
+.icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-indent: -9999px;
+
+}
+
+.icon a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
+    background-color: gainsboro;
+    background-image: url('cat.png');
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-attachment: scroll;
+}
+
+.icon .like:hover {
+    background-position: -5px 0;
+}
+
+.icon .cat {
+    background-position: 0 -50px;
+    border: 1px solid red;
+}
+
+.icon .cat:hover {
+    background-position: -50px -50px;
+}
+
+.blockboxtest {
+    margin: 40px;
+    font-size: 0; /* 폰트 사이즈를0으로 만들어보자 */
+}
+
+.blockboxtest > li {
+    border: 1px solid black;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 80px;
+    text-align: center;
+}
+
+.bordertest {
+    width: 100px;
+    height: 100px;
+    background-color: palegreen;
+    /* border-top-style: solid;
+    border-right: dotted;
+    border-bottom: ridge;
+    border-left: double;
+
+    border-top-width: 4px;
+    border-right-width: 6px;
+    border-bottom-width: 6px;
+    border-left-width: 8px;
+    */
+
+    border-top: 4px solid red;
+    border-right: 6px dotted blue;
+    border-bottom: 8px ridge orange ;
+    border-left: double 8px gray;
+}
+
+
+.hotitem {
+    width: 361px;
+    overflow: hidden;
+    border: 2px solid blue;
+    padding: 10px 15px 10px 15px;
+    letter-spacing: -1px;
+    margin: 0 0 10px 10px;
+}
+
+.itemleft {
+    float: left;
+    width: 230px;
+    margin-right: 20px;
+}
+
+.itemleft > h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: purple;
+}
+
+.itemleft ul > li {
+    float: left;
+    width: 110px;
+}
+
+.itemleft ul {
+    overflow: hidden;
+}
+
+.itemleft ul > li:first-child {
+    margin-right: 10px;
+}
+
+.itemright {
+    float: left;
+    position: relative;
+    float: left;
+    width: 95px;
+    height: 100px;
+    padding: 30px 0 0 15px;
+    border-left: 1px solid pink;
+}
+.itemright > p {
+    border: 0;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.itemright > a.btn {
+    padding: 5px 10px 3px 10px;
+    border: 1px solid beige;
+    color: chocolate;
+    text-decoration: none;
+    background-color: cyan;
+    margin: 0 0 0 10px;
+}
+
+.itemright > a.iteminfo {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+.main {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+}
+
+.main div {
+    flex: 1;
+}
+
+.floattest {
+    overflow: hidden;
+    border: 2px solid lime;
+    padding:  20px;
+    width:  270px;
+    margin-bottom: 20px;
+
+}
+
+.floattest > .photo {
+    float: left;
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid lime;
+}
+
+.floattest > p {
+    border: 2px solid red;
+    padding: 0;
+    margin: 0;
+}
+
+[class~="middle"] {
+    border: 2px solid black;
+    padding: 20px;
+    width: 656px;
+}
+
+.bottom {
+    border: 2px solid gray;
+    padding: 10px;
+    clear: both;
+
+}
+
+.floattest.left {
+    float: left;
+
+}
+
+.floattest.right {
+    float: right;
+}
+
+.floattest::after {
+    border: 2px solid blue;
+    content: '';
+    clear: both;
+    display: block;
+}

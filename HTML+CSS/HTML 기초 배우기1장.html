@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프론트 HTML CSS 자바스크립트</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="testcss11.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="css/resetcss.css"> -->
+    <style>
+
+
+
+        h2 > p {
+            color: chartreuse;
+        }
+    </style>
+
+        <script>
+
+            var 라디오 = {
+                안테나 : "신호감지",
+                배터리 : "전원 공급",
+                스위치 : "켜고끄기",
+                만들어진날 : "1980년",
+                소유주 : "정을수"
+            }
+        //  alert('라디오는 '+라디오.만들어진날+'에 만들어졌으며, '+라디오.소유주+'가 가지고있습니다.');
+
+
+            var 개최일 = '2017년 1월 10일';
+            var 참석자 = '200명';
+            var 종목 = '30개';
+            var 중요한일 = '전화걸기';
+
+
+        //    alert(개최일+'에 '+참석자+'이 참석한 운동회의 종목은'+ 종목+'였습니다.');
+
+
+        </script>
+
+</head>
+
+<body>
+    <h1>마크업이란</h1>
+    <p>무언가를 처리하기위해 태그를 이용해 표시하는것</p>
+
+    <div>
+        <h2>첫걸음</h2>
+        <div>
+            <h3>만들어보자</h3>
+            <p>천릿길도 한걸음부터 나아가기 위해 노력해보자</p>
+        </div>
+    </div>
+    <div>
+        <h3>크기를 조절하자</h3>
+        <p>단락을 만들어보며 태그들을 사용해봅시다. </p>
+    </div>
+        <h3>Head</h3>
+        <p>Head 안에는 페이지를 처리하기 위해 필요한 항목이 정의되어있다.</p>
+        <p>meta 는 메타 정보를 선언하는 태그에 여러나라 언어를 표시할수있는 형식인 UTF-8로 정의
+        <p>title 은 탭에 표시해줄 제목</p>
+        <p>script 는 파일의 링크를 정의하거나 직접코드를 작성한다</p>
+        <p>style 은 css를 작성하기 위한 공간이다.</p>
+        </p>
+
+        <h3>body</h3>
+        <p>웹페이지의 내용</p>
+
+        <h3>공통속성</h3>
+        <p>id 이름 지어줄때 페이지내에서 같은 이름 지정할수없다.</p>
+        <p>class 여러 요소들을 한꺼번에 선택시</p>
+        <p>title 특정요소 추가설명 호버하면 툴팁으로</p>
+        <p>style css 명령을 직접 정의</p>
+        <p>hidden 특정요소 감출때</p>
+        <p>tabindex tab 키에 따라 접근 되는 순서를 임의로 지정</p>
+        <p>accseekey 요소에 포커스를 추가하거나 활성화 시키기위한 키보드의 단축키를 정의</p>
+        <p>lang 요소에 사용된 언어 정의</p>
+        <p>spellcheck 요소에 spellcheck 가능하는지</p>
+        <p>contenteditable 특정요소를 편집이 가능한 요소로만든다.</p>
+        <p>data-* 특정요소에 임의의 속성을 만들어 쓸수 있게 해준다.</p>
+        <p>dir 특정요소의 글의 방향정의</p>
+        <p>css 파일안에서도 @charset "urf-8" 선언하고 사용한다.</p>
+        <p>@import 사용해서 다른 css를 불러올 수도 있다. (예: @import url('table.css') 표</p>
+        <p>@import 는 다른 스타일이 시작되기전에 먼저 선언한다.</p>
+
+
+
+        <h2>자바스크립트가 다룰수 있는 값(data)의 종류 7가지</h2>
+        <p>1. undefined 자바스크립트가 값이 없다고 알려줄때</p>
+        <p>2. null 우리가 값이 없다고 표현하고 싶을때</p>
+        <p>3. 문자 일반적인 글자</p>
+        <p>4. 숫자 음수에서 소수점 이하의 정수까지</p>
+        <p>5. 참,거짓 컴퓨터에서 사용되는 논리적인 true,false 형식</p>
+        <p>6. 객체 이름: 값 의 매칭으로 구성되는 정보의 묶음</p>
+        <p>7. 일발객체 일반적으로 사용되는 객체</p>
+        <p>배열객체 이름대신 순서 숫자를 이용해 값을 나열된 형태로 사용하기위한 객체</p>
+        <p>함수객체 원하는 시점에서 호출해서 값을 처리할 수 있는 객체</p>
+        <p>심볼</p>
+        <p>변수를 사용하여 처리할 값에 이름을 붙여주자  var 이름 = '정을수'; var 나이 = '22';</p>
+        <p>변수를 지정하지 않아도 자동으로 설정해준다.</p>
+        <p>\역 슬래시를 사용하여 문자로 넣을수 있다.</p>
+        <p>숫자는 소수를 포함한 어떤 숫자(실수)도 자유롭게 사용할 수 있다.</p>
+        <p>null 은 값이없다고 표현할때</p>
+        <p>undefined 는 값이없다고 자바스크립트가 말해줄 때 사용된다.</p>
+        <p>ul 등수나 순서가없는 목록</p>
+        <p>ol 등수나 순서대로 나열할때</p>
+        <p>dl 특정 주제나 내용에 대한 설명 정의를 내리기 위해 리스트 </p>
+        <p>dl 이 부모가되고 dt 가 정의될 대상 dd는 설명 이다.</p>
+
+        <h3>ddl dt dd 에대한 이해</h3>
+        <dl>
+            <dt>종류:</dt>
+            <dd>콜라</dd>
+            <dd>사이다</dd>
+            <dt>무설탕:</dt>
+            <dt>무가당</dt>
+            <dd>제로코크</dd>
+            <dd>나랑드사이다</dd>
+        </dl>
+
+        <dl>
+            <dt>종류:</dt>
+            <dd>
+                <ul>
+                    <li>콜라</li>
+                    <li>사이다</li>
+                    <li>오렌지쥬스</li>
+                    <li>탄산수</li>
+                    <li>요플레</li>
+                </ul>
+            </dd>
+            <dd>나랑드사이다</dd>
+        </dl>
+
+        <div id="div-name">
+            <h2>div 의미없는 그룹핑</h2>
+            <p class="div-sentence">정해진 의미는 없고 필요한 용동에 따라 상자를 만들고 구획을 나누기 위해 자요롭게사용한다.</p>
+            <p>의미적으로 관계가 없다면 div를 사용한다(div 는 오직 내용을 묶는 역할)</p>
+        </div>
+
+        <div>
+            <h2>span</h2>
+            <p>글줄의 흐름을 유지하면서 글줄 안에 <span style="color: blue;">상자를 만들어 특정 단어나 문장을 표시할때</span></p>
+        </div>
+
+        <section>
+            <h2>section</h2>
+            <p>내용이 서로 관계가 있다면 section을 사용</p>
+        </section>
+
+        <article>
+            <h2>article</h2>
+            <p>내용이 독립적이고 스스로 설 수 있는 내용엔 article 을 사용한다.</p>
+        </article>
+        <div>
+            <h2>horizontal rule (hr)</h2>
+            <p>주제와 주제 사이의 분리를 나타내는 의미를 갖고 사용된다.</p>
+        </div>
+
+        <hr/>
+
+        <div class="hr-name">
+            <h2>hr 2</h2>
+            <p class="hrtag red">주제와 주제 사이의 분리를 나타내는 의미를 갖고 사용된다.</p>
+            <p class="hrtag">section 과 section 사이에는 이미 분리된 주제이기 때문에 필요하지 않다.</p>
+        </div>
+
+
+        <div>
+            <h1>quotation 인용</h1>
+            <p> 인용하는 말이나 글에 사용가능한 태그 <q> 하나의 문장안에 들어가는 짤막한 인용구에 사용</q> cite="" 를 추가해 출처의 URL 을 표기 할 수있다.</p>
+            <h2>block quotation</h2>
+            <p>긴 인용문이어서 여러문장이 필요할 때 사용할 수 있도록 블록박스의 성질을 가지고 있다. <blockquote>정말긴인용문에필요한 인용태그 정말긴인용문에필요한 인용태그
+                정말긴인용문에필요한 인용태그정말긴인용문에필요한 인용태그정말긴인용문에필요한 인용태그정말긴인용문에필요한 인용태그정말긴인용문에필요한 인용태그정말긴인용문에필요한 인용태그
+            </blockquote></p>
+        </div>
+
+        <div>
+            <h2>Strong</h2>
+            <p><strong>인라인 박스 성질</strong> 을 가지며 강조한다는 의미를 갖는다.</p>
+            <p><em>약한 강조</em> 의 의미를 가진다.</p>
+        </div>
+
+        <div>
+            <img src="파일주소" alt="대체 텍스트">
+        </div>
+
+        <div>
+            <h2>bold italic</h2>
+            <p>b 는 <b>글씨를 두껍게</b> i 는 <i>이탤릭으로 기울이는 표현의 용도로</i> 였으나 HTML5 이후부터 문체나 분위기가 다른 문장과 다르다는 의미를 갖는 태그가 되었다.</p>
+        </div>
+
+        <div>
+            <h2>small</h2>
+            <p>복잡하고 난해한 법률이나 <small>약관 규약등을 요약한 부분에 사용된다.</small></p>
+        </div>
+
+
+        <section>
+            <h2>anchor 링크</h2>
+            <p>다른 페이지로 이동할때 사용된다.</p>
+            <p>해당 페이지로 <a href="https://naver.com">네이버가기</a></p>
+            <p>해당 페이지가 새창에서 <a href="https://naver.com" target="_blank">네이버가기</a></p>
+            <p id="email">문의사항은 <a href="https://naver.com">네이버</a>에게 문의하세요</p>
+        </section>
+
+
+        <section>
+            <h2>cited 참조</h2>
+            <p>cite는 시, 영화, TV프로그램, 노래등 저작물의 제목이나 내용을 참조할 때<cite>(cite 태그를 사용해보자)</cite> 사용한다.</p>
+        </section>
+
+        <section>
+            <h2>abbreviation 약어</h2>
+            <p>abbr 머릿글자를 이용한 줄임말로  사용된다 <abbr title="World Wide Web">WWW</abbr>는 월드 와이드 웹의 머리글자이다.</p>
+        </section>
+
+        <div>
+            <h2>dfn 용어정의</h2>
+            <p>어떤 공식적인 <dfn title="산을등지고 물을 내려다본다">배산임수</dfn> 개념이나 용어 단어에사용한다</p>
+        </div>
+
+        <div>
+            <h2>s 유효하지않은</h2>
+            <dl>
+                <dt>유효하지 않은상태를 표현할때 사용</dt>
+                    <dd><a href="">site.com</a></dd>
+                    <dd><s>30000원</s></dd>
+                    <dd>60000원</dd>
+            </dl>
+        </div>
+
+        <div>
+            <h2>del 과 ins 삭제 와 삽입</h2>
+            <p>del 은 페이지에서 삭제되었다는 의미  ins 는 페이지에 새롭게 삽입되었다는 상태의 의미</p>
+            <p>이사이트에서
+                <del datetime="2019-11-18">dog.jpg</del>
+                삭제되고
+                <ins datetime="2020-11-18">cat.jpg</ins>
+                추가되었습니다.
+            </p>
+        </div>
+
+        <div>
+            <h2>adress 연락처</h2>
+            <p>주소 이메일 연락처등을 마크업 할때 사용</p>
+            <address>
+            <p>서울시 송파구</p>
+            <p><a href="daum.net">daum.net</a></p>
+            </address>
+        </div>
+
+        <div class="name_rule">
+            <h3>이름을 짓는규칙</h3>
+            <p class="naming_rule">id="3service" 숫자로 시작하면 안된다. </p>
+            <p class="naming_rule">class="service3" 숫자가 뒤로붙는것은 괜찮다</p>
+            <p class="naming_rule">class="Service" 소문자를 사용하는것이 원칙적으로 좋다.</p>
+            <p class="naming_rule">class="service_three" "-"를 사용해서 의미를 구분지어 줄 수 있다.</p>
+            <p class="naming_rule">class="service-three" "-"를 사용해서 의미를 구분지어 줄 수 있다.</p>
+        </div>
+        <br/>
+        <div id="service" class="service">
+            <h2 class="red">네이버 주소</h2>
+            <div class="castbox red">
+                <h3>네이버 만화</h3>
+                <p>네이버 에서 서비스중인 만화들을
+                    모아봤습니다.
+                </p>
+            </div>
+            <div class="castbox">
+                <h3>네이버 음악</h3>
+                <p>네이버 음악들을 모아서 서비스를
+                    해보았습니다.
+                </p>
+            </div>
+        </div>
+        <br/>
+        <div class="person">
+            <input type="text" id="emain" />
+            <input type="submit" value="입력하기" />
+        </div>
+
+        <div class="service1">
+            <h2 class="top blue">네이버 뮤직</h2>
+            <div class="dastbox01 blue">
+                <h3>네이버 만화</h3>
+                <p>현존하는 모든 만화를 모아모아 여러사람이 보기 좋게
+                    홈페이지를 구성해보았습니다.
+                </p>
+            </div>
+            <br/>
+            <div>
+                <h3>속성을이용한 선택법</h3>
+                <p>class~=blue class 속성에 blue 라는 값을 하나라도 가지고 있는 요소를 선택한다.</p>
+                <p>class^=dast class 속성에 dast 라는 글자로 시작하는 요소를 선택합니다.</p>
+
+            </div>
+            <div class="dastbox02">
+                <h3>네이버 신문</h3>
+                <p>현존하는 모든 신문을 모아모아 여러사람이 보기 좋게
+                    구성해보았습니다.
+                </p>
+                <a href="http://naver.com">더보기</a>
+            </div>
+        </div>
+
+        <ul class="category">
+            <li>오늘의 아침</li>
+            <li>오늘의 빵
+            <ul>
+                <li>슈크림</li>
+                <li>소보루</li>
+                <li>단팥빵</li>
+                <li>크림빵</li>
+            </ul>
+            </li>
+            <li>오늘의 점심</li>
+            <li>오늘의 저녁</li>
+            <li>오늘의 야식</li>
+        </ul>
+        <div>
+            <p> > 직계 자식들만 선택하여 css를 준다.</p>
+            <p> 한칸을 띄우면 category 자손중에 모든 li 찾아 선택하여 css를 준다.</p>
+        </div>
+
+        <ul class="category1">
+            <li>오늘의 아침</li>
+            <li>오늘의 빵
+            <ul>
+                <li>슈크림</li>
+                <li>소보루</li>
+                <li>단팥빵</li>
+                <li>크림빵</li>
+            </ul>
+            </li>
+            <li>오늘의 점심</li>
+            <li>오늘의 저녁</li>
+            <li>오늘의 야식</li>
+        </ul>
+
+        <div class="service2">
+            <h2 class="top blue">네이버 뮤직</h2>
+            <div class="dastbox01 blue">
+                <h3>네이버 만화</h3>
+                <p>현존하는 모든 만화를 모아모아 여러사람이 보기 좋게
+                    홈페이지를 구성해보았습니다.
+                </p>
+            </div>
+            <br/>
+            <div>
+                <h3>속성을이용한 선택법</h3>
+                <p>class~=blue class 속성에 blue 라는 값을 하나라도 가지고 있는 요소를 선택한다.</p>
+                <p>class^=dast class 속성에 dast 라는 글자로 시작하는 요소를 선택합니다.</p>
+
+            </div>
+            <div class="dastbox02">
+                <h3>네이버 신문</h3>
+                <p>현존하는 모든 신문을 모아모아 여러사람이 보기 좋게
+                    구성해보았습니다.
+                </p>
+            </div>
+
+            <div class="service3">
+                <h2>네이버 뮤직2</h2>
+                <div class="vastbox">
+                    <h3>네이버 만화2</h3>
+                    <p>현존하는 모든 만화를 모아모아 여러사람이 보기 좋게
+                        홈페이지를 구성해보았습니다.
+                    </p>
+                </div>
+                </div>
+                <br/>
+                <div>
+                    <h3>속성을이용한 선택법2</h3>
+                    <p>class^=vast class 속성에 vast 라는 글자로 시작하는 요소를 선택합니다.</p>
+
+                </div>
+                <div>
+                    <h3>네이버 신문2</h3>
+                    <p> .vastbox 의 자손중에 h3 가 있으면 모두 선택하여 h3만 선택하게된다
+                    </p>
+                </div>
+
+                <div class="service4">
+                    <h2>다음 뮤직1</h2>
+                    <div class="hastbox">
+                        <h3>다음 만화1</h3>
+                        <p> .hastbox 바로뒤에 붙어있는 형제를 선택 </p>
+                    </div>
+                    <div>
+                        <h3>다음 신문1</h3>
+                        <p> + 기호는 바로뒤에 붙어있는 형제를 선택할 수 있다.</p>
+                        <p> service 의 직계 자식들중에 div 의 바로뒤에 붙어있는 div를 선택해서 보더선언 </p>
+                    </div>
+                </div>
+
+                    <br/>
+
+                    <div class="service5">
+                        <h4>뒤에 나오는 원하는 모든 형제를 선택해보자</h4>
+                        <div class="qastbox">
+                            <h3>다음 만화1</h3>
+                            <p> h2 뒤로 나오는 형제들 중에서 qastbox라는 이름을 가진 요소들을 전부 선택한다. </p>
+                        </div>
+                        <div class="qastbox">
+                            <h3>다음 신문1</h3>
+                            <p> h2 뒤에 나오는 형제들 중에서 모든 div 를 선택하고 div 에 color를 선언하자 상속되어 h2 p 가 빨강색이된다.</p>
+                        </div>
+                    </div>
+
+                    <br/>
+
+                    <div class="service6">
+                        <h2>가상 선택자 첫글자만 선택해보자</h2>
+                        <div class="castbox1">
+                            <h3>다음 만화1</h3>
+                            <p> castbox 의 모든 자손중에서 p를 찾아 첫번째 글짜를 마크업한 것처럼 가상의 클래스를 주어 선택한다. </p>
+                        </div>
+                        <div class="castbox1">
+                            <h3>다음 신문1</h3>
+                            <p> 맨 처음 앞글자가 강조된다.</p>
+                        </div>
+                    </div>
+
+                    <br/>
+
+                    <div class="service7">
+                        <h2>가상 선택자 첫줄만 선택해보자</h2>
+                        <div class="castbox2">
+                            <h3>다음 만화1</h3>
+                            <p> service의 모든 자손중에서 p를 찾아<br/>
+                                첫째줄을 마크업한것 처럼 가상 선택자로 선택합니다.<br/>
+                            </p>
+                        </div>
+                        <div class="castbox2">
+                            <h3>다음 신문1</h3>
+                            <p> 맨 처음 앞글자가 강조된다.
+                                다음 글을 써보자</p>
+                            <p> p태그를 계속 써도 적용이된다.</p>
+                        </div>
+                    </div>
+
+                    <br/>
+
+                    <ul class="category2">
+                        <li>해당 요소이면서 부모의 첫번째 자식인 요소를 선택한다.</li>
+                        <li>오늘의 빵
+                        <ul>
+                            <li>category2의 자손중에서 li 안에 들어있는 li 들을 찾아서 그중에 첫번째를 선택</li>
+                            <li>소보루</li>
+                            <li>단팥빵</li>
+                            <li>크림빵</li>
+                        </ul>
+                        </li>
+                        <li>오늘의 점심</li>
+                        <li>오늘의 저녁</li>
+                        <li>오늘의 야식</li>
+                    </ul>
+
+                    <hr/>
+
+                    <div class="service8">
+                        <h2>오늘의 저녁</h2>
+                        <div class="castbox3">
+                            <h3>h3는 혼자지만 부모 (castbox3) 입장에서 첫번째 자식이기 때문에 선택된다.</h3>
+                            <p>p들 중에서는 첫번째일지 모르지만 부모(castbox3) 입장에서는 둘째이기 때문에 선택되지 않습니다.</p>
+                            <p>저녁 점심 아침 그중에 가장</p>
+                            <p>야식 점심 저녁 그중에 가장</p>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                    <ul class="category3">
+                        <li>before 선택자와 content 속성을 이용해서 category3의 직계자식들의
+                            제일 앞에 hi hello 라는 컨텐츠를 넣어주고 상자를 선택합니다.</li>
+                        <li>오늘의 빵
+                        <ul>
+                            <li>생크림</li>
+                            <li>소보루</li>
+                            <li>단팥빵</li>
+                            <li>category3의 자손중에서 li 안에 들어있는 li 들을 찾아서 그중에 마지막요소를 선택합니다.</li>
+                        </ul>
+                        </li>
+
+                        <li class="info">
+                            <label for="phone">전화번호입력</label>
+                            <input id="phone" type="text"></li>
+                        <li class="menu"><a href="http://after.com">after</a>
+                            선택자와 content 속성을 이용해서 이미지를 넣습니다.</li>
+                        <li class="menu1"><a href="http://after.com" target="_blank">after1</a>
+                            선택자와 content 속성을 이용해서 이미지를 넣습니다.</li>
+                        <li>category3의 직계 자식 li 들 중에서 마지막 요소를 선택합니다.</li>
+                    </ul>
+
+                    <ul class="category4">
+                        <li>오늘의 빵</li>
+                        <li>p 는 상하마진을 줘 단락으로 표현된다.</li>
+                        <li>q는 인용구에 사용되어 쌍따옴표가 들어간다</li>
+                        <li>em 은 약한 강조로 이텔릭으로 표현된다.</li>
+                        <li>ul 과 li 는 중점과 들여쓰기가 된다.</li>
+                        <li>a 는 글씨색과 밑줄이 들어가 링크로 연결된다.</li>
+                        <li>상속은 대상요소에 가까울수록 우선된다.</li>
+                        <li>직접 선언된 명령이 우선이다.</li>
+                        <li>a 에는 상속이 되지 않기 때문에 별도로 지정한다.</li>
+                        <li>레셋용 css를 통해 작업자의 편의대로 작성하기도한다.</li>
+                        <li>HTML 은 위에서 아래로 차례대로 처리한다.</li>
+                        <li>여러개의 CSS파일도 차례대로 인식한다.</li>
+                        <li>여러개 적용되면 맨마지막 css를 덮어 쓴다.</li>
+                        <li>style 에서도 마찬가지이다.</li>
+                        <li>css 파일 안에서도 마찬가지이다.</li>
+                        <li>imort 된 css도 HTML 에 가장 가까운 css에 덮어씌워진다.</li>
+                        <li>초기화 css는 가장 상위에 넣어야 한다.</li>
+                        <li>구체적으로 태그를2개이상 이용해 부르면 우선시된다.</li>
+                        <li>class 가 태그이름보다 더 높아 우선순위가 높아진다.</li>
+                        <li>class 이름과 :(가상선택자)는 우선순위가 동일하다</li>
+                        <li>대신 cascading 하향법칙에 의해 아래에 위치한게 우선시된다.</li>
+
+                    </ul>
+
+                    <div class="menu10">
+                        <a href="http://test.com">빵집</a>
+                        <a href="http://test.com">면집</a>
+                        <a href="http://test.com">밥집</a>
+                        <p>가상 선택자 구체성이 같기 때문에
+                            link  visited  hover  active  순으로 인식</p>
+                        <p>class 이름과 [type] 속성선택자는 같다. </p>
+                        <p>id 이름이 class 이름보다 우선순위가 높다.</p>
+                        <p>> , *, +, -, , 는 명시도에 영향을 주지않는다.</p>
+                        <p>명시도가 높아도 스타일 속성을 이용해 직접적으로 HTML 안에
+                            적용하는 인라인 스타일을 이길수는 없다. </p>
+                        <p>하지만 !important 선언으로 인라인 스타일을 이길수 있다.</p>
+                    </div>
+
+                    <div id="service9">
+                        <h2>!important 사용해보기</h2>
+                        <div class="castbox11">
+                            <h4> 임폴턴트로 내용을 바꿔보자</h4>
+                            <p> 임폴턴트사용으로 내용의 색깔이 바뀐다.</p>
+                        </div>
+                        <div class="castbox11">
+                            <h4>!important 사용해서 인라인스타일 이겨보자</h4>
+                            <p style="color: red;"> 인라인 스타일을 사용하여 색깔이 변하는가?</p>
+                            <p>명시도 태그=1 class=:(가상선택자)=10 class=[type] id=100  </p>
+                            <p>우선순위로는 !important > 인라인 스타일 > 명시도 >
+                                하향우선 > 일반적인 선언 > 브라우저측 기본스타일</p>
+                        </div>
+                    </div>
+
+                    <section>
+                        <p><h3>폰트 단위</h3></p>
+                        <p><h4>절대 단위</h4></p>
+                        <p>px 디지털 화면에 대한 최소단위로 기기의 해상도에 따라 다르다 화면밀도에 따라 각각 다른길이가된다.</p>
+                        <p>pt 전통적인 인쇄에 사용되는 단위 해상도에 따라 달라지기 때문에 의미가 없다.</p>
+                        <p><h4>상대 단위</h4></p>
+                        <p>em 감싸고 있는 부모(상황)의 폰트사이즈에 따라 상대적으로 지정하는 단위
+                            부모폰트가 16px 이고 자식을 0.5em 으로 지정하면 <br>폰트사이즈는 8px로 바뀐다.
+                            따라서 상대적으로 자식의 길이를 제어할 수 있어서 유용하다.</p>
+                    </section>
+
+                    <div class="box20">박스1입니다. 크기를 볼까요</div>
+                    <div class="box21">박스2입니다. 크기를 볼까요</div>
+
+                    <hr/>
+
+                    <div class="fontstart">
+                        <div class="fonttest1">
+                            <h1>이러한 일상에서</h1>
+                            <h2>이러한 일상에서</h2>
+                            <h3>이러한 일상에서</h3>
+                            <h4>이러한 일상에서</h4>
+                            <h5>이러한 일상에서</h5>
+                            <h6>이러한 일상에서</h6>
+                            <p>이러한 일상에서는</p>
+                        </div>
+                    </div>
+
+                    <div class="fonttest2">
+                        <p>Everyone that accesses web pages on a computer</p>
+                        <p>font variant 는 소문자를 대문자로 만드는 역할 normal 은 기본값이며
+                            small-caps 는 소문자를 작은 대문자로 만든다.</p>
+                        <p>소문자 x-height(해당폰트 알파벳 x 의 높이) 크기로 대문자를 만들어줍니다.</p>
+                    </div>
+
+                    <div>
+                        <p class="linetest1"><span>Hold On 기다려Hold On 기다려Hold On 기다려Hold On 기다려Hold On 기다려</span></p>
+                    </div>
+
+                    <div>
+                        <p class="letter-spacing">letter-spacing 글자와 글자 사이의 간격을 지정한다.</p>
+                        <p class="word-spacing">word-spacing 단어와 단어 사이의 간격을 지정합니다.</p>
+                        <p class="text-align">text-align 글자들의 가로 정렬을 지정합니다.</p>
+                        <p class="text-indent">text-indent 들여쓰기를 지정합니다.</p>
+                        <p class="text-decoration">text-decoration 밑선, 윗선, 취소선을 지정합니다.</p>
+                        <p class="text-transform">text-TRANSFORM 대, 소문자 변환을 지정합니다.</p>
+                    </div>
+    </body>
+
+</html>

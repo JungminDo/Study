@@ -1,0 +1,87 @@
+.table	{
+    display:table;
+    border-collapse:collapse; /* 보더를 합쳐서 사용*/
+
+}
+.caption	{
+    display:table-caption;
+    text-align:right;
+    caption-side:bottom;
+}
+.tbody	{
+    display:table-row-group;
+}
+.tr	{
+    display:table-row;
+}
+.th,	.td	{
+    display:table-cell;
+    padding:10px;
+    border:1px	solid	black;
+
+}
+
+.table1	{
+    display:table;
+    /* border-collapse: separate;  */
+    border-spacing: 10px 5px; /* 모든선과 선사이에 좌우로 10px 상하 5px 간격생김 */
+    padding: 14px;
+    border: 5px dotted red;
+}
+
+select, input, textarea {
+    vertical-align: middle;
+    font-size: 14px;
+    /* 인라인 요소인 양식태그에 vertical-align을 middle 로 선언에 가운데 정렬이 되도록한다.*/
+
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 4px;
+    color: green;
+    border: 1px solid gray;
+    /* 속성자 선택자로 선택하여, 보더스타일을 바꾸었습니다. */
+}
+
+.member {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F7F5DA;
+    /* form 디자인에 사용하지 않고 div 인 member 에 넓이 여백 가운데 정렬을 위한 마진을 준다.*/
+}
+
+.member fieldset {
+    padding: 20px;
+    margin: 0 0 20px;
+}
+
+.member legend {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size:  16px;
+    color: brown;
+}
+
+.member strong {
+    display: inline-block;
+    width: 100px;
+}
+
+.member fieldset > div + div {
+    margin-top: 10px;
+}
+
+.member .btn_area {
+        text-align: right;
+}
+
+.member em {
+    color: orange;
+    font-size: 11px;
+}
+
+.member b {
+    color: red;
+}

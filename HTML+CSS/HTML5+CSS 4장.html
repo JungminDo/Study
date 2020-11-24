@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5+CSS</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="HTML+CSS4장.css">
+    <script src="HTML+CSS4장.js"></script>
+</head>
+<body>
+
+    <p>웹킷을 사용하는 사파리 크롬은    -webkit- border: 1px </p>
+    <p>모질라 재단의 파이어폭스         -moz- border: 1px</p>
+    <p>오페라                          -o- border: 1px</p>
+    <p>마이크로소프트의 익스플로러       -ms- border: 1px</p>
+
+    <p>간결해진 시작 !DOCTYPE html </p>
+
+    <p>meta charset="utf-8" </p>
+<!--
+    <meter min="0" max="10" value="5"></meter>
+    <p>측정 값이 일정한 범위 안에 있을때 를 표시하기 위해 사용한다.</p>
+
+    <meter min="0" max="4" value="5"> </meter>
+    <p>측정 값이 최대값을 넘길경우</p>
+
+    <meter min="0" low="3" optimum="5" high="8" max="10" value="5" ></meter>
+    <p>최소0 3보다 낮으면 최적값5 8보다 높으면 최대 10 값은 5 </p>
+
+    <meter min="0" low="3" optimum="9" high="8" max="10" value="2"> </meter>
+    <p>최적값과 현재값이 low 와 high의 보다 높거나 낮게 되었을때 어떻게 되는가?</p> -->
+
+    <progress value="70" max="100" >70% </progress>
+            <input type="range" />
+            <input type="search" autocapitalize="on"/>
+            <input type="number"  />
+            <input type="url"  />
+            <input type="color"  />
+
+<!--
+            <canvas id="neon" width="300px" height="200px"></canvas>
+
+
+
+
+
+            <div	class="input_list">
+                <strong>차례대로 입력하세요.</strong>
+                <ul>
+                    <li>
+                        <label	for="name">이름</label>
+                        <input	type="text"	id="name"	/>
+                    </li>
+                    <li>
+                        <label	for="sex">성별</label>
+                        <input	type="text"	id="sex"		/>
+                    </li>
+                    <li>
+                        <label	for="old">나이</label>
+                        <input	type="text"	id="old"		/>
+                    </li>
+                </ul>
+            </div> -->
+
+            <div class="catimage">
+                <a href=""><img src="cat.png" width="50px"/></a>
+                <a href=""><img src="cat.png" width="50px"/></a>
+                <a href=""><img src="cat.png" width="50px"/></a>
+            </div>
+
+            <br/>
+
+        <div>
+            <ul id="one" class="level-1">
+                <li class="item-i">I</li>
+                <li id="ii" class="item-ii">II
+                    <ul class="level-2">
+                        <li class="item-a">A</li>
+                        <li class="item-b">B
+                            <ul class="level-3">
+                                <li class="item-1">1</li>
+                                <li class="item-2">2</li>
+                                <li class="item-3">3</li>
+                            </ul>
+                        </li>
+                        <li class="item-c">C</li>
+                    </ul>
+                    </li>
+                <li class="item-iii">III</li>
+                <li>closest()메소드는 단 하나의 결과만을 리턴한다. 첫번째 부모 엘리멘트를 찾고싶을때</li>
+                <li>parents()메소드는 자신부터 document root 까지 검색을해 결과가 1개 이상이다.</li>
+            </ul>
+        </div>
+
+        <br/>
+
+        <li class="vacation onsale" data-price='399.99'>
+            <h3>Hawaiian Vacation</h3>
+            <button>Get Price</button>
+            <ul class="comments">
+                <li>Amazing deal</li>
+                <li>Want to go!</li>
+            </ul>
+            <li class="vacation onsale"></li>
+            <li class="vacation expiring"></li>
+        </li>
+        <li class="confirmation">
+        <button class="flbtn">FLIGHT DETAILS</button>
+        <ul class="ticket"> Money </ul>
+        </li>
+
+        <div id="filters">
+            <button class="onsale-filter">On Sale Now</button>
+            <button class="expiring-filter">Expiring</button>
+        </div>
+
+        <br/>
+
+        <div class="vacation" data-price='399.99'>
+            <h3>Hawaiian Vacation</h3>
+            <p>$399.99 per ticket</p>
+            <p>
+            Tickets:
+            <input type='number' class='quantity' value='1' />
+            </p>
+        </div>
+        <p>Total Price: $<span id='total1'>399.99</span></p>
+
+        <br/>
+
+        <div class="mainwrap">
+            <div class="warp1">
+                <h2>Hawaiian Vacation</h2>
+                <button>GET PRICE</button> <br/>
+                <a href="#" class="expand">Show comments</a>
+            </div>
+            <div class="warp2">
+                <h2>Eurpoean Getaway</h2>
+                <button>GET PRICE</button> <br/>
+                <a href="#" class="expand">Show comments</a>
+            </div>
+            <div class="warp3">
+                <h2>Visit Japan</h2>
+                <button>GET PRICE</button>
+
+            </div>
+            <div class="warp4">
+                <h2>Korea</h2>
+                <button>GET PRICE</button>
+            </div>
+            <div class="warp5">
+                <h2>Denver</h2>
+                <button>GET PRICE</button>
+
+            </div>
+            <div class="warp6">
+                <h2>England</h2>
+                <button>GET PRICE</button> <br/>
+                <a href="#" class="expand">Show comments</a>
+            </div>
+        </div>
+
+        <br/>
+
+        <form name="loandata">
+            <table>
+                <tr>
+                    <td><b>Amount of the loan(ant currency):</b></td>
+                    <td><input type="text" name="principal" onchange="calculate()";></td>
+                </tr>
+                <tr>
+                    <td>2)Annual percentage rate of interest</td>
+                    <td><input type="text" name="interest" onratechange="calculate();"></td>
+                </tr>
+                <tr>
+                    <td>3)Repayment period in years:</td>
+                    <td><input type="text" name="years" onratechange="calculate();"></td>
+                </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="compute" onclick="calculate();"></td>
+                    </tr>
+                    <tr><td><b>Payment Information</b></td></tr>
+                    <tr>
+                        <td>4) Your monthly payment:</td>
+                        <td>$ <span class="result" id="payment"> </span></td>
+                    </tr>
+                    <tr>
+                        <td>5) Your total payment:</td>
+                        <td>$ <span class="result" id="total"></span></td>
+
+                    </tr>
+                    <tr>
+                        <td>6) Your total interest payments:</td>
+                        <td>$ <span class="result" id="totalinterest"></span></td>
+                    </tr>
+            </table>
+        </form>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

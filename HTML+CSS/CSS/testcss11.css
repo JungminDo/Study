@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+
+h3 {
+    color: blueviolet;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 3px solid black;
+    border-width: 1px;
+    width: 300px;
+}
+
+body {
+    padding:  20px;
+    margin: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+.naver-connect > h3 {
+    text-align: center;
+    width: 200px;
+    margin: 0%;
+    color: green;
+}
+#div-name {
+    font-size: 15px;
+    color: gray;
+    width: 250px;
+    margin: 5px;
+}
+
+.div-sentence {
+    font-size: 20px;
+    color: darkgray;
+    width: 300px;
+    border-bottom: 3px solid black;
+}
+
+.hr-name > p {
+    background-color: darksalmon;
+    width: 550px;
+}
+.red {
+    color: red;
+}
+
+.name_rule, naming_rule {
+    border: 2px solid yellow;
+    width: 600px;
+}
+
+div#service.service {
+    border: 2px solid lime;
+}
+
+h2.red {
+    border: 2px solid black;
+}
+
+.castbox.red {
+    border: 2px solid red;
+}
+
+input[value] {
+    color: blue;
+}
+input[type="text"] {
+    background-color: silver;
+}
+
+[class~="blue"] {
+    background-color: skyblue;
+}
+
+div[class^="dast"] {
+    border: 2px solid blue;
+}
+
+div[class$="02"] {
+    color: chartreuse;
+}
+
+[href*="naver.com"] {
+    color: green;
+}
+
+.category > li {
+    border: 1px solid blue;
+    width: 550px;
+    margin: 5px;
+}
+
+.category1  li {
+    border: 1px solid red;
+    width: 500px;
+    margin: 5px;
+}
+
+.vastbox h3{
+    border: 5px solid grey;
+}
+
+h2 + .hastbox {
+    border: 4px solid black;
+}
+.service4 > div + div {
+    border: 3px solid lime;
+}
+
+h4 ~ .qastbox {
+    border: 2px solid blueviolet;
+}
+
+h4 ~ div {
+    color: red;
+}
+
+.castbox1 p:first-letter {
+    background-color: lime;
+    font-size: 22px;
+}
+
+.service6 {
+    border: 1px solid plum;
+}
+
+.service7 p:first-line{
+    color: royalblue;
+}
+
+.category2 > li:first-child {
+    border: 2px solid black;
+}
+
+.category2 li li:first-child {
+    border: 1px solid green;
+}
+
+.service8 p:first-child {
+    border: 2px solid blue;
+
+}
+
+.service8 h3:first-child {
+    border: 1px solid green;
+    width: auto;
+}
+
+.category3 > li:last-child {
+    border: 2px solid red;
+}
+
+.category3 li li:last-child {
+    border: 1px solid lime
+}
+
+.category3:before {
+    content: 'hi hello';
+    border: 3px solid gray;
+}
+
+.category3::after {
+    content: url(images/dog.jpg);
+    content: 'good boy';
+}
+
+.info input:focus {
+    background-color: hotpink;
+}
+
+.menu a:focus {
+    color: white
+}
+
+.menu1 a:link {
+    color: lime;
+}
+.menu1 a:visited {
+    color: red;
+}
+.menu1 a:active {
+    color: purple;
+}
+
+.category4 li:hover {
+    background-color:  lime;
+}
+
+.category4 li:active {
+    background-color:  red;
+}
+
+
+.menu10 a:link {
+    color: lime;
+}
+
+.menu10 a:visited {
+    color: red;
+}
+
+.menu10 a:hover {
+    color: yellow;
+}
+
+.menu10 a:active {
+    color: black;
+}
+
+.castbox11 h4 + p { /* h4 옆에 p태그 형제를 선택하자 */
+    color: yellow;
+}
+
+.castbox11 > p { /* castbox11 의 직계 자식중 p를 선택한다. */
+    color: navy !important;
+}
+
+body {
+    font-size: 18px;
+    padding:  20px;
+    margin: 10px;
+
+}
+
+.box20 {
+    width: 5.555555em;
+    height: 5.555555em;
+    background-color: navy;
+}
+
+.box21 {
+    width: 100px;
+    height: 100px;
+    background-color: navajowhite;
+}
+
+
+.fonttest1 {
+    font:italic bold 12px/30px Georgia, serif
+  /*단축형 스타일 굵기 사이즈 줄간격 글꼴 */
+}
+.fonttest1 > p {
+    font-family: '돋움', dotum, 'Helvetica Neue' , sans-serif;
+    /* 돋움서체를 먼저착고 없으면 Helvetic 지정 그마저없으면 산세리프 */
+}
+
+.fonttest2 > p:first-child { /* 작은대문자 */
+    font-variant: small-caps;
+    font-style: oblique; /* 강제로기울인다. */
+}
+
+.fonttest2 p + p { /* 기본 */
+    font-variant: normal;
+
+}
+
+.fonttest2 p + p + p {
+    font-variant: small-caps;
+    font-weight: bold; /* 굵게  normal은 400 bold 는 900*/
+    line-height: 10px; /* 줄간격 지정 px과 %, em 은 결과값이 상속된다.*/
+                        /* 숫자값은 각폰트사이즈에 알맞게 다시계산된다.*/
+}
+
+.linetest1 {
+    background-color: blue;
+    border: 2px solid black;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.linetest1 span {
+    font-family: arial;
+    background-color: lime;
+}
+
+.letter-spacing {
+    letter-spacing: 20px; /* 음수값 사용가능 */
+}
+
+.word-spacing {
+    word-spacing: 20px;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.text-indent {
+    text-indent: 80px;
+}
+
+.text-decoration {
+    text-decoration: underline;
+    /* underline 아랫선긋기, overline 윗선긋기, line-through 중앙선긋기, none 선없에기 */
+}
+
+.text-transform {
+    text-transform: lowercase;
+    /* lowercase 소문자, uppercase 대문자, capitalize 단어 첫글자를 대문자로 */
+}

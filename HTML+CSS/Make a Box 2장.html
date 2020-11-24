@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 박스 만들기</title>
+
+    <link rel="stylesheet" type="text/css" href="resetcss.css">
+    <link rel="stylesheet" type="text/css" href="makebox.css">
+</head>
+<body>
+    <div>
+    <p>박스는 가장자리를 둘러싸고 있는 block 박스와 글줄(line)을 이루고 있는
+        line 박스 그리고 그 안 (in line) 에서 흐르고 있는 inline 박스로 이루어 져 있습니다.
+        line 박스는 눈으로 확인할 수 는 없고 다만, 내부적으로 글줄이 만들어 지면서 자동으로 생성됩니다.
+    </p>
+
+    <p class="marginpadding">마진은 박스 외부 패딩은 박스내부 </p>
+    </div>
+    <hr/>
+
+    <div class="week_movie">
+        <div class="left">123</div>
+        <div class="right">123</div>
+    </div>
+
+    <p>block 박스가 있고 inline 높이가 없고 가로로 늘어진다.
+        inline-block 은 인라인 속성을 가지지만 블록의속성도있다.</p>
+
+    <div class="boxout">
+        <p>박스는 가장자리를 둘러싸고 있는 block 박스와 글줄(line)을 이루고 있는
+            line박스 그리고 그 안(in line) 에서 흐르고 있는 inline박스 로 이루어져 있습니다
+            line 박스는 눈으로 확인할 수 는 없고 다만, 내부적으로 글줄이 만들어 지면서 자동으로 생성됩니다.
+        </p>
+        <p>
+            넘치는 상황에따라 3가지 overflow 속성을 사용해보자
+            이때 overflow 는 넘치면 자르거나 넘치면 스크롤바를 만들거나 한다.
+            그리고 이 3가지 속성들은 모두 4가지 값을 사용하는데
+            overflow 가로와 세로 혹은 둘다 넘치는 상황
+            overflow-y 세로로만 넘치는 상황
+            overflow-x 가로로만 넘치는 상황
+            hidden 을 사용하면
+            overflow hidden 가로 세로 모두 자르기
+            overflow-y hidden 세로방향만 자르고 / 가로방향은 넘칠때만 스크롤바가 생긴다.
+            overflow-y hidden 가로방향만 자르고 / 세로방향은 넘칠때만 스크롤바가 생긴다.
+        </p>
+
+        <p>
+            overflow scroll 가로 세로 모두 스크롤바를 만들어준다.
+            overflow-x scroll 세로방향은 무조건 스크롤바가 생기고 / 가로방향은 넘칠때만 생긴다.
+            overflow-y scroll 가로방향은 무조건 스크롤바가 생기고 / 세로방향은 넘칠때만 생긴다.
+        </p>
+
+        <p>
+            overflow auto 가로/세로 모두 넘칠때만 스크롤바를 만들어준다.
+            overflow-x auto 가로/세로 모두 넘칠때만 스크롤바를 만들어준다.
+            overflow-y auto 가로/세로 모두 넘칠때만 스크롤바를 만들어준다.
+        </p>
+
+        <p>
+            overflow visible 특별히 지정하지 않아도 모든 요소에 적용되는 초기값
+        </p>
+    </div>
+
+    <div class="pama">
+        <ul>padding
+            <li>px 일반적으로 사용하는 단위</li>
+            <li>em 부모상자의 폰트크기에 비례하여 계산</li>
+            <li>% 부모상자의 크기에 비례하여 계산</li>
+            <li>0 초기값</li>
+        </ul>
+        <ul>margin
+            <li>px 일반적으로 사용하는 단위</li>
+            <li>em 부모상자의 폰트크그에 비례하여 계산</li>
+            <li>% 부모상자의 크기에 비례하여 계산</li>
+            <li>auto 상자의 크기를 뺀 나머지값으로 자동으로 계산</li>
+            <li>0 초기값</li>
+        </ul>
+    </div>
+
+    <div class="bordertest">
+        박스안의 내용이 다르면 됩니다. 박스안의 내용이 다르면 됩니다.
+        박스안의 내용이 다르면 됩니다.
+        박스안의 내용이 다르면 됩니다. 박스안의 내용이 다르면 됩니다.
+        박스안의 내용이 다르면 됩니다. 박스안의 내용이 다르면 됩니다.
+        박스안의 내용이 다르면 됩니다.
+        박스안의 내용이 다르면 됩니다. 박스안의 내용이 다르면 됩니다.
+    </div>
+
+    <div class="margintest">
+        <p>박스가 있으면 사이를 띄워야지 </p>
+        <p>박스가 있으면 사이를 띄워야지 </p>
+    </div>
+
+    <div class="margintest1">
+        <p>박스가 박스가</p>
+    </div>
+
+    <div class="story">
+        <h2>험난한 모험가이야기</h2>
+        <div>2011.11.11</div>
+    </div>
+
+    <div class="marginauto1">
+        <p>동해물과백두산이동해물과백두산이동해물과백두산이동해물과백두산이동해물과백두산이동해물과백두산이
+            동해물과백두산이동해물과백두산이동해물과백두산이동해물과백두산이동해물과백두산이동해물과백두산이동해물과백두산이
+            동해물과백두산이동해물과백두산이동해물과백두산이동해물과백두산이동해물과백두산이동해물과백두산이
+        </p>
+    </div>
+
+    <div class="noblock">
+        <p>
+        박스는 가장자리를 둘러싸고있는 block 박스와 글줄 을 이루고 있는 line 박스 그리고 그안 에서
+        흐르고 있는 inline 박스로 이루어져 있습니다. line 박스는 눈으로 확인할 수 는 없고
+        내부적으로 글줄이 만들어 지면서 자동으로 생성됩니다.
+        </p>
+    </div>
+    <hr/>
+    <div class="realative"> absolute 를 사용해서 박스를 만들어보자
+        <div class="absolute">이 구역은 absolute 를 사용해서 만들어졌다.</div>
+    </div>
+
+        <div class="margincall">
+            <p>박스는 가장자리를 둘러싸고있는 block 박스와 글줄 을 이루고 있는 line 박스 그리고 그안 에서
+                흐르고 있는 inline 박스로 이루어져 있습니다. line 박스는 눈으로 확인할 수 는 없고
+                내부적으로 글줄이 만들어 지면서 자동으로 생성됩니다.</p>
+
+
+
+            <p>박스는 가장자리를 둘러싸고있는 block 박스와 글줄 을 이루고 있는 line 박스 그리고 그안 에서
+                흐르고 있는 inline 박스로 이루어져 있습니다. line 박스는 눈으로 확인할 수 는 없고
+                내부적으로 글줄이 만들어 지면서 자동으로 생성됩니다.</p>
+
+
+
+            <p>박스는 가장자리를 둘러싸고있는 block 박스와 글줄 을 이루고 있는 line 박스 그리고 그안 에서
+                흐르고 있는 inline 박스로 이루어져 있습니다. line 박스는 눈으로 확인할 수 는 없고
+                내부적으로 글줄이 만들어 지면서 자동으로 생성됩니다.</p>
+        </div>
+
+
+
+        <div class="imgtest">
+            <p>강아지 뛰어 노는 사진 고양이 노는 사진</p>
+        </div>
+
+        <br/>
+
+        <div class="testbox2">
+            <p class="first">1위 <strong>100%</strong></p>
+            <p class="second">2위 <strong>75%</strong></p>
+            <p class="fourth">4위 <strong>54%</strong></p>
+            <p class="third">3위 <strong>64%</strong></p>
+        </div>
+
+        <hr/>
+
+        <div class="icon">
+            <a href="#" class="like">즐겨찾기</a>
+            <a href="#" class="cat">고양이</a>
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div>
+            <ul class="blockboxtest">
+                <li>빨강</li>
+                <li>노랑빛깔</li>
+                <li>파랑</li>
+                <li>초록</li>
+            </ul>
+            <p>li 는 기본적으로 block 박스로 지정되어있다 이걸 diplay:inline 명령으로
+                in-line 박스(글자)처럼 옆으로 흐르게 만들어준다.
+                그리고 폰트사이즈를 0으로 설정하면 빈공간도 0이되고 자식이 li 에 상속되어
+                상자안의 글자크기도 0이되어 보이지 않게된다.
+                그리고 li에 처음글자크기를 다시 지정해 원래대로 보이게 한다. 공간을 조절하기
+                위해 margin 을 줘서 적당히 공간을 조절하면된다.
+                display: none 은 브라우저상에 존재하지 말라고 선언하는것이다. 삭제하고 옆으로 밀린다.
+                visibility:hidden 은 브라우저상에는 보이지만 시각적으로는 보이지 않게 되어 자리를 차지한다.
+            </p>
+        </div>
+
+        <div>
+            <p class="bordertest">border의 속성 style width color collapse spacing radius image
+                는 각자 보더의 모양 보더의 굵기 색 테이블에서의 보더를 합치기 테이블에서 셀과 셀사이의 간격설정
+                보더에 라운드를 만들거나 원하는 보더스타일을 이미지로 넣는다.
+            </p>
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <div class="hotitem">
+            <div class="itemleft">
+                <h3>이번주 핫딜</h3>
+                <ul>
+                    <li> <a href=""> <img src="cat.png" alt="고양이장난감" width="100px"></a></li>
+                    <li><a href=""><img src="cat2.png" alt="고양이여러마리" width="100px"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="itemright">
+                <p>고양이광고가 들어가기위한 공간입니다 고양이를</p>
+                <a href="" class="iteminfo"><img src="#" alt="광고안내"></a>
+                <a href="" class="btn">광고보기</a>
+            </div>
+        </div>
+
+        <div>
+            <p>1.기본 흐름층 normal flow 층 <br/>
+                3가지 층중 가장 아래의 층으로써 블록박스와 인라인박스가 만들어내는
+                기본흐름에 따라 배치되는 층이다.
+                박스와 박스의 간격 부모박스와 자식박스의 거리를 마진과 패딩으로 밀거나
+                당겨서 배치할 수 있다
+            </p>
+
+            <p>2.Float 층
+                상자끼리 가로배치를 할때 주로 사용되며, float 속성을 사용하여 명령을 하게되고 이때
+                float 층으로 float:left(왼쪽) float:right(오른쪽) 으로 뜨면서 가로로배치된다.
+                이렇게 기본흐름에서 떠오르면서 부모상자나 이후로 나오는 상자들에게 영향을 미치게되며
+                때문에 선명하고 생생하게 이런 상황을 이해하지 못하면 어렵다.
+
+                CSS는 Float을 이용한 가로배치를 보편적으로 사용하는데, CSS3에서는 flex 라는 개념이 있다.
+            </p>
+        </div>
+
+        <br/>
+
+        <div class="main">
+            <div style="background-color: coral;">RED</div>
+            <div style="background-color: lightblue;">BLUE</div>
+            <div style="background-color: lightgreen;">Green div with more content.</div>
+            <div style="background-color: coral;">RED</div>
+            <div style="background-color: lightblue;">BLUE</div>
+            <div style="background-color: lightgreen;">Green div with more content.</div>
+            <div style="background-color: coral;">RED</div>
+            <div style="background-color: lightblue;">BLUE</div>
+            <div style="background-color: lightgreen;">Green div with more content.</div>
+        </div>
+
+        <div>
+            <p>3.절대 독립층
+                3가지 층중에서 가장 위에 있는 층으로서 기본흐름층과 Float층과는 완전 무관하게 됩니다.
+                기본흐름이나 Float 층에 변화가 생겨도 아무런 영향을 받지 않는다는 뜻이다.
+                이 절대독립층은 position:absolute 속성에 top,bottom,left,right 속성으로
+                좌표를 정하는 방식이며, 그 목적에 따라 position 속성의 값을 fixed, relative로 할수있다.
+            </p>
+        </div>
+
+        <div>
+            <p>float 속성은 <br>
+                left 왼쪽으로 당기면서 띄우기 <br>
+                right 오른쪽으로 밀면서 띄우기 <br>
+                none 띄우지 않기 br
+                inherit 부모상자에 적용된 float 속서을 상속받는다.</p>
+        </div>
+
+        <div class="floattest">
+            <div class="photo"></div>
+                <p>LEFT.HTML 은 선형적(linearity)입니다. 브라우저가 위에서 아래로 순서대로(cascading)처리 된다는 말이죠.
+                RIGHT. HTML 은 선형적인(inearity)입니다. 브라우저가 위에서 아래로 순서대로 처리된다는 말이죠.</p>
+        </div>
+
+        <div>
+            <p> 1. 블록이 자리잡는 상태를 새롭게 만드는 방법은 <br>
+                float으로 블록이 자리잡는 상태를 새롭게 만들어 float층으로 들어가고 <br>
+                박스를 밀어버린다. 만일 아래에 다른 상자가 있을경우 그상자가 옆으로 온다.
+
+                2. overflow 로 블록이 자리잡는 상태 를 새롭게 만들때 <br>
+                overflow 를 적용하면 새로운 블록서식문맥을 생성하고 내용물을 다시 감싼다.
+
+                3. diplay:inline-block 으로 블록이 자리잡는 상태를 새롭게 만든다. <br>
+                인라인 블록으로 안리안 속성을 과 블록 속성을 둘다 가지게된다. <br>
+
+                4. 블록이 자리잡는 상태가 일어나면 두가지 현상이 더 일어난다. <br>
+                float 된 자식을 감싸주고 상/하 마진을 가진 자식을 부모가 감싼다. <br>
+                float 된 상자로 들어가지 않는다. float된 상자 아래로 겹치지 않는다. <br>
+
+            </p>
+        </div>
+
+        <div class="floattest middle">
+            <div class="floattest left">
+                <div class="photo"></div>
+                    <p>LEFT.HTML 은 선형적(linearity)입니다. 브라우저가
+                        위에서 아래로 순서대로(cascading)처리 된다는 말이죠.
+                    </p>
+            </div>
+
+
+            <div class="floattest right">
+                <div class="photo"></div>
+                    <p>RIGHT.HTML 은 선형적(linearity)입니다. 브라우저가
+                        위에서 아래로 순서대로(cascading)처리 된다는 말이죠.
+                </p>
+            </div>
+            <p class="bottom">BOTTOM. 저는 세번째 자식입니다.</p>
+        </div>
+
+
+        <div	class="wrap">
+            <div	class="header"></div>
+            <div	class="main">
+                <div	class="left"></div>
+                <div	class="contents"></div>
+            </div>
+            <div	class="footer"></div>
+        </div>
+
+
+
+
+    </body>
+</html>

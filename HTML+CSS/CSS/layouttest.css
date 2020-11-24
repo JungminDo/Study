@@ -1,0 +1,295 @@
+
+.wrap	{
+    margin:0	auto;
+    width:80%;
+    min-width: 500px;
+}
+.header	{
+    height:100px;
+    background-color:black;
+}
+.main	{
+    background-color:orange;
+}
+.contents	{
+    float: left;
+    width: 81.25%;
+    height:400px;
+    background-color:yellow;
+}
+.left	{
+    float: left;
+    width:18.75%;
+    height:200px;
+    background-color:lime;
+}
+.footer	{
+    clear: both;
+    height:80px;
+    background-color:gray;
+}
+
+
+.product {
+    border: 2px solid #999;
+    padding: 20px 10px;
+    width: 540px;
+    overflow: auto;
+    font-size: 0;
+}
+
+.product > li {
+    background-color: #ededed;
+    padding: 10px;
+    margin: 0 10px 20px;
+    width: 140px;
+    list-style: none;
+    display: inline-block;
+    *display: inline;
+    /* float: left; */
+    zoom: 1;
+    font-size: 12px;
+    vertical-align: top; /*수직정렬을 지정한다*
+                            inline 과 table cell 엘리먼트에만 적용된다.*/
+
+}
+
+.product > li > * {
+    display: block;
+    text-align: center;
+
+
+}
+
+.product > li > img {
+    margin-bottom: 10px;
+    width: 140px;
+    height: 100px;
+}
+
+.product > li > span {
+    max-height: 100px;
+    overflow: auto;
+}
+
+.mother {
+    border: 6px solid gray;
+    padding: 20px;
+    width: 300px;
+    display: inline-block;
+    zoom: 1;
+    font-size: 16px;
+    position: static;;
+}
+
+.mother > img {
+    float: left;
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: auto;
+    left: 0;
+    right: auto;
+    bottom: 0;
+}
+
+.mother > p {
+    border: 2px solid lime;
+    margin: 0;
+    position:static;
+}
+
+.maindiv {
+
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+
+
+}
+
+.maindiv.left1 {
+
+    float: left;
+    border: 2px solid black;
+    padding: 20px;
+    width: 280px;
+}
+
+.maindiv.right1 {
+
+    float: left;
+    border: 2px solid black;
+    padding: 20px;
+    width: 280px;
+}
+
+.maindiv > .photo {
+    float: left;
+    width: 50px;
+    height: 30px;
+    margin-right: 20px;
+    border: 1px solid blue;
+}
+
+.bottom3 {
+    clear: both;
+    border: 2px solid lime;
+    margin: 10px;
+}
+.comment {
+    position: absolute;
+    top: -15px;
+    left: auto;
+    right: -15px;
+    bottom: auto;
+    border: 1px solid red;
+}
+
+.comment > span {
+    font-weight: bold;
+    color: red;
+    border: 1px solid red;
+    position: absolute;
+    top: 0px;
+    right: 28px;
+
+}
+
+.offset {
+    background-color: gray;
+    position: relative;
+    height: 200px;
+}
+
+.offson {
+    background-color: yellow;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin: -50px 0 0 -100px;
+
+}
+
+
+.core {
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: lightblue;
+
+}
+
+.coreheader {
+    position: absolute;
+    width: auto;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    background-color: black;
+
+}
+
+.coremain {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    background-color: orange;
+}
+
+.corefooter {
+    position: absolute;
+    width: auto;
+    height: 50px;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+}
+
+.coreleft {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    overflow: auto;
+    background-color: lime;
+}
+
+.corecontents {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 150px;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: yellow;
+}
+
+
+.boxtest > div {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.box1 {
+    background-color: yellow;
+    z-index: 1;
+}
+
+.box2 {
+    background-color: lime;
+    top: -150px;
+    left: 50px;
+    z-index: 100;
+}
+
+.box3 {
+    background-color: green;
+    top: -300px;
+    left: 100px;
+    z-index: 200;
+}
+
+.boxtest > div > div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.son1 {
+    background-color: red;
+    z-index: 500;
+}
+
+
+.son2 {
+    background-color: orange;
+    top: 50px;
+    left: 50px;
+    z-index: 300;
+}

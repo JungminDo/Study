@@ -1,0 +1,85 @@
+
+
+.input_list	input[type="text"]:enabled	{
+    box-shadow:0	0	10px	lime;
+}
+.input_list	input[type="text"]:disabled	{
+    opacity:0.3;
+}
+
+.catimage	{
+    width:800px;
+    height:300px;
+    padding-top:100px;
+    border-radius:10px;
+    text-align:center;
+    background-color: ghostwhite;
+}
+.catimage	a	+	a	{
+    margin:0	20px;
+}
+.catimage	a	img	{
+    width:200px;
+    height:200px;
+}
+
+.catimage a:hover img {
+
+    transform-origin: right top; /* 우측하단 기준으로 확대 */
+    transform: rotate(315deg) scale(1.5);
+
+}
+
+.ticket {
+    display: none;
+}
+
+
+.mainwrap {
+    overflow: hidden;
+    width: 900px;
+    height: auto;
+    background-color: orange;
+    padding: 20px;
+    margin: auto;
+}
+
+.mainwrap > div {
+    overflow: hidden;
+    float: left;
+    width: 280px;
+    height: 150px;
+    background-color: rgb(87, 77, 77);
+    margin: 10px;
+    text-align: center;
+
+}
+
+.mainwrap > div > button {
+    width: 90%;
+    background-color: lightgreen;
+}
+
+.mainwrap > div > a {
+    float: left;
+    margin: 10px 0 0 15px;
+    color:  rgb(230, 223, 211);
+
+}
+
+.mainwrap > div > h2 {
+    color: rgb(230, 223, 211);
+
+}
+
+.comments {
+    display: none;
+}
+
+.result {
+    font-weight: bold;
+}
+
+#payment {
+    text-decoration: underline;
+}

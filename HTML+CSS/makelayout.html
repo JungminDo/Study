@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layoutmake</title>
+
+    <link rel="stylesheet" href="layouttest.css">
+
+</head>
+<body>
+
+    <div	class="wrap">
+        <div	class="header"></div>
+        <div	class="main">
+            <div	class="left"></div>
+            <div	class="contents"></div>
+        </div>
+        <div	class="footer"></div>
+    </div>
+
+    <br/>
+
+    <ul class="product">
+        <li>
+            <img src="cat.png" alt=""/>
+            <strong>청바지</strong>
+            <cite>고양이로 대체됨</cite>
+            <small>20000000원</small>
+
+        </li>
+
+        <li>
+            <img src="cat.png" alt=""/>
+            <strong>고양이</strong>
+            <span>귀여운 고양이!</span>
+            <s>2000000원</s>
+            <em>30000000원</em>
+        </li>
+
+        <li>
+            <img src="cat.png" alt=""/>
+            <strong>점퍼</strong>
+        </li>
+
+        <li>
+            <img src="cat.png" alt=""/>
+            <strong>position 속성</strong>
+            <span>
+            1. absolute 조상이 되는 상자중에서 realative, absolute, fixed 가 지정된 조상을 기준으로
+            떨어져 나와 절대 독립적으로 배치할 때 사용한다. <br>
+            2. realative 기본흐름에 잇는 자신의 자리(공간)을 기준으로 떨어져 나와 절대독립적으로 배치할대 <br>
+            3. fixed 브라우저 viewport를 기준으로 떨어져 나와 절대독립적으로 배치할 때 <br>
+            4. static 절대독립적인 배치가 아닌 상태(초기값) <br>
+            5. inherit 부모의 position 값을 상속받음
+            </span>
+        </li>
+    </ul>
+
+
+            <div class="mother">
+                <img src="cat.png" alt=""/>
+                <p>How can design make learning fell like less...</p>
+            </div>
+                <p>How can design make learning fell like less...</p>
+                <p>How can design make learning fell like less...</p>
+                <p>How can design make learning fell like less...</p>
+                <p>How can design make learning fell like less...</p>
+                <p>How can design make learning fell like less...</p>
+                <p>How can design make learning fell like less...</p>
+                <p>How can design make learning fell like less...</p>
+                <p>position absolute 에 offset 은 top 0 left 0 을 지정하면 <br>
+                    오른쪽과 아랫면은 지정하지 않았기 때문에 초기화값인 auto로 처리되고 <br>
+                    기준을 정할때는 조상상자들 중에 원하는 상자에 realative, absolute fixed 를 지정되면, <br>
+                    그 상자를 기준으로 offset 값의 거리만큼 위치하게 됩니다. 만약지정되지 않으면 html 뷰포트가 기준이된다.
+                </p>
+                <p>
+                    조상이 되는 상자들중에 기준을 삼고 싶은 조상은 postion realative를 줘 기준을 만들고 <br>
+                    .mother 의 윗면과 왼쪽 면에서 0 만큼의 거리로 자신의 윗면 과 왼쪽면을 위치 시킨다. <br>
+                    주의 할점은 기준이 되는 상자의 보더영역 안쪽면이 기준이라는 것이다. <br>
+                    realative 는 있던 자리를 기준으로 offset 값만큼 이동하고 윗면과 왼쪽면값이 0 이기 때문에 움직이지않는다.
+                </p>
+
+
+
+
+                <div class="maindiv">
+                    <div class="maindiv left1">
+                        <div class="photo"></div>
+                        <p>LEFT.HTML 은 선형적입니다. 브라우저가 위에서 아래로 순서대로 처리 된다는 말이죠.</p>
+                        <a class="comment" href="" >
+                            <img src="cat.png" alt="고양이" width="25px">
+                            <span>6</span>
+                        </a>
+                    </div>
+                    <div class="maindiv right1">
+                        <div class="photo"></div>
+                        <p>RIGHT.HTML 은 선형적입니다. 브라우저가 위에서 아래로 순서대로 처리 된다는 밀이죠.</p>
+                        <a class="comment" href="" >
+                            <img src="cat.png" alt="고양이" width="25px">
+                            <span>8441231</span>
+                        </a>
+                    </div>
+                    <p class="bottom3">BOTTOM 3번째 자식입니다.</p>
+                </div>
+
+                <br>
+
+                <div class="offset">
+                    <div class="offson">son</div>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="core">
+                    <div class="coreheader"></div>
+                    <div class="coremain">
+                        <div class="coreleft"></div>
+                        <div class="corecontents"></div>
+                    </div>
+                    <div class="corefooter"></div>
+                </div>
+
+                <br>
+
+            <div class="boxtest">
+                <div class="box1"></div>
+                <div class="box2">
+                    <div class="son1"></div>
+                    <div class="son2"></div>
+                </div>
+                <div class="box3"></div>
+            </div>
+
+
+</body>
+</html>
