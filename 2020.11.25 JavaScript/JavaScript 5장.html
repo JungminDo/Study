@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA Script5장</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="JAVAScript5장.css">
+    <script src="JAVAScript5장.js"></script>
+
+</head>
+<body>
+
+<!--
+    <ul class="navigation">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>javascript</li>
+        <li class="selected">$사용충돌방지</li>
+        <li>function($)</li>
+        <li>$를 로컬변수로</li>
+    </ul>
+-->
+
+    <br/>
+
+    <fieldset>
+        <legend> 기본 </legend>
+        <div class="sample">
+            <ul id="tutorials">
+                <li class="tutorial" id="HTML"> HTML </li>
+                <li class="tutorial" id="CSS"> CSS </li>
+                <li class="tutorial" id="javascript"> javascript </li>
+                <li class="tutorial" id="jquery"> jQuery </li>
+                <li class="tutorial" id="PHP"> PHP </li>
+                <li class="tutorial" id="MYSQL"> MYSQL </li>
+            </ul>
+        <textarea>
+            <ul id="tutorials">
+                <li class="tutorial" id="HTML"> HTML </li>
+                <li class="tutorial" id="CSS"> CSS </li>
+                <li class="tutorial" id="javascript"> javascript </li>
+                <li class="tutorial" id="jquery"> jQuery </li>
+                <li jclass="tutorial" id="PHP"> PHP </li>
+                <li class="tutorial" id="MYSQL"> MYSQL </li>
+            </ul>
+        </textarea>
+        <div class="clear"></div>
+        </div>
+            <input class="btn" type="button" id="#jquerybtn" value="#jquery" /> - id 선택자 <br />
+            <input class="btn" type="button" id=".tutorial" value=".tutorial" /> - class 선택자 <br />
+            <input class="btn" type="button" value="li" /> - 엘리먼트 선택자 <br />
+            <input class="btn" type="button" value="#jquery, #MYSQL" /> - 다중 선택자 <br />
+    </fieldset>
+
+
+    <fieldset>
+        <legend> filter </legend>
+            <div class="sample">
+                <ul id="list">
+                    <li> HTML </li>
+                    <li> CSS </li>
+                    <li> javascript </li>
+                    <li> PHP </li>
+                    <li> MYSQL </li>
+                </ul>
+        <textarea>
+            <ul id="list">
+                <li> HTML </li>
+                <li> CSS </li>
+                <li> javascript </li>
+                <li> PHP </li>
+                <li> MYSQL </li>
+            </ul>
+        </textarea>
+            <div class="clear"></div>
+            </div>
+                <input class="btn" type="button" value="#list li:eq(2)" /> - 인자와 인덱스가 동일한 엘리먼트를 찾아내는 선택자 <br />
+                <input class="btn" type="button" value="#list li:gt(1)" /> - 인자 보다 인덱스가 큰 엘리먼트를 찾아내는 선택자 <br />
+                <input class="btn" type="button" value="#list li:lt(2)" /> - 인자 보다 인덱스가 작은 엘리먼트를 찾아내는 선택자 <br />
+                <input class="btn" type="button" value="#list li:even" /> - 첫번째, 세번째... 홀 수의 인덱스 값을 가진 엘리먼트에 대한 선택자 <br />
+                <input class="btn" type="button" value="#list li:odd" /> - 두번째, 네번째.... 짝 수의 인덱스 값을 가진 엘리먼트에 대한 선택자 <br />
+                <input class="btn" type="button" value="#list li:first" /> - 첫번재 인덱스 엘리먼트에 대한 선택자 <br />
+                <input class="btn" type="button" value="#list li:last" /> - 마지막 인덱스 엘리먼트에 대한 선택자 <br />
+    </fieldset>
+
+
+    <fieldset>
+        <legend> 속성 </legend>
+            <div class="sample">
+                <ul id="attribute">
+                    <li target="ABCD">ABCD</li>
+                    <li target="BCDE">BCDE</li>
+                    <li target="CDEF">CDEF</li>
+                    <li target="DEFG">DEFG</li>
+                    <li target="EFGH">EFGH</li>
+                    <li id="FGHI" target="FGHI">FGHI</li>
+                </ul>
+        <textarea>
+            <ul id="attribute">
+                <li target="ABCD">ABCD</li>
+                <li target="BCDE">BCDE</li>
+                <li target="CDEF">CDEF</li>
+                <li target="DEFG">DEFG</li>
+                <li target="EFGH">EFGH</li>
+                <li id="FGHI" target="FGHI">FGHI</li>
+            </ul>
+        </textarea>
+            <div class="clear"></div>
+        </div>
+            <input class="btn" type="button" value="[target*=&quot;BC&quot;]" /> - 속성의 값에 주어진 문자열이 포함되는 엘리먼트를 찾아내는 선택자 <br />
+            <input class="btn" type="button" value="[target=&quot;DEFG&quot;]" /> - 속성의 값과 주어진 문자열이 일치하는 엘리먼트를 찾아내는 선택자 <br />
+            <input class="btn" type="button" value="[target!=&quot;DEFG&quot;]" /> - 속성의 값과 주어진 문자열이 일치하지 않는 엘리먼트를 찾아내는 선택자 <br />
+            <input class="btn" type="button" value="[target^=&quot;B&quot;]" /> - 속성의 값으로 주어진 문자열이 처음 등장하는 엘리먼트를 찾아내는 선택자 <br />
+            <input class="btn" type="button" value="[target$=&quot;H&quot;]" /> - 속성의 값으로 주어진 문자열이 마지막으로 등장하는 엘리먼트를 찾아내는 선택자 <br />
+            <input class="btn" type="button" value="[target]" /> - 속성이 존재하는 엘리먼트를 찾아내는 선택자 <br />
+            <input class="btn" type="button" value="[target][id]" /> - 속성들이 존재하는 엘리먼트를 찾아내는 선택자
+    </fieldset>
+    <fieldset>
+        <legend>Form</legend>
+            <div class="live">
+                <div>
+                    <input type="text" disabled="disabled" value="disabled" />
+                    <input type="text" value="enabled"/>
+                </div>
+                <div><input type="checkbox" checked="checked" /></div>
+                <div><input type="checkbox" /></div>
+            </div>
+                <textarea class="sample">
+                    <div>
+                        <input type="text" disabled="disabled" value="disabled" />
+                        <input type="text" value="enabled"/>
+                    </div>
+                    <div><input type="checkbox" checked="checked" /></div>
+                    <div><input type="checkbox" /></div>
+                </textarea>
+        <div class="clear"></div>
+            <input class="btn" type="button" value="[type=&quot;text&quot;]" /> - 폼 엘리먼트를 선택할 때는 속성 셀렉터를 사용한다. <br />
+            <input class="btn" type="button" value="[type=&quot;text&quot;]:disabled" /> - disabled 속성의 값이 disabled인 엘리먼트를 찾아내는 선택자<br />
+            <input class="btn" type="button" value="[type=&quot;text&quot;]:enabled" /> - disabled 속성의 값이 enabled인 엘리먼트를 찾아내는 선택자<br />
+            <input class="btn" type="button" value="input:checked" /> - 체크박스 중 체크가 된 엘리먼트를 찾아내는 선택자 <br />
+    </fieldset>
+
+    <br/>
+        <a id="tutorial22" href="http://jquery.com" target="_self">jQuery</a>
+
+    <br/>
+    <br/>
+
+        <input id="click_me" type="button" value="click me">
+        <input id="remove_event" type="button" value="unbind">
+        <input id="trigger_event" type="button" value="trigger">
+
+        <p class="element">
+            I would like to say:
+        </p>
+
+        <p class="remove-p">
+            Hwo?
+        </p>
+
+        <p class="replace-p">
+            no~~ change me!
+        </p>
+
+        <br/>
+
+        <button class="remove-btn">
+            Call remove() on paragraphs
+        </button>
+
+        <br/>
+
+        <button class="replaceAll-btn">
+            replaceAll() on
+        </button>
+
+        <br/>
+
+        <button class="replaceWith-btn">
+            replaceWith() on
+        </button>
+
+    <div class="classtest">
+        <p class="blue">Click to toggle </p>
+        <p class="blue highlight"> highlight </p>
+        <p class="blue"> on these </p>
+        <p class="blue"> paragraphs </p>
+    </div>
+
+    <br/>
+    <br/>
+
+    <input class="attr-ctl" type="text" value="some text"/>
+
+    <p class="text-ctl">
+
+    </p>
+
+    <br/>
+
+    <div>
+        <p><strong>수의 연산</strong></p>
+        <p>Math.pow(3,2);     // 9,  3의2승</p>
+        <p>Math.round(10.6);  // 11, 10.6을 반올림</p>
+        <p>Math.ceil(10.2);   // 11, 10.2을 올림</p>
+        <p>Math.floor(10.6);  // 10, 10.6을 내림</p>
+        <p>Math.sqrt(9);      // 3,  3의 제곱근</p>
+        <p>Math.random();     // 0부터, 1.0 사이의 랜덤한 숫자</p>
+        <p><strong>문자의 표현 string</strong></p>
+        <p>alert('coding everyday') 작은 따옴표는 작은 따옴표로 끝나야 한다.</p>
+        <p>alert("coding everyday") 큰은 따옴표는 큰 따옴표로 끝나야 한다.</p>
+        <p>alert(typeof"1") 숫자를 따옴표로 감싸면 문자가 된다. typeof는 데이터 형을 알려준다.</p>
+        <p>alert(typeof 1 ) 따옴표가 없으면 숫자로 출력 </p>
+        <p>alert('kipgoing\'s javascript') 작은 따옴표를 문자열 안에 포함시킬수 있다.</p>
+        <p>alert('안녕하세요.\n 코딩을 해봅시다.') \n은 줄바꿈을 의미하는 특수한 문자이다.</p>
+        <p>alert('coding'+'good')문자와 문자를 더할 때는 + 기호를 넣어준다.</p>
+        <p>alert('coding good'.length)뒤에 .length 를 붙이면 문자의 길이를 구한다.</p>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div>
+        <p>prompt() 구문은 사용자가 입력한 값을 가져와서 id 변수의 값으로 대입한다. api 또는 함수</p>
+        <p>boolean 의 대체재 로는 0(true) 과 1(false) 가 있다. </p>
+        <p>while 문 은  while(조건) 괄호안의 조건이 참이면 중괄호 안의 코드 구간을 반복적으로 실행한다.</p>
+        <p>함수 내에서 사용한 return 은 return 뒤에 따라오는 값을 함수의 결과로 반환한다.</p>
+        <p>인자란? 인자(argument)는 함수로 유입되는 입력 값을 의미하는데, 어떤 값을 인자로 전달하느냐에 <br/>
+            따라서 함수가 반환하는 값이나 메소드의 동작방법을 다르게 할 수 있다.</p>
+    </div>
+
+    <div>
+        <p>
+        배열(array)이란 연관된 데이터를 모아서 통으로 관리하기 위해서 사용하는 데이터 타입이다. 변수가 하나의 데이터를 <br/>
+        저장하기 위한 것이라면 배열은 여러개의 데이터를 하나의 변수에 저장하기 위한 것이다
+        </p>
+        <p>var name = 'kor' name 이라는 변수에 문자 kor 이 할당되고 name 을 호출하면 문자 kor 이 온다.</p>
+        <p>여러개의 데이터를 배열에 넣을려면  [ ] 를 쓰고 콤마(,) 로 구분지어주면된다.</p>
+        <p>var name = ['kor', 'jpa', 'hong']</p>
+        <p>하나의 변수에 3개의 데이터를 담았다. 각각의 데이터를 원소(element)라고 부른다. 데이터를 불러오려면</p>
+        <p>alert(name[0]); 이라고 불러오면된다.</p>
+    </div>
+
+    <div>객체의 생성방법</div>
+    <div>API 란 ? Application Programming Interface 의 약자로 프로그램이 동작하는 환경을 제어하기 위해서 한경에서 제공되는
+        조작 장치이다. 이 조작 장치는 프로그래밍 언어를 통해서 조작할 수 있다.
+    </div>
+
+    <div>정규 표현식 패턴
+    var pattern = /a/
+
+    정규 표현식 객체 생성자
+    var pattern = new RegExp('a');
+
+    두가지 모두 같은 결과를 만들지만 각자의 장단점이 존재한다.
+
+    </div>
+
+
+
+
+
+</body>
+</html>

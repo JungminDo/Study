@@ -1,0 +1,76 @@
+/*
+.navigation > li {
+    list-style: none;
+    float: left;
+    padding: 5px;
+}
+
+.navigation {
+    cursor: pointer;
+}
+
+.navigation .selected {
+    background-color: red;
+    color: white;
+}
+ */
+
+/*
+body {
+    font-size: 12px;
+} */
+
+.selected, .selected_parent {
+    background-color: red !important;
+    columns: white;
+    border: 2px solid red !important;
+}
+
+input.btn {
+    width: 130px;
+}
+
+ul, .live {
+    float: left;
+    width: 150px;
+    padding: 0 0 0 20px;
+    margin: 0;
+}
+
+textarea {
+    float: left;
+    width: 400px;
+    height: 150px;
+    font-size: 11px;
+    margin: 0 0 0 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+.sample{
+    margin: 0 0 20px 0;
+}
+
+.element {
+    background-color: rgba(255, 255, 0, 0.205);
+}
+
+
+.classtest > p {
+    margin: 4px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+.blue {
+    color: blue;
+
+}
+
+.highlight {
+    background-color: yellow;
+}
