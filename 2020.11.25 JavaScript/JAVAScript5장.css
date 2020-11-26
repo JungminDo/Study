@@ -20,6 +20,17 @@ body {
     font-size: 12px;
 } */
 
+
+fieldset {
+    width: 800px;
+    margin: auto;
+}
+
+section {
+
+ text-align: center;
+}
+
 .selected, .selected_parent {
     background-color: red !important;
     columns: white;
