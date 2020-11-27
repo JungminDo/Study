@@ -1,0 +1,180 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+
+ul, li {
+        list-style: none;
+    }
+a {
+    text-decoration: none;
+}
+
+.wrap {
+    position: relative;
+    min-width: 1280px;
+    margin: 0;
+}
+
+.header {
+    position: absolute;
+    min-width: 1280px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    border-top: 5px solid rgb(150, 145, 145);
+    margin: auto;
+}
+
+.menu {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+
+.menu .logo {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    margin-left: -100px;
+    transition-duration: 0.3s;
+}
+
+#main_nav {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    text-align: center;
+    display: block;
+    background-color: white;
+}
+
+#main_nav > ul {
+
+    display: inline-block;
+}
+
+#main_nav > ul > li {
+    float: left;
+    width: 160px;
+    position: relative;
+}
+
+.mn1 {
+    font-size: 18px ;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    z-index: 3;
+    padding-top: 10px;
+    display: block;
+
+}
+
+
+.me2 > ul > li {
+
+    height: 50px;
+    background-color: white;
+    z-index: 100;
+    margin: -15px 40px 0 0;
+
+}
+
+
+.me2 {
+    display: none;
+    margin-top: 40px;
+
+}
+
+ /* Center 이미지 밑 버튼 */
+
+.center_main {
+    float: left;
+    position: relative;
+    width: 100%;
+    top: 150px;
+    margin: auto;
+    z-index: -50;
+}
+/* bxSlider 적용 */
+.center_img_slider > div > p {
+
+    width: 100%;
+    height: 480px;
+    background: lightblue;
+    text-align: center;
+}
+
+.left_menu {
+    float: left;
+}
+
+.right_menu {
+    float: right;
+}
+
+
+/* study-site AND QA */
+
+.quick_link {
+    overflow: hidden;
+    position: absolute;
+    left: 40%;
+    bottom: 160px;
+    width: 1170px;
+    margin-left: -500px;
+    text-align: right;
+    z-index: 5;
+}
+
+.quick_link_content {
+    overflow: hidden;
+    float: right;
+    display: table;
+}
+
+.quick_link_content > div {
+
+    display: table-cell;
+    vertical-align: bottom;
+    height: 80px;
+}
+
+.quick_link_content > div > a {
+    display: block;
+    width: 300px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.study_site {
+    background-color: orange;
+    border-radius: 30px 0 0 0;
+    float: left;
+    transition-duration: 0.2s;
+    letter-spacing: -0.02em;
+}
+
+.quick_link_content > div > a > strong {
+    color: black;
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 27px 0 0 0;
+}
+
+.study_QA {
+    background-color: #009223;
+    border-radius: 0 0 30px 0;
+    float: right;
+    letter-spacing: -0.05em;
+}
