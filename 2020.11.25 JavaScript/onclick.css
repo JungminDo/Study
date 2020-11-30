@@ -52,6 +52,7 @@ a {
     text-align: center;
     display: block;
     background-color: white;
+
 }
 
 #main_nav > ul {
@@ -65,7 +66,7 @@ a {
     position: relative;
 }
 
-.mn1 {
+.menu_nav {
     font-size: 18px ;
     color: black;
     font-weight: bold;
@@ -77,23 +78,24 @@ a {
 }
 
 
-.me2 > ul > li {
+.menu_content > ul > li {
 
-    height: 50px;
+    height: 42px;
     background-color: white;
     z-index: 100;
-    margin: -15px 40px 0 0;
+    margin: 0 40px 0 0;
 
 }
 
 
-.me2 {
+.menu_content {
     display: none;
     margin-top: 40px;
 
+
 }
 
- /* Center 이미지 밑 버튼 */
+ /* Center 이미지 및 버튼 */
 
 .center_main {
     float: left;
@@ -103,6 +105,7 @@ a {
     margin: auto;
     z-index: -50;
 }
+
 /* bxSlider 적용 */
 .center_img_slider > div > p {
 
@@ -112,24 +115,17 @@ a {
     text-align: center;
 }
 
-.left_menu {
-    float: left;
-}
-
-.right_menu {
-    float: right;
-}
 
 
-/* study-site AND QA */
+/* study-site AND QA  사이트 검색 문의 게시판*/
 
 .quick_link {
     overflow: hidden;
     position: absolute;
     left: 40%;
-    bottom: 160px;
+    bottom: 690px;
     width: 1170px;
-    margin-left: -500px;
+    margin-left: -400px;
     text-align: right;
     z-index: 5;
 }
@@ -177,4 +173,164 @@ a {
     border-radius: 0 0 30px 0;
     float: right;
     letter-spacing: -0.05em;
+}
+
+
+/* center main 메뉴들 */
+
+ .center_study_menu {
+    background-color: rgb(235, 226, 226);
+    padding: 60px 0 0;
+    height: 600px;
+
+}
+
+.hd {
+    width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 33px;
+    position: relative;
+}
+
+.hd > h2 {
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: font_sw, sans-serif;
+    min-height: 60px;
+    padding: 17px 0 0 25px;
+    margin-bottom: 1px;
+}
+
+.tab_study_menu {
+    position: absolute;
+    right: 0;
+    top: 44px;
+}
+
+.tab_study_menu > ul {
+    overflow: hidden;
+}
+
+.tab_study_menu > ul > li:first-child {
+    padding: 0;
+    margin: 0;
+}
+
+.tab_study_menu > ul > li {
+    float: left;
+    position: relative;
+    margin-left: 23px;
+    padding: 0 0 0 25px;
+}
+
+.tab_study_menu ul > li > a {
+    display: block;
+    font-size: 16px;
+    color: green;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+
+
+}
+
+.tab_study_menu > ul > li.active > a {
+    color: blue;
+    font-weight: bold;
+}
+
+.tab_study_menu >  ul > li:first-child:after {
+    display: none;
+}
+
+.tab_study_menu >  ul > li:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 1px;
+    height: 15px;
+    background-color: gray;
+    ;
+}
+
+.center_study_ment {
+    text-align: center;
+
+}
+
+
+
+
+
+
+.left_menu {
+    float: left;
+    width: 500px;
+    height: 350px;
+    margin: 0 0 0 50px;
+    border: 1px solid blue;
+    text-align: center;
+}
+
+.right_menu {
+    float: right;
+    width: 500px;
+    height: 350px;
+    margin: 0 50px 0 0;
+    border: 1px solid blue;
+    text-align: center;
+}
+
+
+
+
+/* 팝업기능 */
+
+.openpopup_wrapper{
+    z-index: 999;
+    background-color: orange;
+    padding: 10px 10px 0 ;
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    top: 200px;
+    left: 200px;
+}
+
+.openpopup_content {
+    display: block;
+    width: 360px;
+    height: 360px;
+}
+
+
+.openpopup_footer {
+    height: 28px;
+    position: relative;
+}
+
+.openpopup_footer > label {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.openpopup_footer label input {
+    vertical-align: middle;
+    position: relative;
+    top: 7px;
+    float: left;
+}
+
+.openpopup_footer label img {
+    display: block;
+    float: left;
+}
+
+.openpopup_footer .close {
+    position: absolute;
+    right: 21px;
+    top: 0;
 }
