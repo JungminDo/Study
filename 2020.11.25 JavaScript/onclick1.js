@@ -9,6 +9,7 @@
 
         // 자연스럽게 위로 숨기는방법? show hide 는 좌표 기준 0,0 에서부터 시작한다.
         // .stop() 으로 버블링을 막는다.
+        // swiper 슬라이드 써보기 bx바꾸기
 
         $('#main_nav').on('mouseenter', function(){
 
@@ -23,7 +24,7 @@
 
     });
 
-    $('.center_img_slider').bxSlider();
+    // $('.center_img_slider').bxSlider();
 
         // 팝업창 오늘 하루 안보이기
         // F5누르면 초기화 쿠키가 이유 같은데
@@ -75,6 +76,74 @@
                 }
             });
 
+
+            // Swiper 슬라이드 적용
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    },
+                    navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    },
+                });
+
+
+
+
+    // 탭메뉴 color 바꾸기
+    // 살짝살짝 벌어지는거 잡는 방법은?
+    $('.tab_study_menu ul li a').on('click', function () {
+		var tg = $(this).attr('href');
+		$(this).parent('li').addClass('active').siblings('li').removeClass('active');
+    });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             //오늘하루 안보이기 예제2
 
    /*
@@ -117,16 +186,8 @@
     */
 
 
-    // 탭메뉴 color 바꾸기
-    // 살짝살짝 벌어지는거 잡는 방법은?
-    $('.tab_study_menu ul li a').on('click', function () {
-		var tg = $(this).attr('href');
-		$(this).parent('li').addClass('active').siblings('li').removeClass('active');
-    });
 
 
-
-});
 
 
     /*
@@ -144,23 +205,5 @@
     }
 
 
-          // 팝업 예제1번
-    function openpopup(){
-        var url = 'popup.html';
-        var name = 'popup test';
-        var option = 'width = 500, height = 500, top= 100, left = 200, location = no'
-        window.open(url, name, option);
-    }
 
     */
-
-
-    /* center_study_menu 탭 메뉴 만들기 */
-    /*
-    function pdTab_Sort () {
-        var  $hash = window.location.hash;
-        var spd = 0.5;
-        var eft = power4,easeInout;
-        var tg;
-    }
-     */

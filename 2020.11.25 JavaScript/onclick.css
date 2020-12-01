@@ -106,7 +106,7 @@ a {
     z-index: -50;
 }
 
-/* bxSlider 적용 */
+/* bxSlider 적용
 .center_img_slider > div > p {
 
     width: 100%;
@@ -114,6 +114,38 @@ a {
     background: lightblue;
     text-align: center;
 }
+ */
+
+/* Swiper 슬라이드 적용*/
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 500px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
 
 
 
@@ -259,9 +291,13 @@ a {
 
 }
 
+.left_menu ul {
+    padding: 0;
+}
 
-
-
+.right_menu ul {
+    padding: 0;
+}
 
 
 .left_menu {

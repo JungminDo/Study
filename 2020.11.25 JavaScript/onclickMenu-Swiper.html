@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>onclickMenu</title>
-    <link rel="stylesheet" href="onclick.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> <!-- bxslider 1 -->
+    <title>onclickMenu-Swiper</title>
+
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">       <!-- Swiper 1 -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">   <!-- Swiper 2 -->
-
+    <link rel="stylesheet" href="onclick.css"/>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>               <!-- Swiper 3 -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>           <!-- Swiper 4 -->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>     <!-- bxslider 2 -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>             <!-- jquery -->
     <script src="onclick1.js"></script>
 
 
@@ -167,11 +165,25 @@
 
         <div class="center_study">
             <a href="#none">
-            <div class="center_img_slider">
-                <div><p>첫번째 슬라이더</p></div>
-                <div><p>두번째 슬라이더</p></div>
-                <div><p>세번째 슬라이더</p></div>
-            </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">Slide 10</div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             <div class="quick_link">
                 <div class="quick_link_content">
                     <div class="study_site">

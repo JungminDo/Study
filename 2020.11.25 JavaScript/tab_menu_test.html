@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴 연습1번</title>
+
+    <link rel="stylesheet" href="tab_menu_css.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+<body>
+
+    <div class="content">
+        <ul class="menu nav">
+            <li class="menu1">메뉴1번</li>
+            <li class="menu2">메뉴2번</li>
+            <li class="menu3">메뉴3번</li>
+            <li class="menu4">메뉴4번</li>
+            <li class="menu5">메뉴5번</li>
+        </ul>
+        <div class="menu tab">
+            <div class="menu1" style="background-color: red;"></div>
+            <div class="menu2" style="background-color: blue;"></div>
+            <div class="menu3" style="background-color: green;"></div>
+            <div class="menu4" style="background-color: gray;"></div>
+            <div class="menu5" style="background-color: orange;"></div>
+        </div>
+    </div>
+    <div class="content">
+        <ul class="menu nav">
+            <li class="menu1">메뉴1번</li>
+            <li class="menu2">메뉴2번</li>
+            <li class="menu3">메뉴3번</li>
+            <li class="menu4">메뉴4번</li>
+            <li class="menu5">메뉴5번</li>
+        </ul>
+        <div class="menu tab">
+            <div class="menu1" style="background-color: black;"></div>
+            <div class="menu2" style="background-color: lime;"></div>
+            <div class="menu3" style="background-color: yellow;"></div>
+            <div class="menu4" style="background-color: purple;"></div>
+            <div class="menu5" style="background-color: pink;"></div>
+        </div>
+    </div>
+
+
+
+</body>
+
+    <script>
+        (function(){
+            $.fn.menuBar = function() {
+                var $menuBar = null,
+                    $menuList = null,
+                    $menuSelect = null;
+
+                    function init(el){
+                        $menuBar = $(el);
+                        $menuList = $menuBar.find('li');
+                    }
+                    function event(){
+                        $menuList.on('click', function(){
+                            if($menuSelect)
+                                $menuSelect.removeClass('active');
+                                $menuList.removeClass('active');
+                                $menuSelect = $(this);
+                                $menuSelect.addClass('active');
+                                $menuSelect.parent('ul').next().children().eq($(this).index()).show.siblings().hide();
+                        })
+                    }
+                    init($(this));
+                    event();
+            }
+        })(jQuery);
+
+
+
+    </script>
+
+
+
+</html>
