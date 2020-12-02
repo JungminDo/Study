@@ -87,9 +87,19 @@
                     clickable: true,
                     },
                     navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-button-next',  // 다음 버튼
+                    prevEl: '.swiper-button-prev',  // 이전 버튼
                     },
+                    breakpoints: {
+                        1024: {
+                        allowTouchMove: false,
+                        // fals의 경우 슬라이드를 전환 할 수 있는  유일한 방법은
+                        // slide prev slide Next만 사용해야한다.
+                        followFinger: false
+                        // 비활성화하면 슬라이더를 놓을때만 애니메이션이 적용되며
+                        // 손가락을 잡고 있는 동안에는 움직이지 않는다.
+                        }
+                    }
                 });
 
 
