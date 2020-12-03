@@ -147,6 +147,11 @@ a {
   }
 
 
+  .swiper-slide > img {
+      width: 1200px;
+
+  }
+
 
 
 /* study-site AND QA  사이트 검색 문의 게시판*/
@@ -155,7 +160,7 @@ a {
     overflow: hidden;
     position: absolute;
     left: 40%;
-    bottom: 690px;
+    bottom: 60%;
     width: 1170px;
     margin-left: -400px;
     text-align: right;
@@ -184,7 +189,7 @@ a {
 }
 
 .study_site {
-    background-color: orange;
+    background-color: rgb(253, 185, 59, 0.6);
     border-radius: 30px 0 0 0;
     float: left;
     transition-duration: 0.2s;
@@ -201,10 +206,11 @@ a {
 }
 
 .study_QA {
-    background-color: #009223;
+    background-color: rgb(188, 204, 207, 0.6);
     border-radius: 0 0 30px 0;
     float: right;
     letter-spacing: -0.05em;
+
 }
 
 
@@ -213,7 +219,7 @@ a {
  .center_study_menu {
     background-color: rgb(235, 226, 226);
     padding: 60px 0 0;
-    height: 600px;
+
 
 }
 
@@ -256,7 +262,7 @@ a {
     padding: 0 0 0 25px;
 }
 
-.tab_study_menu ul > li > a {
+.tab_study_menu ul > li {
     display: block;
     font-size: 16px;
     color: green;
@@ -266,7 +272,7 @@ a {
 
 }
 
-.tab_study_menu > ul > li.active > a {
+.tab_study_menu > ul > li.active {
     color: blue;
     font-weight: bold;
 }
@@ -318,12 +324,25 @@ a {
     text-align: center;
 }
 
+/* 탭메뉴  */
 
+
+.tab-content{
+    display: none;
+    padding: 12px;
+    width: 650px;
+    margin: auto;
+}
+
+.tab-content.active {
+    display: inherit;
+}
 
 
 /* 팝업기능 */
 
 .openpopup_wrapper{
+    display: none;
     z-index: 999;
     background-color: orange;
     padding: 10px 10px 0 ;
@@ -332,6 +351,7 @@ a {
     position: fixed;
     top: 200px;
     left: 200px;
+
 }
 
 .openpopup_content {

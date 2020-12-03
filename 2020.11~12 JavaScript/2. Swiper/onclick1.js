@@ -82,24 +82,35 @@
                 slidesPerView: 1,
                 spaceBetween: 30,
                 loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
+                autoplay: 2000,
+                // pagination: {
+                //     el: '.swiper-pagination',
+                //     clickable: true,
+                //     },
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
                     },
                     navigation: {
-                    nextEl: '.swiper-button-next',  // 다음 버튼
-                    prevEl: '.swiper-button-prev',  // 이전 버튼
+                    // nextEl: '.swiper-button-next',  // 다음 버튼
+                    // prevEl: '.swiper-button-prev',  // 이전 버튼
                     },
                     breakpoints: {
                         1024: {
-                        allowTouchMove: false,
+                        // allowTouchMove: false,
                         // fals의 경우 슬라이드를 전환 할 수 있는  유일한 방법은
                         // slide prev slide Next만 사용해야한다.
-                        followFinger: false
+                        // followFinger: false
                         // 비활성화하면 슬라이더를 놓을때만 애니메이션이 적용되며
                         // 손가락을 잡고 있는 동안에는 움직이지 않는다.
                         }
                     }
+                    // on : {
+                    //     init: function(){
+                    //     swiper.slideToLoop(0)
+
+                    //     }
+                    // }
                 });
 
 
@@ -107,10 +118,30 @@
 
     // 탭메뉴 color 바꾸기
     // 살짝살짝 벌어지는거 잡는 방법은?
-    $('.tab_study_menu ul li a').on('click', function () {
-		var tg = $(this).attr('href');
-		$(this).parent('li').addClass('active').siblings('li').removeClass('active');
+    // $('.tab_study_menu ul li a').on('click', function () {
+	// 	var tg = $(this).attr('href');
+	// 	$(this).parent('li').addClass('active').siblings('li').removeClass('active');
+    // });
+
+
+    $('.tab_study_menu ul li ').on('click', function () {
+	    var tab_id = $(this).attr('data-tab');
+
+        $('.tab_study_menu ul li').removeClass('active');
+        $('.tab-content').removeClass('active');
+
+        $(this).addClass('active');
+        console.log('add')
+        $("#" + tab_id).addClass('active');
+        console.log('add33')
     });
+
+
+
+
+
+
+
 
 });
 

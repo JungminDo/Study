@@ -12,7 +12,11 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>           <!-- Swiper 4 -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>             <!-- jquery -->
     <script src="onclick1.js"></script>
-
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    #stars
+    #stars2
+    #stars3
+    #title
 
 </head>
 <body>
@@ -167,22 +171,26 @@
             <a href="#none">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
-                        <div class="swiper-slide">Slide 10</div>
+                        <div class="swiper-slide"><img src="../images/geese.jpg" alt="">    </div>
+                        <div class="swiper-slide"><img src="../images/squirrel.jpg" alt=""> </div>
+                        <div class="swiper-slide"><img src="../images/sail.jpg" alt="">     </div>
+                        <div class="swiper-slide"><img src="../images/squirrel.jpg" alt=""> </div>
+                        <div class="swiper-slide"><img src="../images/sail.jpg" alt="">     </div>
+                        <div class="swiper-slide"><img src="../images/squirrel.jpg" alt=""> </div>
+                        <div class="swiper-slide"><img src="../images/geese.jpg" alt="">    </div>
+                        <div class="swiper-slide"><img src="../images/sail.jpg" alt="">     </div>
+                        <div class="swiper-slide"><img src="../images/geese.jpg" alt="">    </div>
+                        <div class="swiper-slide"><img src="../images/sail.jpg" alt="">     </div>
+                        <div class="swiper-slide"><img src="../images/geese.jpg" alt="">    </div>
+                        <div class="swiper-slide"><img src="../images/squirrel.jpg" alt=""> </div>
                     </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
                         <!-- Add Arrows -->
+                        <!--
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
+                        -->
                 </div>
             <div class="quick_link">
                 <div class="quick_link_content">
@@ -199,17 +207,17 @@
                     <h2>HTML CSS JS 선택하세요</h2>
                     <div class="tab_study_menu">
                         <ul>
-                            <li class="active">
-                                <a href="#none">HTML</a>
+                            <li class="tab-menu active" data-tab="tab-1">
+                                HTML
                             </li>
-                            <li class="">
-                                <a href="#none">CSS</a>
+                            <li class="tab-menu" data-tab="tab-2">
+                                CSS
                             </li>
-                            <li class="">
-                                <a href="#none">JavaScript</a>
+                            <li class="tab-menu" data-tab="tab-3">
+                                JavaScript
                             </li>
-                            <li class="">
-                                <a href="#none">구글검색</a>
+                            <li class="tab-menu" data-tab="tab-4">
+                                구글검색
                             </li>
                         </ul>
                     </div>
@@ -228,6 +236,31 @@
                 </div>
             </a>
                 <h2 class="center_study_ment">당신을 위한 다채로운 HTML CSS 공부법을 배워 보세요!</h2>
+
+                    <div id="tab-1" class="tab-content active">
+                        <h1>탭 메뉴 1번의 내용입니다.</h1>
+                        <p>탭 메뉴 1번의 내용은 나랏말씀이 딍귝에 달해 서로의 말싸미 아닛띠 </p>
+                        <p>이러한 역경과 고난을 견뎌내고 우리의 한글 이 만들어지게 되었다.</p>
+                    </div>
+
+                    <div id="tab-2" class="tab-content">
+                        <h1>탭 메뉴 2번의 내용입니다.</h1>
+                        <p>이! 밤이 지나아면 우린 서로의 길을 가고 이 밤이 지나아면 우린</p>
+                        <p>그렇게 떠나야만 하나아아아!~</p>
+                    </div>
+
+                    <div id="tab-3" class="tab-content">
+                        <h1>탭 메뉴 3번의 내용입니다.</h1>
+                        <p>data-tab 색인번호 찾아서 가는방식 앞에 data 는 정의 되어있다.</p>
+                        <p>뒤의 -tab 구문에는 다른 변수값을 써도 가능하다.</p>
+                    </div>
+
+                    <div id="tab-4" class="tab-content">
+                        <h1>탭 메뉴 4번의 내용입니다.</h1>
+                        <p>가능하면 -tab 이구문에는 흔한 value 같은 값은 쓰지 않는것이좋다.</p>
+                        <p>data-tab 만들어 봤으니 다른 방식으로도 만들어봅시다.</p>
+                    </div>
+
                     <div class="left_menu">
                         <span class="now_study">지금 바로 시작하세요</span>
                         <br>
@@ -251,7 +284,7 @@
 
             <div class="openpopup_wrapper" id="popup01">
                 <div class="openpopup_content">
-                    <img src="cat.png" alt="사회적 거리두기 팝업">
+                    <img src="../images/sail.jpg" alt="사회적 거리두기 팝업" width="400px" height="360px">
                 </div>
                 <div class="openpopup_footer">
                     <label>
@@ -259,7 +292,7 @@
                         <img src="notToday.jpg" alt="하루 동안 보지 않기">
                     </label>
                         <a class="close" href="#" id="close_popup01">
-                            <img src="test_close.jpg" alt="닫기">
+                            <img src="exit.jpg" alt="닫기">
                         </a>
                 </div>
             </div>
