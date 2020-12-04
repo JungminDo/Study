@@ -53,7 +53,7 @@
 
             // 오늘 하루 안보기
             $(".notToday").click(function () {
-                var popupId = $(this).attr("id").replace("notToday_", "");
+                var popupId = $(this).attr("id").replace("notToday-", "");
 
                 setCookie(popupId, "Y", "1");
                 $("#" + popupId).hide();
@@ -62,15 +62,15 @@
 
             // 닫기
             $("a.close").click(function () {
-                var popupId = $(this).attr("id").replace("close_", "");
+                var popupId = $(this).attr("id").replace("close-", "");
 
                 $("#" + popupId).hide();
                 return false;
             });
 
-            $.each($(".openpopup_wrapper"), function(idx, data){
+            $.each($(".openpopup-wrapper"), function(idx, data){
                 if (getCookie(data.id) != "Y") {
-                    $("#" + data.id).show();
+                    $("#" + data.id).hide(); // show 로 바꾸기
                 } else {
                     $("#" + data.id).hide();
                 }
@@ -78,7 +78,7 @@
 
 
             // Swiper 슬라이드 적용
-            var swiper = new Swiper('.swiper-container', {
+            var swiper = new Swiper('.studymain', {
                 slidesPerView: 1,
                 spaceBetween: 30,
                 loop: true,
@@ -95,16 +95,15 @@
                     // nextEl: '.swiper-button-next',  // 다음 버튼
                     // prevEl: '.swiper-button-prev',  // 이전 버튼
                     },
-                    breakpoints: {
-                        1024: {
                         // allowTouchMove: false,
                         // fals의 경우 슬라이드를 전환 할 수 있는  유일한 방법은
                         // slide prev slide Next만 사용해야한다.
                         // followFinger: false
                         // 비활성화하면 슬라이더를 놓을때만 애니메이션이 적용되며
                         // 손가락을 잡고 있는 동안에는 움직이지 않는다.
-                        }
-                    }
+
+
+
                     // on : {
                     //     init: function(){
                     //     swiper.slideToLoop(0)
@@ -112,6 +111,36 @@
                     //     }
                     // }
                 });
+
+                var myswiper = new Swiper('.tabsub', {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                    loop: true,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 4,
+                            spaceBetween: 40,
+                        },
+                        1024: {
+                            slidesPerView: 5,
+                            spaceBetween: 10,
+
+                        },
+                    }
+                    });
+
 
 
 
@@ -124,22 +153,17 @@
     // });
 
 
-    $('.tab_study_menu ul li ').on('click', function () {
+    $('.tab-study-menu ul li ').on('click', function () {
 	    var tab_id = $(this).attr('data-tab');
 
-        $('.tab_study_menu ul li').removeClass('active');
+        $('.tab-study-menu ul li').removeClass('active');
         $('.tab-content').removeClass('active');
 
         $(this).addClass('active');
-        console.log('add')
+
         $("#" + tab_id).addClass('active');
-        console.log('add33')
+
     });
-
-
-
-
-
 
 
 

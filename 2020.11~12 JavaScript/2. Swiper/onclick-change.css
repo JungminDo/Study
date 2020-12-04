@@ -1,0 +1,159 @@
+
+@media (max-width:768px) { /* 해상도 768이하일때 글자를 파란색으로  */
+    body {
+        color: lightblue;
+    }
+}
+
+/*  모바일 우선 (Mobile First)
+    작은 가로폭부터 큰 가로폭 순서로 만들고, min-width를 이용한다.
+    A
+@media ( min-width: 768px ) {
+    B
+}
+
+@media ( min-width: 1024px ) {
+    C
+}
+
+    기본 모양은 A, 768px 이상일 때는 B, 1024px 이상일 때는 C 가 적용됩니다.
+    대부분은 모바일 우선으로 만들어져있다.
+
+    데스크톱 우선(Desktop First)
+    큰 가로폭 부터 작은 가로폭 순서로 만들고, max-width를 이용한다.
+
+
+    A
+@media (max-width: 1023px) {
+    B
+}
+@media (max-width: 767px) {
+    C
+}
+
+    기본 모양은 A, 1023px 이하일 때는 B, 767px 이하일 때는 C 가 적용됩니다.
+*/
+
+#main-wrap {
+
+    width: 960px;
+    height: auto;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #bcbcbc;
+
+}
+
+.main-header {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-origin: 1px solid yellow;
+}
+
+.main-content {
+
+    border: 5px solid lightblue;
+}
+
+.main-header h2 {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+
+.main-content ul {
+    position: relative;
+    top: 0;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+    padding: 10px 20px;
+
+}
+
+.main-content li a {
+    position: relative;
+    display: block;
+    padding: 10px 20px 10px 0;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    width: 102px;
+    z-index: 100;
+}
+
+
+.main-content .manu-sub {
+    display: none;
+}
+
+.main-content .manu-sub.on {
+    display: inherit;
+    margin: auto;
+    padding: 0 20px 0 0 ;
+    width: 102px;
+    position: relative;
+    z-index: 300;
+
+}
+
+@media (max-width: 480px) {
+    #main-wrap {
+        width: auto;
+    }
+
+    .main-header {
+        float: none;
+        width: auto;
+    }
+
+    .main-content {
+        float: none;
+        width: auto;
+    }
+
+
+}
+
+
+
+/*  다중 화면 swiper css적용 */
+
+
+
+    .swiper-container {
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        top: 105px;
+        z-index: -10;
+        max-width: 900px;
+        margin: 0 0 0 5px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-wrapper div img {
+        width: 100%;
+        height: 80%;
+    }

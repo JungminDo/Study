@@ -14,13 +14,13 @@ a {
 
 .wrap {
     position: relative;
-    min-width: 1280px;
+    min-width: 100%px;
     margin: 0;
 }
 
 .header {
     position: absolute;
-    min-width: 1280px;
+    min-width: 100%;
     width: 100%;
     top: 0;
     left: 0;
@@ -45,7 +45,7 @@ a {
     transition-duration: 0.3s;
 }
 
-#main_nav {
+#main-nav {
     position: absolute;
     width: 100%;
     top: 100px;
@@ -55,18 +55,18 @@ a {
 
 }
 
-#main_nav > ul {
+#main-nav > ul {
 
     display: inline-block;
 }
 
-#main_nav > ul > li {
+#main-nav > ul > li {
     float: left;
     width: 160px;
     position: relative;
 }
 
-.menu_nav {
+.menu-nav {
     font-size: 18px ;
     color: black;
     font-weight: bold;
@@ -78,7 +78,7 @@ a {
 }
 
 
-.menu_content > ul > li {
+.menu-content > ul > li {
 
     height: 42px;
     background-color: white;
@@ -88,7 +88,7 @@ a {
 }
 
 
-.menu_content {
+.menu-content {
     display: none;
     margin-top: 40px;
 
@@ -97,7 +97,7 @@ a {
 
  /* Center 이미지 및 버튼 */
 
-.center_main {
+.center-main {
     float: left;
     position: relative;
     width: 100%;
@@ -107,7 +107,7 @@ a {
 }
 
 /* bxSlider 적용
-.center_img_slider > div > p {
+.center-img-slider > div > p {
 
     width: 100%;
     height: 480px;
@@ -129,7 +129,7 @@ a {
     text-align: center;
     font-size: 18px;
     background: #fff;
-    height: 500px;
+
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -146,41 +146,40 @@ a {
     align-items: center;
   }
 
+.swiper-wrapper > div > img {
+    width: 100%;
+}
 
-  .swiper-slide > img {
-      width: 1200px;
-
-  }
 
 
 
 /* study-site AND QA  사이트 검색 문의 게시판*/
 
-.quick_link {
+.quick-link {
     overflow: hidden;
     position: absolute;
     left: 40%;
-    bottom: 60%;
-    width: 1170px;
+    /* bottom: 50%; */
+    width: 100%;
     margin-left: -400px;
     text-align: right;
     z-index: 5;
 }
 
-.quick_link_content {
+.quick-link-content {
     overflow: hidden;
     float: right;
     display: table;
 }
 
-.quick_link_content > div {
+.quick-link-content > div {
 
     display: table-cell;
     vertical-align: bottom;
     height: 80px;
 }
 
-.quick_link_content > div > a {
+.quick-link-content > div > a {
     display: block;
     width: 300px;
     position: relative;
@@ -188,7 +187,7 @@ a {
     overflow: hidden;
 }
 
-.study_site {
+.study-site {
     background-color: rgb(253, 185, 59, 0.6);
     border-radius: 30px 0 0 0;
     float: left;
@@ -196,7 +195,7 @@ a {
     letter-spacing: -0.02em;
 }
 
-.quick_link_content > div > a > strong {
+.quick-link-content > div > a > strong {
     color: black;
     display: block;
     font-size: 22px;
@@ -205,7 +204,7 @@ a {
     padding: 27px 0 0 0;
 }
 
-.study_QA {
+.study-QA {
     background-color: rgb(188, 204, 207, 0.6);
     border-radius: 0 0 30px 0;
     float: right;
@@ -216,7 +215,7 @@ a {
 
 /* center main 메뉴들 */
 
- .center_study_menu {
+ .center-study-menu {
     background-color: rgb(235, 226, 226);
     padding: 60px 0 0;
 
@@ -224,7 +223,7 @@ a {
 }
 
 .hd {
-    width: 1170px;
+    width: 100%;
     margin: 0 auto;
     padding-bottom: 33px;
     position: relative;
@@ -234,35 +233,35 @@ a {
     color: black;
     font-size: 40px;
     font-weight: bold;
-    font-family: font_sw, sans-serif;
+    font-family: font-sw, sans-serif;
     min-height: 60px;
     padding: 17px 0 0 25px;
     margin-bottom: 1px;
 }
 
-.tab_study_menu {
+.tab-study-menu {
     position: absolute;
     right: 0;
     top: 44px;
 }
 
-.tab_study_menu > ul {
+.tab-study-menu > ul {
     overflow: hidden;
 }
 
-.tab_study_menu > ul > li:first-child {
+.tab-study-menu > ul > li:first-child {
     padding: 0;
     margin: 0;
 }
 
-.tab_study_menu > ul > li {
+.tab-study-menu > ul > li {
     float: left;
     position: relative;
     margin-left: 23px;
     padding: 0 0 0 25px;
 }
 
-.tab_study_menu ul > li {
+.tab-study-menu ul > li {
     display: block;
     font-size: 16px;
     color: green;
@@ -272,16 +271,16 @@ a {
 
 }
 
-.tab_study_menu > ul > li.active {
+.tab-study-menu > ul > li.active {
     color: blue;
     font-weight: bold;
 }
 
-.tab_study_menu >  ul > li:first-child:after {
+.tab-study-menu >  ul > li:first-child:after {
     display: none;
 }
 
-.tab_study_menu >  ul > li:after {
+.tab-study-menu >  ul > li:after {
     content: '';
     position: absolute;
     left: 0;
@@ -292,37 +291,11 @@ a {
     ;
 }
 
-.center_study_ment {
+.center-study-ment {
     text-align: center;
 
 }
 
-.left_menu ul {
-    padding: 0;
-}
-
-.right_menu ul {
-    padding: 0;
-}
-
-
-.left_menu {
-    float: left;
-    width: 500px;
-    height: 350px;
-    margin: 0 0 0 50px;
-    border: 1px solid blue;
-    text-align: center;
-}
-
-.right_menu {
-    float: right;
-    width: 500px;
-    height: 350px;
-    margin: 0 50px 0 0;
-    border: 1px solid blue;
-    text-align: center;
-}
 
 /* 탭메뉴  */
 
@@ -338,11 +311,24 @@ a {
     display: inherit;
 }
 
+/* 사이드 탭메뉴 */
+
+.side-tab-menu > div{
+    overflow: hidden;
+    width: 500px;
+    border: 2px solid black;
+}
+
+/* display: flex box , float ,position  display: table */
+/* 반응형 해보기 pc 이미지 3개 한번에 모바일 1개만 움직이는 형태로*/
+/* 보여주는거 외에 접근이 안되게 해야한다. */
+
+
 
 /* 팝업기능 */
 
-.openpopup_wrapper{
-    display: none;
+.openpopup-wrapper{
+
     z-index: 999;
     background-color: orange;
     padding: 10px 10px 0 ;
@@ -354,38 +340,38 @@ a {
 
 }
 
-.openpopup_content {
+.openpopup-content {
     display: block;
     width: 360px;
     height: 360px;
 }
 
 
-.openpopup_footer {
+.openpopup-footer {
     height: 28px;
     position: relative;
 }
 
-.openpopup_footer > label {
+.openpopup-footer > label {
     cursor: pointer;
     display: inline-block;
     margin-left: 20px;
     overflow: hidden;
 }
 
-.openpopup_footer label input {
+.openpopup-footer label input {
     vertical-align: middle;
     position: relative;
     top: 7px;
     float: left;
 }
 
-.openpopup_footer label img {
+.openpopup-footer label img {
     display: block;
     float: left;
 }
 
-.openpopup_footer .close {
+.openpopup-footer .close {
     position: absolute;
     right: 21px;
     top: 0;
