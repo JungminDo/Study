@@ -14,10 +14,9 @@
      */
 
     /* ul li 마우스 올리면 보여준다. */
-    $('.main-content ul').hover(function(){
-        $('manu-sub').addClass('on').show();
-    }, function() {
-        $('manu-sub').hide();
+    $('.main-content ul').on('click', function(){
+        $('.manu-sub').toggleClass('on');
+        console.log('mouse click')
     });
 
 
@@ -43,7 +42,7 @@
 
 
 
-    var myswiper = new Swiper('.swiper-container', {
+    var myswiper = new Swiper('.first', {
         slidesPerView: 1,
         spaceBetween: 10,
         loop: true,
@@ -68,7 +67,7 @@
         breakpoints: {
             640: {
                 slidesPerView: 2,
-                spaceBetween: 20,
+                spaceBetween: 10,
                 autoHeight: true
 
             },
@@ -77,31 +76,62 @@
                 spaceBetween: 10,
                 effect: "coverflow",
 
-            },
-            on: {
-                resize:function(){
-                    if($(document).width() < 1024) {
-                        console.log('1111')
-                        swiper.slideToLoop(0);
-                    }else if($(document).width() >= 1024) {
-                        console.log('2222')
-                        swiper.slideToLoop(0);
-                    }
-                }
             }
+            // on: {
+            //     resize:function(){
+            //         if($(document).width() < 768) {
+            //             if($('.swiper-container').hasClass('mobile')) return false;
+            //             console.log('phone1')
+            //             playswiper.slideToLoop(0);
+            //             $('.swiper-container').addClass('mobile');
+            //         }else if($(document).width() >= 1024) {
+            //             $('.swiper-container').removeClass('mobile');
+            //             console.log('pc2')
+            //             playswiper.slideToLoop(0);
+            //         }
+            //     }
+            // }
+
         }
         });
 
+        var playswiper = new Swiper('.second', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            autoHeight: true,
+            pagination: '.swiper-pagiantion',
+            paginationClickable: true,
+            runCallbacksOnInit: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: true,
+            },
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: true,
 
-        $("")
+            },
+            on: {
+                resize:function(){
+                    if($(document).width() < 768) {
+                        if($('.swiper-container').hasClass('mobile')) return false;
+                        console.log('phone')
+                        $('.swiper-container').addClass('mobile');
+                        playswiper.slideReset(0);
+                    }else if($(document).width() >= 960) {
+                        $('.swiper-container').removeClass('mobile');
+                        console.log('pc')
+
+                        playswiper.slideReset(0);
+                    }
+
+                }
+
+            }
+        });
 
 
 
 
-
-
-
-
-
-
- })
+ });

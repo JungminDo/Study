@@ -11,11 +11,12 @@
         // .stop() 으로 버블링을 막는다.
         // swiper 슬라이드 써보기 bx바꾸기
 
-        $('#main_nav').on('mouseenter', function(){
+        $('#main_nav').on('clck', function(){
 
 
             $('.menu_content').hide().stop().slideDown(250);
                 $('#main_nav').addClass('open').css('overfolw', 'height:450px');
+                console.log('mainnav')
         });
 
         $('#main_nav').on('mouseleave', function(){
