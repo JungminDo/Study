@@ -130,7 +130,7 @@ $(document).ready(function(){
                 stagger: 0.2, // 시작시간을 엇갈리게 하며 시작 시간 사이에 0.2를 준다.
                 y: function(i, elem, boxes) {
                     return i % 2 === 1 ? yMove : -yMove;
-                    // i 를 숫자 2로 나우고 남은값을 비교하여 1이면 y 아니면 -y
+                    // i 를 숫자 2로 나우고 남은값을 비교하여 1이면 y 아니면 -y 를 넣어준다.
                 }
             });
 
