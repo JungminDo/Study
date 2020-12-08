@@ -63,3 +63,101 @@
     border: 2px solid black;
     border-radius: 50%;
 }
+
+.gsap-control-method {
+    margin: auto;
+    padding: 20px;
+}
+
+
+.flex-box {
+    display: flex;
+}
+
+
+
+
+
+
+/* skew 비틀기 기울기
+    X축 좌/우 좌: -각도 / 우 + 각도 로 기울인다.
+    Y축 상/하 상: -각도 / 하 + 각도 로 기울인다.
+
+    skewX(x deg) 각도가 양수인 경우 영역의 상단은 왼쪽 방향으로 영역 하단은 오른쪽 방향으로 비틀린다.
+    skewY(y deg) 각도가 양수인 경우 영역의 좌측은 위로, 우측은 아래로 비틀린다.
+
+    X,Y 축을 기준으로 기울이게 되는데 X축은 좌/우로, Y축은 상/하로 기울이는 효과를 준다.
+    X 축에 + 각도는 우측으로 - 각도는 좌측으로 기울이는 효과이며,
+    Y 축에 + 각도는 아래쪽으로, - 각도는 윗쪽으로 기울이는 효과를 준다.
+
+    deg = degree 각의 단위
+    ㅇ
+*/
+
+
+
+
+.skew-test {
+    overflow: hidden;
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.box1 {
+    float: left;
+    border: 2px solid red;
+    background-color: #555;
+    width: 300px;
+    height: 220px;
+    margin: 20px;
+}
+
+.box1 img {
+    opacity: 0.7;
+
+}
+
+.test1 {
+    transform: skewx(15deg);
+}
+
+.test1-x {
+    transform: skewx(-15deg);
+}
+
+.test2 {
+    transform: skewy(15deg);
+}
+
+.test2-y {
+    transform: skewy(-15deg);
+}
+
+.test3 {
+    transition-duration: 2s;
+}
+
+.test3:hover {
+    transform: skewx(45deg) skewY(45deg);
+}
+
+.box1 p {
+    text-align: center;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+}
+
+.box4main {
+    display: inline-block;
+    margin-left: 200px;
+}
+
+.box4main > div{
+
+        display: inline-block;
+        margin: 100px 0 0 0 ;
+        border: 1px solid blue;
+        width: 50px;
+        height: 50px;
+}
