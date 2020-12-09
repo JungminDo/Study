@@ -135,24 +135,106 @@ $(document).ready(function(){
             });
 
  */
-        /* Effect-test  */
+        /*  //Effect-test
 
-        gsap.registerEffect({
-            name: "fade",
-            defaults: {duration: 2}, //defaults get applied to the "config" object passed to the effect below
-            effect: (targets, config) => {
-                return gsap.to(targets, {duration: config.duration, opacity: 0});
-            }
-        });
-
-        //now we can use it like this:
-        //gsap.effects.fade(".box");
-
-        document.querySelectorAll(".box").forEach(function(box) {
-            box.addEventListener("mouseenter", function() {
-            gsap.effects.fade(this);
+            gsap.registerEffect({
+                name: "fade",
+                defaults: {duration: 2}, //defaults get applied to the "config" object passed to the effect below
+                effect: (targets, config) => {
+                    return gsap.to(targets, {duration: config.duration, opacity: 0});
+                }
             });
-        });
+
+            //now we can use it like this:
+            //gsap.effects.fade(".box");
+
+            document.querySelectorAll(".box").forEach(function(box) {
+            box.addEventListener("mouseenter", function() {
+                gsap.effects.fade(this);
+            });
+            });
+
+           */
+
+
+            /*
+            // gsap.globalTimeline
+
+            gsap.globalTimeline.pause()
+            // 모든 애니메이션에 영향을 미치는 글로벌 타임 라인을 일시 중지하고 자신을 반환한다.
+            gsap.globalTimeline.play()
+            // 모든 애니메이션에 영향을 미치는 글로벌 타임 라인을 다시 시작하고 자신을 반환한다.
+            gsap.globalTimeline.paused()
+            // true 상태면 글로벌 타임 라인이 일시 중지 된 경우 반환 되고 false인 글로벌 타임 라인이 재생중일때 반환한다.
+            gsap.globalTimeline.timeScale()
+            // 모든 애니메이션에 영향을 미치는 글로벌 시간 척도를 가져오거나 설정한다. 모든 애니메이션을 합너에 전체적으로
+            // 속도를 높이거나 낮출수 있는 좋은 방법이다.
+
+            gsap.globalTimeline.timeScale(0.5); //plays at half-speed
+            gsap.globalTimeline.timeScale(2); //plays twice the normal speed
+            var currentTimeScale = gsap.globalTimeline.timeScale(); //returns the current global timeScale
+
+            */
+
+            /*
+            // gsap.ticker
+            // type : Object
+            // GSAP 엔진의 심장 박동과 같으며 모든 requestAnimationFrame 이벤트에서
+            // globalTimeline 을 업데이트 하고 브라우저의 렌더링주기와 완벽하게
+            // 동기화 되며 각업데이트 후에 사용자 지정 논리를 실행하기 위해 자체 리스너를 추가 가능하다
+
+            // add listener
+            // 리스너 추가
+                gsap.ticker.add(myFunction);
+
+                function myFunction(time, deltaTime, frame) {
+                    // makes use of time, deltaTime, and frame
+                }   // time: 티커의 시작 시간을 lagSmooting 에 의해 앞으로 밀리게 할수 있다.
+                    // deltaTime: 이전 틱 이후 경과 한 밀리 초에 해당하는 양이며 gsap.ticker.deltaRatio()
+                    // 를 이용하여 특정 대상 FPS 를 기반으로 하는 비율을 얻을 수 있다.
+                    // frame 각 틱에 증가된 프레임 번호 이다.
+
+            //  TweenMax . lagSmoothing ()
+            //  엔진의 업데이트 사이에서 너무 많은 시간이 경과할 때 발생하는 작업을 제어할 수 있도록 한다.
+            //  코어 타이밍 메커니즘을 조정하여 점프 상황을 방지하고 보완 할 수 있다.
+
+            //to remove the listener later...
+                gsap.ticker.remove(myFunction);
+
+
+                gsap.ticker.fps ()
+            // 티커를 특정 프레임 속도로 제한하려면 사용한다.
+
+                gsap.ticker.deltaRatio ()
+            // 특정 대상 FPS 를 기준으로 한 비율로 마지막 틱 이후 경과 된 시간을 반환한다.
+            // gsap.ticker.deltaRatio(60)마지막 틱 이후 경과 된 시간이 실제로 30pfs에서 실행되는 것과
+            // 비슷하다면 2프레임 속도 변화에 동적으로 조정되는 루프를 쉽게 설정할 수 있도록 반환된다.
+
+                gsap.ticker.add(function() {
+                    obj.x += 3 * gsap.ticker.deltaRatio(60); // rate of change will always be consistent even if the frame rate fluctuates
+                });
+            // 기본 fps 매개 변수는 60 이므로 60 fps 이외의 것을 하용하지 않는 한 하나를 전달할 필요가 없다
+            //  30fps 로 실행되는 것을 기준으로 비율을 얻으려면 다음을 실행한다.
+            //  gsap.ticker.deltaRatio(30)
+
+                gsap.ticker.lagSmoothing ()
+            // 이 메서드는 GSAP 의 지연 완화를 위한 getter 및 setter 역할을 한다.
+            //
+                */
+
+                /* gsap-utils */
+
+            /*
+            function onMove(mouseX){
+                var value = gsap.utils.snap(50, mouseX);
+                display(value);
+            }
+
+            */
+
+            /* cyberpunk animation */
+
+
 
 
 

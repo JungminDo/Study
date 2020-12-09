@@ -166,7 +166,7 @@
     /* Effects-test */
 
 
-
+/*
 
     h1,
     h2,
@@ -194,17 +194,11 @@
     }
 
     #Effects-test {
-
-        position: relative;
-        display: inline-block;
         background-color: #1d1d1d;
         font-family: "Signika Negative", sans-serif;
         color: #989898;
-        margin: auto;
         font-size: 17px;
         text-align: center;
-        width: 1000px;
-        height: 450px;
         border: 2px solid yellow;
     }
     #Effects-test .box {
@@ -226,3 +220,17 @@
     .grey {
         background-color: #989898;
     }
+
+     */
+
+     /*  gsap-utils test  */
+
+
+
+.gsap-utils > img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* cyberpunk animation */
