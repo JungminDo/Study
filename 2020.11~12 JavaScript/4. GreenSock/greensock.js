@@ -74,7 +74,7 @@ $(document).ready(function(){
         document.querySelector("#time2").onclick = () => tween.timeScale(0.2);
 
              */
-
+/*
         var tl = gsap.timeline({repeat:2, yoyo: true});
 
         tl.from(".sail, .squirrel", {duration:1.5, opacity: 0.2, x: 300, scale: 0.3, ease: "back"});
@@ -121,7 +121,7 @@ $(document).ready(function(){
         // orange 를 전 트윈 시작 전에 추가한다.
 
 
-            /* 인덱스를 기반으로 이동 방향을 설정하기 */
+            // 인덱스를 기반으로 이동 방향을 설정하기
 
         var yMove = 50;
             gsap.to(".box4", {
@@ -133,6 +133,26 @@ $(document).ready(function(){
                     // i 를 숫자 2로 나우고 남은값을 비교하여 1이면 y 아니면 -y 를 넣어준다.
                 }
             });
+
+ */
+        /* Effect-test  */
+
+        gsap.registerEffect({
+            name: "fade",
+            defaults: {duration: 2}, //defaults get applied to the "config" object passed to the effect below
+            effect: (targets, config) => {
+                return gsap.to(targets, {duration: config.duration, opacity: 0});
+            }
+        });
+
+        //now we can use it like this:
+        //gsap.effects.fade(".box");
+
+        document.querySelectorAll(".box").forEach(function(box) {
+            box.addEventListener("mouseenter", function() {
+            gsap.effects.fade(this);
+            });
+        });
 
 
 
