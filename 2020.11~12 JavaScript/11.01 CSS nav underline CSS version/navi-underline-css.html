@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation underline Css</title>
+
+    <link rel="stylesheet" href="navi-underline.css">
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="nav-underline.js"></script>
+
+</head>
+<body>
+    <!-- 기본 메뉴 언더바 -->
+    <nav class="nav-first">
+        <a href="#" >select1</a>
+        <a href="#" >selection</a>
+        <a href="#" class="is-current">selecter</a>
+        <a href="#">selected</a>
+        <a href="#">selecting</a>
+        <div class="nav-underline"></div>
+    </nav>
+
+    <!-- 언더바가 나타나면서 선택한 단어 색도 바뀜  -->
+    <ul class="nav-second">
+        <li><a href="#">Coment</a></li>
+        <li><a href="#">Content</a></li>
+        <li><a href="#">Cong</a></li>
+        <li><a href="#">Consert</a></li>
+    </ul>
+
+    <!-- flex 를 이용한 메뉴 및 화면 축소시 모바일 메뉴 로 전환 -->
+    <nav class="test-mb-pc">
+        <ul>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+            <li><a href="#">Menu 4</a></li>
+            <li><a href="#">Menu 5</a></li>
+            <li><a href="#">Menu 6</a></li>
+            <li><a href="#">Menu 7</a></li>
+            <li><a href="#">Menu 8</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="wrap">
+        <h1 class="pen-title">Mobile Navigation Menu</h1>
+        <p class="pen-description">공부용 네비게이션 모바일 메뉴</p>
+        <!-- Begin Your Code -->
+
+        <nav id="mobile-menu" class="mobile-nav-menu">
+            <button class="close-mobile-menu"><span class="screen-reader-text">Close menu</span></button>
+
+            <div class="menu-menu-1-container">
+                <ul id="primary-menu" class="menu dropdown mobile-nav">
+
+                    <li class="menu-item-custom-custom current-menu-item current_page_item">
+                        <a href="#"><span><i class="home-icon"></i>Home</span></a>
+                    </li>
+
+                    <li class="menu-item-has-children">
+                        <a href="#"><span><i class="link2-icon"></i>Sample Page</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#"><span>Page Image Alignment</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Clearing Floats</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children">
+                        <a href="#"><span><i class="link3-icon"></i>Page B</span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#"><span>Level 2b</span></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item-1713">
+                                        <a href="#"><span>Level 2a</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><span><i class="link4-icon"></i>Page abc</span></a>
+                    </li>
+
+                    <li class="menu-item-has-children">
+                        <a href=""><span>Blog</span></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#"><span>Page Markup And Formatting</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#"><span>Clearing Floats</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-item-has-children">
+                                <a href="#"><span>Page Image Alignment</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#"><span>Level 3b</span></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"><span>Level 3a</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><span>Front Page</span></a>
+                    </li>
+
+                    <li>
+                        <a href="/"><span>About The Tests</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- End Your Code -->
+    </div><!-- .wrap -->
+
+
+</body>
+</html>

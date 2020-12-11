@@ -1,0 +1,752 @@
+
+/* 첫번째 nav 방법 처음 기준 으로 마우스를 따라온다. */
+.nav-first {
+    position: relative; /* 나를 기준으로 위치 지정 */
+    display: flex;
+    width: 640px;
+    margin: 4em auto;
+  }
+  .nav-first a {
+    display: block;
+    width: 20%;
+    padding: .75em 0;
+    color: rgb(24, 212, 24);
+    text-decoration: none;
+    text-align: center;
+  }
+.nav-underline {
+    position: absolute;  /* 부모 상위 기준으로 위치지정 */
+    left: 0;
+    bottom: -2px;
+    width: 20%;
+    height: 2px;
+    background: rgb(179, 19, 19);
+    transition: all .25s ease-in-out; /* 느린 시작 빠른 중간 느린 종료 */
+  }
+.nav-first a:nth-child(1).is-current ~ .nav-underline {
+    left: 0;
+  }
+.nav-first a:nth-child(2).is-current ~ .nav-underline {
+    left: 20%;
+  }
+.nav-first a:nth-child(3).is-current ~ .nav-underline {
+    left: 40%;
+  }
+.nav-first a:nth-child(4).is-current ~ .nav-underline {
+    left: 60%;
+  }
+.nav-first a:nth-child(5).is-current ~ .nav-underline {
+    left: 80%;
+  }
+.nav-first a:nth-child(1):hover ~ .nav-underline {
+    left: 0;
+  }
+.nav-first a:nth-child(2):hover ~ .nav-underline {
+    left: 20%;
+  }
+.nav-first a:nth-child(3):hover ~ .nav-underline {
+    left: 40%;
+  }
+.nav-first a:nth-child(4):hover ~ .nav-underline {
+    left: 60%;
+  }
+.nav-first a:nth-child(5):hover ~ .nav-underline {
+    left: 80%;
+  }
+
+
+  /* 두번째 nav 방법 */
+
+  .nav-second {
+    margin: 150px auto 0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    width: 600px;
+    text-align: center;
+  }
+  .nav-second li {
+    display: table-cell;
+    position: relative;
+    padding: 15px 0;
+  }
+
+   /* 마우스 hover 이벤트 시 글자 색 바꾸기 */
+
+  .nav-second li a {
+
+    text-transform: uppercase; /* 모든 글자를 대문자로 바꾼다. */
+    text-decoration: none;
+    letter-spacing: 0.15em; /* 글자 사이의 간격 */
+    color: royalblue;
+    overflow: hidden;
+    font-size: 2em;
+    font-weight: 800;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    /* 마우스 올리면 글자 색이 바뀌는것 같은 효과 */
+    background: -webkit-gradient(linear, left top, right top, from(midnightblue), color-stop(50%, midnightblue), color-stop(50%, royalblue));
+    background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-transition: background-position 275ms ease;
+    transition: background-position 275ms ease;
+    text-decoration: none;
+
+
+  }
+  .nav-second li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(131, 131, 207);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s; /* 넓이 펼치는데 0.3 왼쪽으로 이동하는데 0.3*/
+    width: 0;
+  }
+
+  .nav-second li a:hover {
+    background-position: 0 100%;
+  }
+
+  .nav-second li a:hover:after {
+    width: 100%;
+    left: 0;
+    background-position: 0 100%;
+  }
+
+
+    /* mobile 화면과 pc 화면 메뉴 구성연습 */
+
+
+    .test-mb-pc ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media only screen and (min-width: 640px) {
+
+
+      .test-mb-pc ul li {
+        flex: 1;
+      }
+    }
+
+    .test-mb-pc {
+      background: cadetblue;
+      padding: 20px;
+    }
+
+
+.test-mb-pc ul li a {
+  display: block;
+  text-align: center;
+  margin: 5px;
+  padding: 10px 5px;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1.4;
+  color: white;
+  background: teal;
+}
+
+.test-mb-pc ul li a:hover {
+  background: yellowgreen;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@media only screen and (min-width: 1024px) {
+  .test-mb-pc ul li {
+    flex: 5;
+
+  }
+
+  .test-mb-pc ul {
+
+    flex-direction: row;
+  }
+
+  .test-mb-pc ul li a:hover {
+    background: blue;
+  }
+
+
+
+  .test-mb-pc ul li a {
+    display: block;
+    text-align: center;
+    margin: 5px;
+    padding: 10px 5px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1.4;
+    color: white;
+    background: teal;
+  }
+}
+
+/* 모바일 하단 메뉴 연습 */
+
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  background: #333;
+  font-family: "Open Sans", sans-serif;
+}
+
+.pen-title {
+  color: #FFFFFF;
+  margin-bottom: 0;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.pen-description {
+  color: #FFFFFF;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000;
+}
+.pen-description a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.wrap {
+  max-width: 85.375rem;
+  margin: 0 auto;
+}
+
+.image-as-background {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.screen-reader-text {
+  height: auto;
+  width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+}
+.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
+  height: auto;
+  width: auto;
+  background-color: #000000;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #FFFFFF;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  left: 0.3125rem;
+  line-height: normal;
+  padding: 0.9375rem 1.4375rem 0.875rem;
+  text-decoration: none;
+  top: 0.3125rem;
+  z-index: 100000;
+}
+
+/** Core wd_s navigation styles **/
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.menu a {
+  color: #808080;
+}
+.menu a:visited, .menu a:focus, .menu a:hover {
+  color: #477DCA;
+}
+.menu li {
+  margin: 0 0.625rem 0 0;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu ul::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.menu.menu-horizontal li {
+  display: inline-block;
+}
+.menu.menu-vertical li {
+  margin: 0;
+}
+.menu.menu-vertical a {
+  padding: 0.625rem;
+  border-bottom: 1px solid #cccccc;
+}
+.menu.dropdown ul {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  float: left;
+  left: -999em;
+  position: absolute;
+  top: 1.5em;
+  z-index: 99999;
+}
+.menu.dropdown ul ul {
+  left: -999em;
+  top: 0;
+}
+.menu.dropdown ul li:hover > ul, .menu.dropdown ul li.focus > ul {
+  left: 100%;
+}
+.menu.dropdown ul a {
+  height: auto;
+  width: 12.5rem;
+}
+.menu.dropdown li:hover > ul,
+.menu.dropdown li.focus > ul {
+  left: auto;
+}
+.menu.dropdown li {
+  float: left;
+  position: relative;
+}
+.menu a {
+  display: block;
+  text-decoration: none;
+}
+
+.main-navigation {
+  height: auto;
+  width: 100%;
+  clear: both;
+  display: block;
+  float: left;
+}
+.main-navigation ul {
+  display: none;
+}
+@media screen and (min-width: 40rem) {
+  .main-navigation ul {
+    display: block;
+  }
+}
+.main-navigation.toggled ul {
+  display: block;
+}
+
+/** Mobile Navigation **/
+.mobile-menu-more {
+  overflow: hidden;
+}
+
+.mobile-nav-menu {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 0;
+}
+.mobile-nav-menu.more,
+.mobile-nav-menu .sub-menu {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+.mobile-nav-menu.more {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 1.5625rem;
+}
+.admin-bar .mobile-nav-menu {
+  padding-top: 3.5rem;
+}
+@media screen and (min-width: 48.9375rem) {
+  .admin-bar .mobile-nav-menu {
+    padding-top: 2.5rem;
+  }
+}
+.mobile-nav-menu li {
+  cursor: pointer;
+}
+.mobile-nav-menu > div {
+  bottom: 5.25rem;
+  position: absolute;
+  right: 0;
+  width: 50vw;
+}
+@media screen and (min-width: 48rem) {
+  .mobile-nav-menu > div {
+    bottom: auto;
+    left: 0;
+    right: auto;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.mobile-nav-menu .mobile-nav > li {
+  margin: 0;
+}
+.mobile-nav-menu .mobile-nav > li a {
+  padding: 0 0.625rem;
+}
+
+.mobile-nav-menu .mobile-nav > li:nth-child(-n + 5) {
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  height: 4rem;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 20%;
+}
+.mobile-nav-menu .mobile-nav > li:nth-child(-n + 5):hover {
+  background-color: #eeeeee;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.mobile-nav-menu .mobile-nav > li:nth-child(-n + 5) > a {
+  display: block;
+  font-size: 0.75rem;
+  height: 100%;
+  line-height: 1.2;
+}
+.mobile-nav-menu .mobile-nav > li:nth-child(-n + 5) > a span {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  display: block;
+}
+.mobile-nav-menu .mobile-nav > li:nth-child(2) {
+  left: 20%;
+}
+.mobile-nav-menu .mobile-nav > li:nth-child(3) {
+  left: 40%;
+}
+.mobile-nav-menu .mobile-nav > li:nth-child(4) {
+  left: 60%;
+}
+.mobile-nav-menu .mobile-nav > li:nth-child(5) {
+  left: 80%;
+}
+
+.mobile-nav-menu .mobile-nav > li:nth-child(n + 6) {
+  display: none;
+}
+
+.mobile-nav-menu.more .mobile-nav > li:nth-child(n + 6) {
+  bottom: 0;
+  clear: both;
+  display: block;
+  float: right;
+  position: relative;
+  right: 0;
+  width: 100%;
+}
+.mobile-nav-menu.more .mobile-nav > li:nth-child(n + 6) .sub-menu {
+  opacity: 1;
+}
+.sub-menu-more .mobile-nav-menu.more .mobile-nav > li:nth-child(n + 6) {
+  display: none;
+}
+.mobile-nav-menu.more .mobile-nav > li:nth-child(n + 6) a {
+  color: #FFFFFF;
+  padding: 0.625rem 1.25rem;
+}
+
+.mobile-nav-menu .mobile-nav ul.mobile-nav-menu-more,
+.mobile-nav-menu .mobile-nav > .sub-menu {
+  background-color: #808080;
+  left: 0;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+.mobile-nav-menu .mobile-nav ul {
+  box-shadow: none;
+}
+.mobile-menu-more:not(.sub-menu-more) .mobile-nav-menu .mobile-nav ul {
+  top: 0;
+}
+
+.close-mobile-menu {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: none;
+  display: none;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.625rem;
+  z-index: 1;
+}
+.close-mobile-menu:before {
+  height: 1.5rem;
+  width: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  color: #FFFFFF;
+  content: "x";
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.75;
+}
+.admin-bar .close-mobile-menu {
+  top: 3.5rem;
+}
+@media screen and (min-width: 48.9375rem) {
+  .admin-bar .close-mobile-menu {
+    top: 2.5rem;
+  }
+}
+.close-mobile-menu:hover, .close-mobile-menu:active, .close-mobile-menu:focus {
+  background-color: transparent;
+}
+.close-mobile-menu:hover svg, .close-mobile-menu:active svg, .close-mobile-menu:focus svg {
+  opacity: 0.6;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.more .close-mobile-menu {
+  display: block;
+}
+.close-mobile-menu svg {
+  height: 100%;
+  width: 100%;
+  fill: #FFFFFF;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.mobile-nav.dropdown .menu-item-has-children:hover .sub-menu {
+  display: none;
+}
+.mobile-menu-more:not(.sub-menu-more) .mobile-nav.dropdown .menu-item-has-children:hover .sub-menu {
+  display: block;
+  left: auto;
+  opacity: 1;
+  right: 0;
+}
+.mobile-nav.dropdown .visible .sub-menu,
+.mobile-nav.dropdown .visible:hover .sub-menu,
+.mobile-nav.dropdown .visible:focus .sub-menu,
+.mobile-nav.dropdown .visible:active .sub-menu {
+  bottom: 5.25rem;
+  display: block;
+  left: auto;
+  opacity: 1;
+  position: fixed;
+  right: 0;
+  top: auto;
+}
+@media screen and (min-width: 48rem) {
+  .mobile-nav.dropdown .visible .sub-menu,
+  .mobile-nav.dropdown .visible:hover .sub-menu,
+  .mobile-nav.dropdown .visible:focus .sub-menu,
+  .mobile-nav.dropdown .visible:active .sub-menu {
+    bottom: auto;
+    left: 0;
+    right: auto;
+    top: 0;
+  }
+}
+.mobile-nav.dropdown .visible .sub-menu .sub-menu,
+.mobile-nav.dropdown .visible:hover .sub-menu .sub-menu,
+.mobile-nav.dropdown .visible:focus .sub-menu .sub-menu,
+.mobile-nav.dropdown .visible:active .sub-menu .sub-menu {
+  bottom: 0;
+}
+@media screen and (min-width: 48rem) {
+  .mobile-nav.dropdown .visible .sub-menu .sub-menu,
+  .mobile-nav.dropdown .visible:hover .sub-menu .sub-menu,
+  .mobile-nav.dropdown .visible:focus .sub-menu .sub-menu,
+  .mobile-nav.dropdown .visible:active .sub-menu .sub-menu {
+    bottom: auto;
+  }
+}
+.mobile-nav.dropdown .visible .sub-menu .sub-menu,
+.mobile-nav.dropdown .visible:hover .sub-menu .sub-menu,
+.mobile-nav.dropdown .visible:focus .sub-menu .sub-menu,
+.mobile-nav.dropdown .visible:active .sub-menu .sub-menu {
+  padding-left: 0.625rem;
+  position: relative;
+}
+.mobile-nav.dropdown .sub-menu {
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  width: 50vw;
+}
+@media screen and (min-width: 48rem) {
+  .mobile-nav.dropdown .sub-menu {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+}
+.mobile-nav.dropdown .sub-menu a {
+  color: #FFFFFF;
+  font-size: 1rem;
+  padding: 0.625rem 1.25rem;
+  text-align: left;
+}
+.mobile-nav.dropdown .sub-menu li {
+  display: block;
+  width: 100%;
+}
+
+.mobile-nav > li:nth-child(n + 6) .sub-menu {
+  display: block;
+  left: 0;
+  padding-left: 0.625rem;
+  position: relative;
+}
+
+.no-js.admin-bar .mobile-nav-menu {
+  padding-top: 0;
+}
+.no-js .mobile-nav-menu {
+  bottom: 0;
+  font-size: 0;
+  height: 4rem;
+  overflow-x: auto;
+  top: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  white-space: nowrap;
+  width: 100%;
+}
+.no-js .mobile-nav-menu > div:before, .no-js .mobile-nav-menu > div:after {
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  width: 25%;
+  content: "";
+  pointer-events: none;
+  /* so the text is still selectable */
+  z-index: 20;
+}
+.no-js .mobile-nav-menu > div:after {
+  right: 0;
+  background: -webkit-gradient(linear, right top, left top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+.no-js .mobile-nav-menu > div:before {
+  left: 0;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), to(white));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+.no-js .mobile-nav-menu .mobile-nav a {
+  padding: 0 0.625rem;
+  text-align: center;
+}
+.no-js .mobile-nav-menu .mobile-nav a span {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  display: block;
+}
+.no-js .mobile-nav-menu .mobile-nav > li:nth-child(n + 6) {
+  display: inline-block;
+}
+.no-js .mobile-nav-menu .mobile-nav > li:first-of-type {
+  padding-left: 3.125rem;
+}
+.no-js .mobile-nav-menu .mobile-nav > li:last-of-type {
+  padding-right: 3.125rem;
+}
+.no-js .mobile-nav-menu .mobile-nav li {
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  float: none;
+  font-size: 0.75rem;
+  height: 4rem;
+  left: 0;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  width: auto;
+}
+.no-js .mobile-nav-menu .mobile-nav li > a {
+  display: block;
+  font-size: 0.75rem;
+  height: 100%;
+  line-height: 1.2;
+}
+.no-js .mobile-nav-menu .mobile-nav li.menu-item-has-children > a {
+  display: inline-block;
+  vertical-align: top;
+}
+.no-js .mobile-nav-menu .mobile-nav li.menu-item-has-children:hover .sub-menu {
+  display: inline-block;
+  left: 0;
+}
+.no-js .mobile-nav-menu .sub-menu {
+  display: inline-block;
+  float: none;
+  left: 0;
+  opacity: 1;
+  position: relative;
+  top: auto;
+  width: auto;
+  z-index: 1;
+}
+.no-js .mobile-nav-menu .sub-menu a {
+  color: #477DCA;
+}
+.no-js .mobile-nav-menu .sub-menu li {
+  border: none;
+}
+.no-js .mobile-nav-menu .menu.dropdown ul a {
+  width: auto;
+}

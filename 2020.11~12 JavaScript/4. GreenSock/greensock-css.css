@@ -233,4 +233,34 @@
 }
 
 
-/* cyberpunk animation */
+/* expo, liner test */
+
+
+  .test-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  .expo, .liner {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    font-size: 3em;
+  }
+  .liner {
+    border-left: 2px solid white;
+  }
+  .test-container > div > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+  }
+  .label {
+    position: relative;
+    top: 0px;
+    padding:10px;
+    text-align: center;
+    font-family: "Signika Negative", sans-serif;
+    background-color: rgba(0,0,0,0.5);
+  }
