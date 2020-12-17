@@ -3,7 +3,7 @@
 
         function animateFrom(elem, direction) {
         direction = direction | 1;
-            // direction 스크롤 되는 순간 1이나 -1을 스크롤 방향을 반영한다.
+            // direction(방향) 스크롤 되는 순간 1이나 -1을 스크롤 방향을 반영한다.
         var x = 0,
             y = direction * 100;
         if(elem.classList.contains("gs_reveal_fromLeft")) {
@@ -60,7 +60,7 @@
                 endTrigger: ".c",
                 end: "bottom 20px",  // 스크롤시 애니메이션 끝나는 지점
                 // markers: true,
-                pin: true,
+
                 toggleActions: "restart pause reverse pause"
             },
             x: 400,
@@ -132,5 +132,35 @@
             duration: 3
         });
 
+
+        gsap.registerPlugin(ScrollTrigger);
+
+    const images = gsap.utils.toArray('img');
+    const loader = document.querySelector('.loader--text');
+    const updateProgress = (instance) =>
+    loader.textContent = `${Math.round(instance.progressedCount * 100 / images.length)}%`;
+
+    const showDemo = () => {
+    document.body.style.overflow = 'auto';
+    document.scrollingElement.scrollTo(0, 0);
+    gsap.to(document.querySelector('.loader'), { autoAlpha: 0 });
+
+    gsap.utils.toArray('section').forEach((section, index) => {
+    const w = section.querySelector('.wrapper');
+    const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
+    gsap.fromTo(w, {  x  }, {
+        x: xEnd,
+        scrollTrigger: {
+        trigger: section,
+        scrub: 0.5
+        }
+    });
+    });
+    }
+
+    imagesLoaded(images).on('progress', updateProgress).on('always', showDemo);
+
+
+    
 
     });

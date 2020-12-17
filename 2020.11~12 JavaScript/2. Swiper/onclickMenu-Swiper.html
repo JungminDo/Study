@@ -7,10 +7,12 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.5/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="onclick.css"/>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>               <!-- Swiper 3 -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>         <!-- Swiper 4 -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>             <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="onclick1.js"></script>
 
 </head>
@@ -30,10 +32,10 @@
                         <div class="menu-content">
                             <ul>
                                 <li>
-                                    <a href="#none">순서</a>
+                                    <a href="#">순서</a>
                                 </li>
                                 <li>
-                                    <a href="#none">연혁</a>
+                                    <a href="#">연혁</a>
                                 </li>
                                 <li>
                                     <a href="#none">순서</a>
@@ -52,19 +54,19 @@
                         <div class="menu-content">
                             <ul>
                                 <li>
-                                    <a href="#none">HTML1</a>
+                                    <a href="#none">HTML</a>
                                 </li>
                                 <li>
-                                    <a href="#none">연혁2</a>
+                                    <a href="#none">연혁</a>
                                 </li>
                                 <li>
-                                    <a href="#none">순서3</a>
+                                    <a href="#none">순서</a>
                                 </li>
                                 <li>
-                                    <a href="#none">소개4</a>
+                                    <a href="#none">소개</a>
                                 </li>
                                 <li>
-                                    <a href="#none">참고5</a>
+                                    <a href="#none">참고</a>
                                 </li>
                             </ul>
                         </div>
@@ -165,9 +167,20 @@
             <a href="#none">
                 <div class="swiper-container studymain">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="../images/geese.jpg" alt="">    </div>
-                        <div class="swiper-slide"><img src="../images/squirrel.jpg" alt=""> </div>
-                        <div class="swiper-slide"><img src="../images/sail.jpg" alt="">     </div>
+                        <div class="swiper-slide"><img src="../images/geese.jpg" alt="">
+                            <div class="content-hover"> <img src="../images/geese.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-slide"><img src="../images/squirrel.jpg" alt="">
+                            <div class="content-hover"> <img src="../images/geese.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-slide"><img src="../images/sail.jpg" alt="">
+                            <div class="content-doc"> 문서의 내용 이나 다른 구역으로 나누어쓰자
+                                <div class="content-doc-left"> 아래 이동
+                                    <i class="fas fa-angle-double-right"></i>
+                                </div>
+
+                            </div>
+                        </div>
                         <div class="swiper-slide"><img src="../images/squirrel.jpg" alt=""> </div>
                         <div class="swiper-slide"><img src="../images/sail.jpg" alt="">     </div>
                         <div class="swiper-slide"><img src="../images/squirrel.jpg" alt=""> </div>

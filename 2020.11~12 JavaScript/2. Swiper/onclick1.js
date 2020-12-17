@@ -11,17 +11,15 @@
         // .stop() 으로 버블링을 막는다.
         // swiper 슬라이드 써보기 bx바꾸기
 
-        $('#main_nav').on('clck', function(){
-
-
-            $('.menu_content').hide().stop().slideDown(250);
-                $('#main_nav').addClass('open').css('overfolw', 'height:450px');
+        $('#main-nav').on('mouseenter', function(){
+            $('.menu-content').hide().stop().slideDown(250);
+                $('#main-nav').addClass('open').css('overfolw', 'height:450px');
                 console.log('mainnav')
         });
 
-        $('#main_nav').on('mouseleave', function(){
-                $('#main_nav').removeClass('open');
-                $('.menu_content').show().stop().slideUp(250);
+        $('#main-nav').on('mouseleave', function(){
+                $('#main-nav').removeClass('open');
+                $('.menu-content').show().stop().slideUp(250);
 
     });
 
@@ -82,16 +80,15 @@
             var swiper = new Swiper('.studymain', {
                 slidesPerView: 1,
                 spaceBetween: 30,
-                loop: true,
-                autoplay: 2000,
+                // loop: true,
                 // pagination: {
                 //     el: '.swiper-pagination',
                 //     clickable: true,
                 //     },
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    },
+                    // autoplay: {
+                    //     delay: 2500,
+                    //     disableOnInteraction: false,
+                    // },
                     navigation: {
                     // nextEl: '.swiper-button-next',  // 다음 버튼
                     // prevEl: '.swiper-button-prev',  // 이전 버튼
@@ -142,8 +139,52 @@
                     }
                     });
 
+                    var contenthover = $('.content-hover')
+                    var contentdoc = $('.content-doc')
+                    var contentdocleft = $('.content-doc-left')
+
+                    /* swiper 안의 사진이나 내용 애니메이션 */
+                    /* 같이 작동 하니 class 명을 따로 하지 않고 각각 작동하게 할려면? */
+                    /* 슬라이드 넘버를 체크 하고 넘버에 오면 실행 하게 하면될까? */
+
+                    contenthover.on('mouseenter', function() {
+                        gsap.to(contenthover, {
+                            duration: 0.5,
+                            y: -100,
+
+                        })
+
+                    });
+                    contenthover.on('mouseleave', function() {
+                        gsap.to(contenthover, {
+                            duration: 0.5,
+                            y: 0,
+                        })
+
+                    });
 
 
+
+
+            /* 모듈화 시키기 */
+
+
+
+                    contentdoc.on('mouseenter', function() {
+                        gsap.to(contentdoc, {
+                            duration: 0.5,
+                            y: -50,
+                        })
+                        contentdocleft.css('display', 'block');
+
+                    });
+                    contentdoc.on('mouseleave', function() {
+                        gsap.to(contentdoc, {
+                            duration: 0.5,
+                            y: 0,
+                        })
+                        contentdocleft.css('display', 'none');
+                    });
 
 
     // 탭메뉴 color 바꾸기

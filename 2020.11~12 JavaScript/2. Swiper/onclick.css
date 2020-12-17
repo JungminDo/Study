@@ -88,6 +88,52 @@ a {
 }
 
 
+.menu-content > ul > li > a {
+
+
+    letter-spacing: 0.15em;
+    color: royalblue;
+    overflow: hidden;
+    font-weight: 800;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    background: -webkit-gradient(linear, left top, right top, from(midnightblue), color-stop(50%, midnightblue), color-stop(50%, royalblue));
+    background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-transition: background-position 275ms ease;
+    transition: background-position 275ms ease;
+    text-decoration: none;
+
+}
+
+.menu-content > ul > li > a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(131, 131, 207);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s; /* 넓이 펼치는데 0.3 왼쪽으로 이동하는데 0.3*/
+    width: 0;
+}
+
+    .menu-content ul li a:hover {
+    background-position: 0 100%;
+  }
+
+    .menu-content ul li a:hover:after {
+    width: 100%;
+    left: 0;
+    background-position: 0 100%;
+  }
+
 .menu-content {
     display: none;
     margin-top: 40px;
@@ -146,11 +192,58 @@ a {
     align-items: center;
   }
 
-.swiper-wrapper > div > img {
-    width: 100%;
+  .content-hover {
+    position: absolute;
+    top: 60%;
+    left: 0%;
+
+}
+
+.content-hover img {
+    border-radius: 15% 25%;
+}
+
+.content-doc {
+    position: absolute;
+    width: 35%;
+    height: 39.5%;
+    top: 60%;
+    left: 20%;
+    color: black;
+    background:linear-gradient(-45deg, transparent 15px, rgb(255, 255, 255, 0.8) 0);
+    background:border 2px solid blue;
+}
+
+.content-doc:hover {
+    height: 52%;
+    border: 2px solid blue;
+
+}
+
+.content-doc-left {
+    position: absolute;
+    display: none;
+    width: 90%;
+    top: 91%;
+    left: 10%;
+    text-align: left;
+    color: gray;
+    border-top: 2px solid red;
+    padding-top: 1%;
+    z-index: 1;
+
+}
+
+.fas.fa-angle-double-right {
+    position: relative;
+    display: inline-block;
+    left: 65%;
 }
 
 
+.swiper-wrapper > div > img {
+    width: 100%;
+}
 
 
 /* study-site AND QA  사이트 검색 문의 게시판*/
@@ -158,10 +251,7 @@ a {
 .quick-link {
     overflow: hidden;
     position: absolute;
-    left: 40%;
-    /* bottom: 50%; */
     width: 100%;
-    margin-left: -400px;
     text-align: right;
     z-index: 5;
 }
