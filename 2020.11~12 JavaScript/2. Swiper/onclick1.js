@@ -76,6 +76,9 @@
             });
 
 
+
+
+
             // Swiper 슬라이드 적용
             var swiper = new Swiper('.studymain', {
                 slidesPerView: 1,
@@ -89,26 +92,37 @@
                     //     delay: 2500,
                     //     disableOnInteraction: false,
                     // },
-                    navigation: {
-                    // nextEl: '.swiper-button-next',  // 다음 버튼
-                    // prevEl: '.swiper-button-prev',  // 이전 버튼
-                    },
+
                         // allowTouchMove: false,
                         // fals의 경우 슬라이드를 전환 할 수 있는  유일한 방법은
                         // slide prev slide Next만 사용해야한다.
                         // followFinger: false
                         // 비활성화하면 슬라이더를 놓을때만 애니메이션이 적용되며
                         // 손가락을 잡고 있는 동안에는 움직이지 않는다.
+                    on: {
+                        init: function(){
+                            $('.swiper-slide-prev .content-hover').css('opacity', '0');
+                            $('.swiper-slide-next .content-hover').css('opacity', '0');
+                                $('.swiper-slide-active').on('mouseenter', function() {
+                                    gsap.to('.content-hover', {
+                                        duration: 0.5,
+                                        y: -100,
+                                        opacity: 1,
+                                    })
+                                })
+
+                                $('.swiper-slide-active').on('mouseleave', function() {
+                                    gsap.to('.content-hover', {
+                                        duration: 0.5,
+                                        y: 0,
+                                    })
+
+                                });
 
 
-
-                    // on : {
-                    //     init: function(){
-                    //     swiper.slideToLoop(0)
-
-                    //     }
-                    // }
-                });
+                        }
+                    }
+            });
 
                 var myswiper = new Swiper('.tabsub', {
                     slidesPerView: 3,
@@ -139,53 +153,70 @@
                     }
                     });
 
-                    var contenthover = $('.content-hover')
-                    var contentdoc = $('.content-doc')
-                    var contentdocleft = $('.content-doc-left')
 
-                    /* swiper 안의 사진이나 내용 애니메이션 */
-                    /* 같이 작동 하니 class 명을 따로 하지 않고 각각 작동하게 할려면? */
-                    /* 슬라이드 넘버를 체크 하고 넘버에 오면 실행 하게 하면될까? */
 
-                    contenthover.on('mouseenter', function() {
-                        gsap.to(contenthover, {
-                            duration: 0.5,
-                            y: -100,
 
-                        })
 
-                    });
-                    contenthover.on('mouseleave', function() {
-                        gsap.to(contenthover, {
-                            duration: 0.5,
-                            y: 0,
-                        })
 
-                    });
+
+                    // var contenthover = $('.content-hover')
+                    // var contentdoc = $('.content-doc')
+                    // var contentdocleft = $('.content-doc-left')
+                    // var onslide = $('.swiper-slide')
+                    // var contentnum = $('.content-hover').length
+                    // /* swiper 안의 사진이나 내용 애니메이션 */
+                    // /* 같이 작동 하니 class 명을 따로 하지 않고 각각 작동하게 할려면? this로 구분지어준다.*/
+
+
+
+                    // onslide.on('mouseenter', function(a,b,c) {
+                    //     gsap.to(contenthover, {
+                    //         duration: 0.5,
+                    //         y: -100,
+                    //         opacity: 1,
+                    //     })
+                    //     console.log(a);
+                    //     console.log(b);
+                    //     console.log(c);
+                    //     console.log(contentnum);
+
+                    // });
+
+                    // onslide.on('mouseleave', function(a,b,c) {
+                    //     gsap.to(contenthover, {
+                    //         duration: 0.5,
+                    //         y: 0,
+                    //     })
+                    //     console.log(a);
+                    //     console.log(b);
+                    //     console.log(c);
+                    // });
 
 
 
 
             /* 모듈화 시키기 */
+            /* 클래스 하나로 조종하기 */
+            /*  */
 
 
+            $('.content-doc').on('mouseenter', function() {
 
-                    contentdoc.on('mouseenter', function() {
-                        gsap.to(contentdoc, {
+
+                gsap.to('.content-doc', {
                             duration: 0.5,
                             y: -50,
                         })
-                        contentdocleft.css('display', 'block');
+                        $('.content-doc-left').css('display', 'block');
 
                     });
-                    contentdoc.on('mouseleave', function() {
-                        gsap.to(contentdoc, {
+                    $('.content-doc').on('mouseleave', function() {
+                        gsap.to('.content-doc', {
                             duration: 0.5,
                             y: 0,
                         })
-                        contentdocleft.css('display', 'none');
+                        $('.content-doc-left').css('display', 'none');
                     });
-
 
     // 탭메뉴 color 바꾸기
     // 살짝살짝 벌어지는거 잡는 방법은?
@@ -194,7 +225,6 @@
 	// 	$(this).parent('li').addClass('active').siblings('li').removeClass('active');
     // });
 
-
     $('.tab-study-menu ul li ').on('click', function () {
 	    var tab_id = $(this).attr('data-tab');
 
@@ -202,12 +232,9 @@
         $('.tab-content').removeClass('active');
 
         $(this).addClass('active');
-
         $("#" + tab_id).addClass('active');
 
     });
-
-
 
 });
 
