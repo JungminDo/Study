@@ -101,27 +101,37 @@
                         // 손가락을 잡고 있는 동안에는 움직이지 않는다.
                     on: {
                         init: function(){
-                            $('.swiper-slide-prev .content-hover').css('opacity', '0');
-                            $('.swiper-slide-next .content-hover').css('opacity', '0');
                                 $('.swiper-slide-active').on('mouseenter', function() {
-                                    gsap.to('.content-hover', {
+                                    gsap.to('.swiper-slide-active .content-hover', {
                                         duration: 0.5,
                                         y: -100,
                                         opacity: 1,
                                     })
                                 })
-
                                 $('.swiper-slide-active').on('mouseleave', function() {
-                                    gsap.to('.content-hover', {
+                                    gsap.to('.swiper-slide-active .content-hover', {
                                         duration: 0.5,
                                         y: 0,
                                     })
-
                                 });
+                        },
+                        slideChangeTransitionEnd: function() {
+                        $('.swiper-slide-active').on('mouseenter', function() {
+                            gsap.to('.swiper-slide-active .content-hover', {
+                                duration: 0.5,
+                                y: -100,
+                                opacity: 1,
+                            })
+                        })
+                        $('.swiper-slide-active').on('mouseleave', function() {
+                            gsap.to('.swiper-slide-active .content-hover', {
+                                duration: 0.5,
+                                y: 0,
+                            })
+                        });
 
-
-                        }
                     }
+                }
             });
 
                 var myswiper = new Swiper('.tabsub', {
@@ -200,23 +210,37 @@
             /*  */
 
 
-            $('.content-doc').on('mouseenter', function() {
+            // $('.content-doc').on('mouseenter', function() {
 
 
-                gsap.to('.content-doc', {
-                            duration: 0.5,
-                            y: -50,
-                        })
-                        $('.content-doc-left').css('display', 'block');
+            //     gsap.to('.content-doc', {
+            //                 duration: 0.5,
+            //                 y: -50,
+            //             })
+            //             $('.content-doc-left').css('display', 'block');
 
-                    });
-                    $('.content-doc').on('mouseleave', function() {
-                        gsap.to('.content-doc', {
-                            duration: 0.5,
-                            y: 0,
-                        })
-                        $('.content-doc-left').css('display', 'none');
-                    });
+            //         });
+            //         $('.content-doc').on('mouseleave', function() {
+            //             gsap.to('.content-doc', {
+            //                 duration: 0.5,
+            //                 y: 0,
+            //             })
+            //             $('.content-doc-left').css('display', 'none');
+            //         });
+
+
+        $('.content-doc').on('mouseenter', function(){
+            $('.menu-content').hide().stop().slideDown(250);
+                $('.content-doc').addClass('open');
+                console.log('보이나요')
+        });
+
+        $('.content-doc').on('mouseleave', function(){
+                $('.content-doc').removeClass('open');
+                $('.content-doc').show().stop().slideUp(250);
+
+    });
+
 
     // 탭메뉴 color 바꾸기
     // 살짝살짝 벌어지는거 잡는 방법은?
