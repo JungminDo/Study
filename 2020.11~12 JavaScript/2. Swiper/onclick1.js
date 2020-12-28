@@ -228,7 +228,6 @@
             //             $('.content-doc-left').css('display', 'none');
             //         });
 
-
         $('.content-doc').on('mouseenter', function(){
             $('.menu-content').hide().stop().slideDown(250);
                 $('.content-doc').addClass('open');
@@ -240,7 +239,6 @@
                 $('.content-doc').show().stop().slideUp(250);
 
     });
-
 
     // 탭메뉴 color 바꾸기
     // 살짝살짝 벌어지는거 잡는 방법은?
