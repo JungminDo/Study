@@ -31,19 +31,6 @@
 
         var mainswiper = new Swiper('.mainimage', {
 
-            breakpoints: {
-
-                1024: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-
-            },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
