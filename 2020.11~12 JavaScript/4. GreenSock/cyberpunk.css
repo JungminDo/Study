@@ -100,8 +100,8 @@ html, body {
   height: .1em;
   line-height: .5em;
   width: 100%;
-  -webkit-animation: scan 500ms ease-in-out infinite alternate 250ms, glitch-anim 300ms ease-in-out infinite alternate;
-          animation: scan 500ms ease-in-out infinite alternate 250ms, glitch-anim 300ms ease-in-out infinite alternate;
+  -webkit-animation: scan 500ms ease-in-out infinite alternate 454ms, glitch-anim 300ms ease-in-out infinite alternate;
+          animation: scan 500ms ease-in-out infinite alternate 454ms, glitch-anim 300ms ease-in-out infinite alternate;
   overflow: hidden;
   opacity: .7;
 }
@@ -116,8 +116,8 @@ html, body {
   height: .5em;
   line-height: .1em;
   width: 100%;
-  -webkit-animation: scan 665ms ease-in-out infinite alternate 111ms, glitch-anim 300ms ease-in-out infinite alternate;
-          animation: scan 665ms ease-in-out infinite alternate 111ms, glitch-anim 300ms ease-in-out infinite alternate;
+  -webkit-animation: scan 665ms ease-in-out infinite alternate 423ms, glitch-anim 300ms ease-in-out infinite alternate;
+          animation: scan 665ms ease-in-out infinite alternate 423ms, glitch-anim 300ms ease-in-out infinite alternate;
   overflow: hidden;
   opacity: .8;
 }
@@ -209,8 +209,8 @@ html, body {
   10%, 15% {
     height: 1em;
     line-height: .2em;
-    -webkit-transform: translate(-55%, 0.18em);
-            transform: translate(-55%, 0.18em);
+    -webkit-transform: translate(-55%, 0.3em);
+            transform: translate(-55%, 0.3em);
   }
 }
 
@@ -223,8 +223,8 @@ html, body {
   10%, 15% {
     height: 1em;
     line-height: .2em;
-    -webkit-transform: translate(-55%, 0.18em);
-            transform: translate(-55%, 0.18em);
+    -webkit-transform: translate(-55%, 0.3em);
+            transform: translate(-55%, 0.3em);
   }
 }
 
@@ -328,73 +328,73 @@ html, body {
 
 @-webkit-keyframes glitch-anim {
   0% {
-    clip: rect(63px, 9999px, 32px, 0);
+    clip: rect(19px, 9999px, 1px, 0);
   }
   10% {
-    clip: rect(57px, 9999px, 53px, 0);
+    clip: rect(90px, 9999px, 73px, 0);
   }
   20% {
-    clip: rect(60px, 9999px, 22px, 0);
+    clip: rect(34px, 9999px, 60px, 0);
   }
   30% {
-    clip: rect(99px, 9999px, 72px, 0);
+    clip: rect(11px, 9999px, 27px, 0);
   }
   40% {
-    clip: rect(80px, 9999px, 80px, 0);
+    clip: rect(50px, 9999px, 63px, 0);
   }
   50% {
-    clip: rect(97px, 9999px, 46px, 0);
+    clip: rect(39px, 9999px, 4px, 0);
   }
   60% {
-    clip: rect(96px, 9999px, 87px, 0);
+    clip: rect(19px, 9999px, 48px, 0);
   }
   70% {
-    clip: rect(90px, 9999px, 39px, 0);
+    clip: rect(32px, 9999px, 6px, 0);
   }
   80% {
-    clip: rect(82px, 9999px, 94px, 0);
+    clip: rect(23px, 9999px, 4px, 0);
   }
   90% {
-    clip: rect(41px, 9999px, 12px, 0);
+    clip: rect(46px, 9999px, 16px, 0);
   }
   100% {
-    clip: rect(77px, 9999px, 42px, 0);
+    clip: rect(69px, 9999px, 75px, 0);
   }
 }
 
 @keyframes glitch-anim {
   0% {
-    clip: rect(63px, 9999px, 32px, 0);
+    clip: rect(19px, 9999px, 1px, 0);
   }
   10% {
-    clip: rect(57px, 9999px, 53px, 0);
+    clip: rect(90px, 9999px, 73px, 0);
   }
   20% {
-    clip: rect(60px, 9999px, 22px, 0);
+    clip: rect(34px, 9999px, 60px, 0);
   }
   30% {
-    clip: rect(99px, 9999px, 72px, 0);
+    clip: rect(11px, 9999px, 27px, 0);
   }
   40% {
-    clip: rect(80px, 9999px, 80px, 0);
+    clip: rect(50px, 9999px, 63px, 0);
   }
   50% {
-    clip: rect(97px, 9999px, 46px, 0);
+    clip: rect(39px, 9999px, 4px, 0);
   }
   60% {
-    clip: rect(96px, 9999px, 87px, 0);
+    clip: rect(19px, 9999px, 48px, 0);
   }
   70% {
-    clip: rect(90px, 9999px, 39px, 0);
+    clip: rect(32px, 9999px, 6px, 0);
   }
   80% {
-    clip: rect(82px, 9999px, 94px, 0);
+    clip: rect(23px, 9999px, 4px, 0);
   }
   90% {
-    clip: rect(41px, 9999px, 12px, 0);
+    clip: rect(46px, 9999px, 16px, 0);
   }
   100% {
-    clip: rect(77px, 9999px, 42px, 0);
+    clip: rect(69px, 9999px, 75px, 0);
   }
 }
 

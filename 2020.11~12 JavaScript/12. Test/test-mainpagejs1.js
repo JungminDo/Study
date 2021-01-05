@@ -3,6 +3,12 @@
 
 
 
+
+        $('.submenu').on('click', function(){
+
+            $('.megamenu').toggleClass("hidden");
+        });
+
         // $('submenu').on('mouseenter', function(){
         //     $('.megamenu').hide().stop().slideDown(250);
         //     $('.nav-container').addClass('open');
@@ -27,6 +33,7 @@
         //     gsap.from(".sidebar-secnod3", { duration: 1.5,  ease: "back.inOut(2)", y: 50, opacity:0 });
 
         // });
+
 
 
         var mainswiper = new Swiper('.mainimage', {
@@ -58,23 +65,37 @@
                     console.log(mainswiper.realIndex);
                     gsap.fromTo($('.mainsidebar').find('.swiper-slide').eq(mainswiper.realIndex +1), 1, {y:100, opacity:0}, {delay:.2, y:0, opacity:1})
                     console.log(mainswiper.realIndex);
-                    gsap.fromTo($('.mainsidebar').find('.swiper-slide').eq(mainswiper.realIndex +2), 1, {y:100, opacity:0,}, {delay:.4, y:0, opacity:1,})
+                    gsap.fromTo($('.mainsidebar').find('.swiper-slide').eq(mainswiper.realIndex +2), 1, {y:100, opacity:0}, {delay:.4, y:0, opacity:1,})
                     console.log(mainswiper.realIndex);
                 }
             }
 
-
         });
 
+        var hideswiper = new Swiper('.showhide', {
 
-        var subswiper = new Swiper('.showhide', {
 
             navigation: {
                 nextEl: '.main-sub-next',
                 prevEl: '.main-sub-prev',
             },
 
+            on: {
+
+                init: function(){
+                    gsap.fromTo($('.showhide').find('.showhide-sub-button-next'), 1, {opacity:0}, {delay: 1, opacity:1} );
+                    console.log(this.realIndex +'show');
+                }
+            },
+
+
+
+
+
         });
+
+
+
 
 
 
