@@ -94,8 +94,46 @@
 
         });
 
+// 연습용 탭메뉴에 이미지 바꾸거나 교체 find, attr 사용해보기
+//
+  //탭메뉴
 
+//   $(".basicSlider_tabs li").on("click", function(e){
+//     e.stopPropagation();
+//     if($(this).index() == $(".basicSlider_tabs li").last().index()){
+//         _target.removeClass("on").removeClass("reset");
 
+//         $('.writeImg_6 img').attr("src", ".");
+//         $('.writeImg_7 img').attr("src", ".");
+//         $('.writeImg_8 img').attr("src", ".");
+//         $('.writeImg_9 img').attr("src", ".");
+
+//         $('.page_5').find('.num_6 img').attr('src', '이미지 경로')
+//         .css('pointer-events','auto');
+//         $('.page_5').find('.num_7 img').attr('src', '이미지 경로')
+//         .css('pointer-events','auto');
+//         $('.page_5').find('.num_8 img').attr('src', '이미지 경로')
+//         .css('pointer-events','auto');
+//         $('.page_5').find('.num_9 img').attr('src', '이미지 경로')
+//         .css('pointer-events','auto');
+
+//         setState(false);
+
+//         return false;
+//     }
+//     $('.num_6').find('img').attr('src', '이미지 경로')
+//     .css('pointer-events','auto');
+//     $('.num_7').find('img').attr('src', '이미지 경로')
+//     .css('pointer-events','auto');
+//     $('.num_8').find('img').attr('src', '이미지 경로')
+//     .css('pointer-events','auto');
+//     $('.num_9').find('img').attr('src', '이미지 경로')
+//     .css('pointer-events','auto');
+
+//     _target.removeClass("on").removeClass("reset");
+//     setState(false);
+// });
+// }
 
 
 
