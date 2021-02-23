@@ -145,12 +145,12 @@ var carName = "Volvo";
 
 
 
-function myFunction() {
+function my2Function() {
 
 }
 
 // local Scope
-function myFunction() {
+function my2Function() {
     var carName = "Volvo";
 }
 
