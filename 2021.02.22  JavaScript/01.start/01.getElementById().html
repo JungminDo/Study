@@ -24,7 +24,7 @@
 
 <body>
     <div class="main_wrap">
-        <header>
+        <header style="    height: 75px;">
             <h2 id="title">
                 1. getElementById 사용하기
             </h2>
@@ -45,34 +45,235 @@
 
                 <div class="flex_right">
                     <button onclick="document.getElementById('myImage').src='../images/one2.png'"> 오른쪽버튼</button>
-                    <button onclick="document.getElementById('title').innerHTML='1.  사용하기 getElementById';">타이틀교체</button>
+                    <button
+                        onclick="document.getElementById('title').innerHTML='1.  사용하기 getElementById';">타이틀교체</button>
                 </div>
             </div>
         </div>
+        <!-- Swiper -->
+        <div class="swiper-container studyfirst">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- table_table tr td -->
 
+                    <div class="tableContainer brown center">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th></th>
+                                    <th>키워드</th>
+                                    <th>설명</th>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                    </td>
+                                    <td>
+                                        break
+                                    </td>
+                                    <td>
+                                        스위치 또는 루프를 종료한다.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>continue</td>
+                                    <td>루프에서 점프하여 맨 위에서 시작</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>debugger</td>
+                                    <td>
+                                        JavaScript 실행을 중지하고 디버깅 기능을 호출합니다.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        do...while
+                                    </td>
+                                    <td>조건이 참인 동안 문 블록을 실행하고 블록을 반복합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>for</td>
+                                    <td>
+                                        조건이 참인 한 실행할 명령문 블록을 표시합니다.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>function</td>
+                                    <td>
+                                        함수 선언
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>if ... else</td>
+                                    <td>조건에 따라 실행할 명령문 블록을 표시합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>return</td>
+                                    <td>함수를 종료합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>switch</td>
+                                    <td>다른 경우에 따라 실행할 명령문 블록을 표시합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>try....catch</td>
+                                    <td>문 블록에 오류 처리를 구현합니다..</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>var</td>
+                                    <td>변수 선언.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="div_table">
+                        <div class="div_left">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div>10</div>
+                        </div>
 
+                        <div class="div_center">
+                            <div>인라인 요소를 가운데 정렬하는 방법</div>
+                            <div>블록 요소를 가운데 정렬하는 방법</div>
+                            <div>테이블을 이용한 가운데 정렬하는 방법</div>
+                            <div>포지션을 이용한 가운데 정렬하는 방법</div>
+                            <div>포지션을 이용한 가운데 정렬하는 방법</div>
+                            <div>포지션을 이용한 가운데 정렬하는 방법 </div>
+                            <div>플렉스를 이용한 가운데 정렬하는 방법</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div>10</div>
+                        </div>
 
+                        <div class="div_right">
+                            <div>(text-align: center;)</div>
+                            <div>(margin: 0 auto;)</div>
+                            <div>(vertical-align: middle;)</div>
+                            <div>(margin)</div>
+                            <div>(transform: translate(-50%, -50%);)</div>
+                            <div>(margin: auto;)</div>
+                            <div>(display: flex;)</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div>10</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <ul class="ul_table_top">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                    </ul>
+                    <ul class="ul_table_center">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                    </ul>
+                    <ul class="ul_table_bottom">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                        <li>4</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <div class="backimg_01"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="backimg_02"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="backimg_03"></div>
+                    <div class="backimg_03"></div>
+                </div>
+                <div class="swiper-slide">
 
+                </div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide">Slide 10</div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
 
-
-
+        <!-- 여러가지 방법으로 만들어보기
+    1. 표 table div ul li 로
+    2. 가운데 정렬 3가지이상 써보기
+    3. 백그라운드 이미지 만들어보기
+-->
 
 </body>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="swiper.js"></script>
 
-
 <script>
 
-
-
 </script>
-
-
-
-
 
 </html>
