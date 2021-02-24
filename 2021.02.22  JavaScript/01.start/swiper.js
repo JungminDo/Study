@@ -165,10 +165,28 @@ var x = 10;
 
 
 // let 을 이용하여 내부 변수 선언시 블록 외부의 변수 다시 선언되지않게하기.
-var x = 10;
-// Here x is 10
-{
-    let x = 2;
-    // Here x is 2
+// var x = 10;
+// // Here x is 10
+// {
+//     let x = 2;
+//     // Here x is 2
+// }
+// // Here x is 10
+
+
+// var x = 10;
+// document.getElementById("Script-container").innerHTML = x;
+
+
+function toCelsius(f) {
+    return (5/9) * (f-32);
 }
-// Here x is 10
+
+document.getElementById("Script-container").innerHTML = toCelsius(77);
+
+// 문자열 바꾸기
+function changeFunction() {
+    var str = document.getElementById("demo").innerHTML;
+    var txt = str.replace("Microsoft","W3Schools");
+    document.getElementById("demo").innerHTML = txt;
+  }

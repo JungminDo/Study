@@ -175,22 +175,22 @@ body {
 .div_table .div_center div,
 .div_table .div_right div {
 
-width: 367px;
-height: 43px;
-border: 2px solid violet;
+    width: 367px;
+    height: 43px;
+    border: 2px solid violet;
 }
 
 
 .ul_table_top li,
 .ul_table_center li,
 .ul_table_bottom li {
- border: 2px solid greenyellow;
- margin: 1px 0 0 0;
+    border: 2px solid greenyellow;
+    margin: 1px 0 0 0;
 }
 
 .ul_table_top,
 .ul_table_center,
-.ul_table_bottom{
+.ul_table_bottom {
     width: 350px;
     height: 470px;
     border: 2px solid salmon;
@@ -202,7 +202,7 @@ border: 2px solid violet;
     height: 134%;
     /* top: 0%; */
     /* left: 50%; */
-    transform: translateX(0%)  scale(0.6);
+    transform: translateX(0%) scale(0.6);
     background-repeat: no-repeat;
     position: relative;
 }
@@ -212,7 +212,7 @@ border: 2px solid violet;
     background: url("../../images/one2.png");
     width: 50%;
     height: 270%;
-    transform:  scale(0.3);
+    transform: scale(0.3);
     background-repeat: no-repeat;
     position: relative;
     margin: 0 auto;
@@ -231,4 +231,164 @@ border: 2px solid violet;
     display: flex;
     /* justify-content: center; */
     /* vertical-align: top; */
+}
+
+
+tr:nth-child(even) {
+    background-color: cadetblue;
+}
+
+.swiper-slide a {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+}
+
+/* style="overflow-x:auto;"
+    반응형 테이블 일때 스크롤을 보여준다.
+*/
+
+/* css 결합자
+
+    하위 선택자 (공백)
+    자식 선택기 (>) div > li  면 모든 <div> 의 li 를 선 택한다.
+    인접 형제 선택기 (+)   div + p 는 모든  <div></div> 다음의 p 를 선택한다.
+    일반 형제 선택기 (~)   div ~ p 는 지정된 요소 div 의 형제인  모든 p를 선택한다.
+
+*/
+
+/* CSS-: first-child
+p:first-child {
+  color: blue;
+}
+ 첫 번쨰  <p> 요소와 일치
+
+ p i:first-child {
+
+    모든 p 요소의ㅜ 첫번째  <i> 요소와 일치
+
+p:first-child i {
+color: blue;
+}
+    모든 첫번째 하위 요소의 모든 i 요소와 일치
+
+*/
+
+
+/*
+        a[target] {
+        background-color: yellow;
+        }
+
+        a 태그 안에 target 을 선택
+
+        a[target="_blank"] {
+        background-color: yellow;
+        }
+
+        a 태그 안에 target _blank 를 선택
+
+        [title~="flower"] {
+        border: 5px solid yellow;
+        }
+
+        title 에 flower 가 있는 애들만
+*/
+
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 80%;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 70%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* var, let, const 의 차이
+
+    var 여러개를 사용해도 에러가 출력되지 않고 각기 다른 값이 출력된다
+
+    let 과 const 를 여러번 사용하면 에러 메시지가 나온다.
+        즉 변수 재선언이 되지않는다.
+
+    두가지의 차이점은 let은 변수 재할당이 가능하다.하지만
+    const 는 변수 재선언, 변수 재할당 모두 불가능하다.
+
+*/
+
+#Script-container {position: relative;border: 2px solid yellow;display: inline-block;top: -100px;left: 10%;}
+
+#Script-container ~ button {
+    display: inline-block;
+    border: 4px solid plum;
+    margin-top: -100px;
+}
+
+button:hover {
+    background-color: rebeccapurple;
+    cursor: pointer;
+}
+
+
+#demo {
+display: inline-block;
+border: 5px solid steelblue;
 }
