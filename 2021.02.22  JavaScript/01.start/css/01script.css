@@ -382,7 +382,7 @@ input[type=submit]:hover {
     margin-top: -100px;
 }
 
-button:hover {
+#Script-container ~ button:hover {
     background-color: rebeccapurple;
     cursor: pointer;
 }
@@ -391,4 +391,21 @@ button:hover {
 #demo {
 display: inline-block;
 border: 5px solid steelblue;
+}
+
+
+
+.flex_contents{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.flex_contents button {
+    border: 2px solid gray;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: grey;
+    cursor: pointer;
 }

@@ -179,7 +179,7 @@ var x = 10;
 
 
 function toCelsius(f) {
-    return (5/9) * (f-32);
+    return (5 / 9) * (f - 32);
 }
 
 document.getElementById("Script-container").innerHTML = toCelsius(77);
@@ -187,6 +187,71 @@ document.getElementById("Script-container").innerHTML = toCelsius(77);
 // 문자열 바꾸기
 function changeFunction() {
     var str = document.getElementById("demo").innerHTML;
-    var txt = str.replace("Microsoft","W3Schools");
+    var txt = str.replace("Microsoft", "W3Schools");
     document.getElementById("demo").innerHTML = txt;
-  }
+}
+
+
+// 배열 교체하기
+// var cars = ["Saab", "Volvo", "BMW"];
+// cars[0] = "Opel";
+// document.getElementById("cars").innerHTML = cars[0];
+
+var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("cars").innerHTML = text;
+
+
+var fruits, text;
+fruits = ["Banana", "Orange", "Apple", "Mango", "Strow", "ququm"];
+
+text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+document.getElementById("cars_cargo").innerHTML = text;
+document.getElementById("demod").innerHTML = fruits;
+
+function myFunction(value) {
+    text += "<li>" + value + "</li>";
+    fruits.push("Lemon");
+    document.getElementById("demod").innerHTML = fruits;
+}
+
+
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo3").innerHTML = points;
+
+function myFunction1() {
+    points.sort();
+    document.getElementById("demo3").innerHTML = points;
+}
+
+function myFunction2() {
+    points.sort(function (a, b) {
+        return a - b
+    });
+    document.getElementById("demo3").innerHTML = points;
+}
+
+
+var points22 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo4").innerHTML = points22;
+
+function myFunction4() {
+    var i, j, k;
+    for (i = points22.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * i)
+        k = points22[i]
+        points22[i] = points22[j]
+        points22[j] = k
+    }
+    document.getElementById("demo4").innerHTML = points22;
+}
