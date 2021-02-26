@@ -255,3 +255,20 @@ function myFunction4() {
     }
     document.getElementById("demo4").innerHTML = points22;
 }
+
+
+function myFunction5() {
+    var hour = new Date().getHours();
+    var greeting;
+    if (hour < 18) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("demo5").innerHTML = greeting;
+}
+
+// 스크립트 작성시 시나리오 먼저 작성 한글로 작성하고 스크립트로 옮겨오기
+
+
+// var myStr ="FirstLine\n\t+\\+SecondLine+ThirdLine";
