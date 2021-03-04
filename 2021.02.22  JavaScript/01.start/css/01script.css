@@ -409,3 +409,10 @@ button:hover {
     background-color: grey;
     cursor: pointer;
 }
+
+
+
+/*
+scroll-behavior: smooth;
+링크 클릭시 부드럽게 위아래로 올라간다.
+*/
