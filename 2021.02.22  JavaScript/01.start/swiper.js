@@ -272,3 +272,9 @@ function myFunction5() {
 
 
 // var myStr ="FirstLine\n\t+\\+SecondLine+ThirdLine";
+
+// var someAdjective;
+// var myStr = "Learning to code is ";
+
+// var ourName = "freeCodeCamp";
+// var ourStr = "Hello, our name is " + ourName + ", how are you?";
