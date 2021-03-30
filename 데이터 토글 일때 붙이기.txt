@@ -1,0 +1,9 @@
+data-toggle-obj="1"  complete 가 붙는다.
+  
+data-toggle-target="1">   on 이 붙는다.
+
+07_401 4페이지 원 색깔 채우고 갯수제한 까지
+
+버튼 같이 쓰기 0008-102 참고
+
+ data-answer-btn data-quiz-chain="ox1,toggle1"

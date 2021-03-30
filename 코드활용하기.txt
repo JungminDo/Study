@@ -1,0 +1,200 @@
+position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 40px;
+
+display: flex;
+  justify-content: center;
+  align-items: center;
+
+margin: 0 auto;
+/*   “  ”
+직접쓰기
+http://cdata.tsherpa.co.kr/tsherpa/MultiMedia/Flash/2020/curri/index.html?flashxmlnum=guest1&classa=A8-C1-22-MM-MA-03-04-03-0-0-0-0&classno=MA_22_03/suh_0202_03_0003/suh_0202_03_0003_203.html
+정답 파란색 코드#01a0fe
+<span class="blankBox" style="    margin-top: 7px;"></span>
+922 살펴보기
+
+인라인 요소를 가운데 정렬하는 방법 
+
+곱셈 나눗셈 기호
+×
+	70×50=
+    90÷3=
+
+(text-align: center;)
+
+블록 요소를 가운데 정렬하는 방법 
+
+(margin: 0 auto;)
+
+테이블을 이용한 가운데 정렬하는 방법 
+
+(vertical-align: middle;)
+
+포지션을 이용한 가운데 정렬하는 방법
+
+(margin)
+
+포지션을 이용한 가운데 정렬하는 방법 
+
+(transform: translate(-50%, -50%);)
+
+포지션을 이용한 가운데 정렬하는 방법 
+
+(margin: auto;)
+
+플렉스를 이용한 가운데 정렬하는 방법 
+
+(display: flex;)
+
+*/
+
+이번시간에는 무엇을 배울까요 발문 여러개일때 좌측에서 우측으로 나오는방법
+
+ data-appear-delay="300" data-appear-dir="l2r"
+
+dir 을 바꾸고 딜레이를 500씩 늘린다.
+
+다음시간 이번시간 흔들리는거 막기
+<main class="fixOpacity">
+
+모든 화면기준상에서 
+가운데에 정렬하고싶을때 저렇게 입력
+y값에 가운데에 오게하기
+<div class="iconO"></div> 동그라미 하기
+stoppropagation
+preventdefault   
+이해하고 사용하기
+
+인라인블럭은 vertical center middle 사용하기
+
+ data-answer-btn data-quiz-chain="ox1,toggle1"
+
+활동+
+<div class="title active"><ins class="icon"></ins>두 수의 크기 비교하기</div>
+말풍선 bottom 부분을 left right 등으로 바꾸어주면됩니다. ctTail 말꼬리 부분입니다.
+sky 를 다른색으로 지정해주면됩니다.
+balloon sky bottom ctTail center
+
+
+1. 빈칸 네모
+<span class=" blankBox" style="    margin-top: 7px;"></span> 
+
+2. 아이콘 보기
+ 보기 배경색 없는경우	<div class="icon_bogi"></div>
+ 보기 배경색 잇는경우 	<span class="icon_bogi"></span>
+
+예보기
+
+C:\Users\wjdalseh\Desktop\천재 샘플파일모음\NKOR\nkor_0202_01_0304 590 
+다음페이지 넘기기 활용하기(슬라이드)
+
+C:\Users\wjdalseh\Desktop\천재 샘플파일모음\PU 
+
+103html 멀티 미디어 열기 활용
+
+
+
+박스- 선 - 박스 
+http://cdata.tsherpa.co.kr/tsherpa/MultiMedia/Flash/2020/curri/index.html?flashxmlnum=guest1&classa=A8-C1-32-MM-MM-04-05-09-0-0-0-0&classno=MM_32_04/suh_0302_04_0009/suh_0302_04_0009_205_1.html
+
+
+ox 문제
+
+http://cdata.tsherpa.co.kr/tsherpa/MultiMedia/Flash/2020/curri/index.html?flashxmlnum=guest1&classa=A8-C1-12-MM-MA-03-02-07-0-0-0-0&classno=MA_12_03/suh_0102_01_0008/suh_0102_01_0008_401.html
+
+태그 안에 슬라이드 
+nproto_cmn_923 3번째 
+
+931 캐릭터 및 캐릭터 원
+
+501 낱말 5 * 5 배치
+
+508 말풍선 디자인 및 물음표
+
+923 3번 팝업 말풍선
+
+914 1번 팝업 해설 라인박스 찾기전 대용
+
+라인박스 
+DA nproto_cmn_910.html
+
+   $('.page_1').find('.dapCheckBtn').on('click', function(){
+      clearInterval(setTime);
+      $(this).toggleClass('active');
+      if($(this).hasClass('active')){
+        $('.page_1').find('.clickImgNum').css({
+          'visibility':'visible',
+          'opacity':1
+        });
+        $('.clickImgNum').off('mouseup')
+        .css('cursor','alias');
+      }else {
+        setIdx = 0;
+        $('.page_1').find('.clickImgNum').css({
+          'visibility':'hidden',
+          'opacity':0
+        });
+        imgClick();
+        $('.imgBgContainer').css({
+          'pointer-events': 'auto'
+        })
+      }
+    })
+
+ 익스에서 따로 css 설정할때
+
+/* IE10+ */
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* Enter your style code */
+  
+ }
+
+
+data-toggle-obj="1"  complete 가 붙는다.
+  
+data-toggle-target="1">   on 이 붙는다.
+
+07_401 4페이지 원 색깔 채우고 갯수제한 까지
+
+버튼 같이 쓰기 0008-102 참고
+
+ data-answer-btn data-quiz-chain="ox1,toggle1"
+
+돋보기 풀화면 PU so_0302_0102_0004_102
+
+클래스에 bullet circle 이 동그라미
+ number 사각형
+
+.minus {
+        display: inline-block;
+    height: 3px;
+    width: 20px;
+    /* margin: 0 auto; */
+    background-color: #000;
+    position: relative;
+    top: -5px;
+    left: -2px;
+}
+
+WhatFont = 텍스트영역에 마우스 호버시 폰트스타일 알 수 있음.
+fireShot = 전체화면 캡쳐 할떄 유용 ( 스크롤영역까지 전부 )
+headingsMap = 헤딩태그가 누락된 부분체크 ( 시멘틱 마크 업 )
+PerfectPixcel = 더미 이미지를 올려서 픽셀 정확하게 맞출때 사용
+Set Character Encoding = 인코딩방식 변경 가능
+
+
+사운드 넣는 코드
+
+    document.addEventListener("DOMContentLoaded", function () {
+		var answerBtn1 = document.querySelector('.page_4 .getLineBtn');
+        var answerBtn2 = document.querySelector('.page_4 .givenLineBtn');
+        answerBtn1.addEventListener('click', $efSound.click);
+        answerBtn2.addEventListener('click', $efSound.click);
+
+		var answerBtn3 = document.querySelector('.page_5 .getLineBtn');
+        var answerBtn4 = document.querySelector('.page_5 .givenLineBtn');
+        answerBtn3.addEventListener('click', $efSound.click);
+        answerBtn4.addEventListener('click', $efSound.click);
+	}, false);
