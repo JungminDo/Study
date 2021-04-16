@@ -60,21 +60,65 @@
 // conststudy();
 
 // const 2
-function constsudy2() {
-    const list = ["apple", "orange", "banana"];
-    list.push("cake");
-    console.log(list);
+// function constsudy2() {
+//     const list = ["apple", "orange", "banana"];
+//     list.push("cake");
+//     console.log(list);
+// }
+
+// // const 를 사용하더라도 배열과 오브젝트의 값을 변경하는 것은 가능하다.
+// // 일종의 값을 재할당하는 코드가 불가능하다.
+// // immutable array 를 어떻게 만드는가?
+// // 에디터에서 글을 쓸때 임시저장할때 뒤로 가기 또는 앞으로 가기눌러 어떠 값을 되돌리는값을 보여줄때
+// // array 같은 경우 이전에 어떤 값인지 모른다.
+
+// // constsudy2();
+// const list = ["apple", "orange", "banana"];
+// list2 = [].concat(list, "cake");
+// console.log(1+ list);
+// console.log(2+ list2);
+// console.log(list === list2);
+
+
+// ES2015 string에 대한 새로운 메서드들
+
+// let str = "hello world ! ^^ ~~" ;
+// let matchstr = "^ ~~" ;
+// // console.log(str.startsWith(matchstr)); //시작 글자
+// // console.log(str.endsWith(matchstr)); // 끝글자
+// console.log("include test::", str.includes("^^^")); // 포함 되있나
+
+// var data = [1,2,undefined,NaN,null,""];
+// for (var i = 0; i<data.length; i++);
+// console.log(i);
+
+
+
+// var data = [1,2,undefined,NaN,null,""];
+// data.forEach(function(value){
+// console.log("valueis", value);
+
+// });
+
+
+
+// var data = [1,2,undefined,NaN,null,""];
+// data.forEach(function(value){
+// console.log("valueis", value);
+
+// });
+
+
+// var data = [1,2,undefined,NaN,null,""];
+// for(let idx in data) {
+// console.log(data[idx]);
+
+// };
+
+var data = [1,2,undefined,NaN,null,""];
+Array.prototype.getIndex = function(){};
+
+for(let idx in data) {
+    console.log(data[idx]);
+
 }
-
-// const 를 사용하더라도 배열과 오브젝트의 값을 변경하는 것은 가능하다.
-// 일종의 값을 재할당하는 코드가 불가능하다.
-// immutable array 를 어떻게 만드는가?
-// 에디터에서 글을 쓸때 임시저장할때 뒤로 가기 또는 앞으로 가기눌러 어떠 값을 되돌리는값을 보여줄때
-// array 같은 경우 이전에 어떤 값인지 모른다.
-
-// constsudy2();
-const list = ["apple", "orange", "banana"];
-list2 = [].concat(list, "cake");
-console.log(1+ list);
-console.log(2+ list2);
-console.log(list === list2);
